@@ -1,4 +1,6 @@
-﻿public class CharacterStat
+﻿using System.Collections.Generic;
+
+public class CharacterStat
 {
     //스탯 초기값 설정
     public Stat mov = new Stat(50);
