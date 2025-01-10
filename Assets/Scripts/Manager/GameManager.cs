@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    public GameData data;
+    public GameData data = new GameData();
 }
