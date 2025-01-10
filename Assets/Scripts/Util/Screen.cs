@@ -5,6 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class Screen : MonoBehaviour
 {
+    /// <summary>
+    /// 화면 활성화
+    /// </summary>
+    public void ShowScreen()
+    {
+        if (!gameObject.activeSelf)
+            gameObject.SetActive(true);
+    }
+
+    /// <summary>
+    /// 화면 비활성화
+    /// </summary>
+    public void HideScreen()
+    {
+        if(gameObject.activeSelf)
+            gameObject.SetActive(false);
+    }
     
     /// <summary>
     /// 씬 이동
