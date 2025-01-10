@@ -5,7 +5,18 @@ Start of the game.
 <<ChangePortrait 1>>
 Player: I am character
 -> Yes
+    <<ChangeStat mov 10>>
 -> No
-<<ChangePortrait 2>>
-End of game.
+    <<ChangeStat mov -10>>
+    <<ChangePortrait 2>>
+<<declare $isSuccess = false>>
+<<set $isSuccess = TossCoin(0.5)>>
+You Toss a Coin!, it's {$isSuccess}!
+<<set $isSuccess = TossCoin(0.5)>>
+You Toss a Coin!, it's {$isSuccess}!
+<<set $isSuccess = TossCoin(0.5)>>
+You Toss a Coin!, it's {$isSuccess}!
+<<set $isSuccess = TossCoin(0.5)>>
+You Toss a Coin!, it's {$isSuccess}!
+End of game...
 ===
