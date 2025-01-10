@@ -5,6 +5,8 @@ public class Stat
     public const int MaxValue = 95;
     public const int MinValue = 5;
     public int value { get; private set; }
+
+    public event Action StatChanged;
     
     public Stat(int startValue)
     {
@@ -20,5 +22,6 @@ public class Stat
         value += delta;
         if (value < MinValue) value = MinValue;
         if (value > MaxValue) value = MaxValue;
+        StatChanged?.Invoke();
     }
 }
