@@ -2,8 +2,10 @@
 tags:
 ---
 Start of the game.
+<<ChangePortrait 1>>
 Player: I am character
 -> Yes
 -> No
+<<ChangePortrait 2>>
 End of game.
 ===
