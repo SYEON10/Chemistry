@@ -7,4 +7,7 @@
     public Stat lvChris = new Stat(5);
     public Stat lvEun = new Stat(5);
     public Stat lvMint = new Stat(5);
+    public Stat Chris_Eun = new Stat(5);
+    public Stat Eun_Mint = new Stat(5);
+    public Stat Mint_Chris = new Stat(5);
 }
