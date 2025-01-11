@@ -11,10 +11,13 @@ Player: I am character
     <<ChangeStat mov -10>>
 <<SetPortrait Portraits A>>
 <<declare $isSuccess = false>>
-<<set $isSuccess = TossCoin(0.5)>>
-You Toss a Coin!, it's {$isSuccess}!
-<<set $isSuccess = TossCoin(0.5)>>
-You Toss a Coin!, it's {$isSuccess}!
+<<set $isSuccess = TossCoin1("mov")>>
+<<set $isSuccess = TossCoin2(2, "lvChris", 3, "charm")>>
+<<if $isSuccess == true>>
+    성공!
+<<else>>
+    실패!
+<<endif>>
 <<set $isSuccess = TossCoin(0.5)>>
 You Toss a Coin!, it's {$isSuccess}!
 <<set $isSuccess = TossCoin(0.5)>>

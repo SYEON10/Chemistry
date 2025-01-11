@@ -6,6 +6,11 @@ public class GameData
 {
     public CharacterStat stats = new CharacterStat();
 
+    /// <summary>
+    /// 직전에 선택한 선택지의 대사
+    /// </summary>
+    public string beforeChoice = "";
+    
     public Stat GetStat(string stat)
     {
         return GetStat((StatEnum)Enum.Parse(typeof(StatEnum), stat));

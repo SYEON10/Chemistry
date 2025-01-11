@@ -20,40 +20,7 @@ public class DialogManager : Singleton<DialogManager>
 
     void ChangeStat(string statName, int amount)
     {
-        Debug.Log("Changing " + statName + " by " + amount);
-        switch (statName)
-        {
-            case "mov":
-                GameManager.Instance.data.stats.mov.ChangeStat(amount);
-                break;
-            case "charm":
-                GameManager.Instance.data.stats.charm.ChangeStat(amount);
-                break;
-            case "mental":
-                GameManager.Instance.data.stats.mental.ChangeStat(amount);
-                break;
-            case "lvChris":
-                GameManager.Instance.data.stats.lvChris.ChangeStat(amount);
-                break;
-            case "lvEun":
-                GameManager.Instance.data.stats.lvEun.ChangeStat(amount);
-                break;
-            case "lvMint":
-                GameManager.Instance.data.stats.lvMint.ChangeStat(amount);
-                break;
-            case "Chris_Eun":
-                GameManager.Instance.data.stats.Chris_Eun.ChangeStat(amount);
-                break;
-            case "Eun_Mint":
-                GameManager.Instance.data.stats.Eun_Mint.ChangeStat(amount);
-                break;
-            case "Mint_Chris":
-                GameManager.Instance.data.stats.Mint_Chris.ChangeStat(amount);
-                break;
-            default:
-                Debug.LogError("Invalid stat name: " + statName);
-                break;
-        }
+        GameManager.Instance.data.GetStat(statName).ChangeStat(amount);
     }
     
     [YarnFunction ("TossCoin")]
@@ -69,5 +36,17 @@ public class DialogManager : Singleton<DialogManager>
         // TODO: 코인 돌아가는 연출 추가하기, 이때 interaction은 끄기
         
         return Random.value < successRate;
+    }
+
+    [YarnFunction("TossCoin1")]
+    public static bool TossCoin1(string statName)
+    {
+        return true;
+    }
+
+    [YarnFunction("TossCoin2")]
+    public static bool TossCoin2(int ratio1, string statName1, int ratio2, string statName2)
+    {
+        return true;
     }
 }
