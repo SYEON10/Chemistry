@@ -1,7 +1,6 @@
 title: 은채_민트_세번째
 tags: 카페
 ---
-
 <<SetBackground Background cafe>>
 <<SetPortrait Portraits>>
 YOU: 녹차라떼 한 잔 주세요.
@@ -9,11 +8,13 @@ YOU: 녹차라떼 한 잔 주세요.
 은채: 곧 기말고사잖아. 어쩐 일로 여기까지 왔어?
 YOU: 오랜만에 공부도 하고, 겸사겸사 너도 보고.
 은채: 뭐래? 공부나 해.
+<<SetSound EunSmile>>
 <<SetPortrait Portraits Eun_Idle>>
 은채가 우유와 녹차가루를 꺼내려고 하는데, 찬장에 손이 온전히 닿지 않아 까치발을 든 은채가 귀엽다... 
 고 당신은 속으로 생각한다.
 은채가 스팀기로 우유 스팀을 시작한 순간,
 은채: 아야,
+<<SetSound EunGasp>>
 <<SetPortrait Portraits Eun_Shock>>
 스팀기에 손이 데인 건지 은채가 화들짝 놀라 물러선다. 당신은 덩달아 놀라 묻는다.
 YOU: 괜찮아? 많이 다쳤어?
@@ -63,9 +64,11 @@ title: 일반EM3
 <<ChangeStat Eun_Mint +5>>
 은채는 흐르는 물에 손을 식힌다.
 <<SetPortrait Portraits Eun_Idle Mint_Idle>>
+<<SetSound MintCurious>>
 민트: (은채 학생, 괜찮소?)
 은채: 아, 사장님. 괜찮아요.
 민트가 서랍에서 구급키트를 꺼내 은채의 손에 화상 거즈를 덮고, 붕대로 감아준다.
+<<SetSound MintIdle1>>
 민트: (흉지지 않게 조심하시오.)
 은채: 감사합니다...
 <<SetPortrait Portraits Eun_Blush Mint_Idle>>

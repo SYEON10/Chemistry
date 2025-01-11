@@ -1,6 +1,7 @@
 title: 은채_민트_두번째
 tags: 카페
 ---
+<<SetBackground Background cafe>>
 YOU: 안녕하세요
 <<SetPortrait Portraits Eun_Smile>>
 <<SetSound EunSmile>>
@@ -63,6 +64,7 @@ YOU: (그야 그게 맞으니까...)
 <<SetPortrait Portraits Eun_Smile Mint_Idle>>
 <<wait 1>>
 <<SetPortrait Portraits Eun_Smile Mint_Shock>>
+<<SetSound MintCurious>>
 민트: (그걸 모두 혼자 먹은 것이오?)
 YOU: 앗...
 YOU: 사실 은채를 좀 놀리려다가...
@@ -70,11 +72,14 @@ YOU: 사실 은채를 좀 놀리려다가...
 민트: (...)
 YOU: 별개로 음료가 다 맛있기도 했어요!
 <<SetPortrait Portraits Eun_Smile Mint_Smile>>
+<<SetSound MintIdle1>>
 민트: (학생만한 단골도 없는 것 같소. 푸딩도 서비스로 내오겠소.)
 <<SetPortrait Portraits Eun_Idle Mint_Smile>>
 은채: 민트 사장님... 너무 놀리지 마세요.
 <<SetPortrait Portraits Eun_Idle Mint_Laugh>>
+<<SetSound MintIdle1>>
 민트: (농담이오.)
+<<SetSound MintIdle2>>
 민트: (그래도 다음에 오면 챙겨주겠소.)
 <<SetPortrait Portraits Eun_Smile Mint_Smile>>
 <<wait 1>>
@@ -94,6 +99,7 @@ YOU: 우욱... 더는 못 먹겠어...
 <<SetPortrait Portraits Eun_Idle>>
 <<wait 1>>
 <<SetPortrait Portraits Eun_Neg>>
+<<SetSound EunSigh>>
 은채: 그러게 먹을만큼만 시키지...
 은채: 날 그렇게 놀리고 싶었어?
 <<SetPortrait Portraits>>
@@ -121,15 +127,19 @@ YOU: 더는 못 먹겠어...
 은채: 그러게 먹을만큼만 시키지...
 은채: 날 그렇게 놀리고 싶었어?
 <<SetPortrait Portraits Eun_Smile>>
+<<SetSound EunLaugh>>
 은채: 어쩔 수 없지. 내가 도와줘야겠다!
 은채는 당신의 멜론소다 위 체리를 먹어버리고는, 딸기 파르페까지 손대기 시작했다.
 처음부터 숟가락을 갖고 나온 걸 보니, 원래 이러려던 속셈이었던 것 같다.
 <<SetPortrait Portraits Eun_Smile Mint_Neg>>
+<<SetSound MintIdle2>>
 민트: (은채 학생...)
 <<SetPortrait Portraits Eun_Shock Mint_Neg>>
 은채: 앗!
+<<SetSound MintCurious>>
 민트: (은채 학생, 손님의 음식을 뺏어먹는 것이오?)
 은채: 그게 아니라...!
+<<SetSound MintIdle1>>
 민트: (다시는 이런 일 없도록 하시오.)
 <<SetPortrait Portraits Eun_Shock>>
 <<wait 1>>

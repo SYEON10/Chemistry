@@ -1,6 +1,7 @@
 title: 은채_민트_첫만남
 tags: 신촌거리, 카페
 ---
+<<SetBackground Background sinchon>>
 YOU: 집 가서 빨리 잠이나 자고 싶다...
 YOU: 밤샜더니 죽을 것 같아...
 은채: 야~ 어디가?
@@ -15,6 +16,7 @@ YOU: 음...
 은채: 케이크도 먹어도 돼.
 YOU: 가자.
 <<SetPortrait Portraits Eun_Smile>>
+<<SetBackground Background cafe>>
 당신은 은채와 "민트 카페"라는 가게에 들어간다.
 카페는 사람들로 가득 차 있었으나 운 좋게 테이블 하나가 막 빈 것 같다.
 YOU: 여긴 카공할 분위기는 아닌 것 같은데?
