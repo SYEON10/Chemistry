@@ -28,6 +28,12 @@ public class DialogManager : Singleton<DialogManager>
     {
         GameManager.Instance.data.GetStat(statName).ChangeStat(amount);
     }
+
+    [YarnCommand("SetSound")]
+    public static void SetSound(string source)
+    {
+        SoundManager.Instance.PlaySFX(source);
+    }
     
     [YarnFunction ("TossCoin")]
     public static bool TossCoin(float successRate)

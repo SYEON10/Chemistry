@@ -6,7 +6,7 @@ tags: 신촌거리
 크리스: 우리 수업 진짜 재미없지 않아요? 이름부터 '문화와예술을통해본르네상스역사'가 뭐예요~
 YOU: 그니까. 이 수업에서 유일하게 봐줄만 한 건 교수님의 빛나는 머리야...
 <<SetPortrait Portraits Chris_Laugh>>
-// <<SetSound ChrisLaugh>>
+<<SetSound ChrisLaugh>>
 <<wait 0.5>>
 <<SetPortrait Portraits Chris_Idle>>
 크리스: 선배, 말이 너무 심해요! 저도 언젠가 그럴게 될 수도 있는데.
@@ -14,7 +14,7 @@ YOU: 그런 말 하면서 웃지마...
 나레이션: 당신은 크리스와 농담따먹기나 하며 버스 정류장으로 향했다.
 나레이션: 그러던 중...
 <<SetPortrait Portraits Chris_Shock>>
-// <<SetSound ChrisShock>>
+<<SetSound ChrisShock>>
 크리스: 앗!
 YOU: 뭐야? 왜 그렇게 놀라?
 크리스: 저기! 저기 안 보여요?!
@@ -46,7 +46,7 @@ title: 성공CM1
 크리스: 죄송해요. 제가 너무 쳐다봤죠?
 민트: (신촌에서 퍼리 처음 보오?)
 <<SetPortrait Portraits Chris_Shock Mint_Idle>>
-// <<SetSound ChrisShock>>
+<<SetSound ChrisShock>>
 크리스: 분명 말을 하지 않았는데 소리가 들렸어!
 크리스: 역시 이상해!
 나레이션: 크리스는 당신과 민트를 두고 어딘가로 가버렸다...

@@ -29,6 +29,11 @@ public class SoundManager : Singleton<SoundManager>
     {
         if(bgmSounder.isPlaying) bgmSounder.Stop();
         AudioClip clip = Resources.Load<AudioClip>(BGMPath + source);
+        if (clip == null)
+        {
+            Debug.Log("음악 파일이 없습니다. " + clip);
+            return;
+        }
         bgmSounder.clip = clip;
         bgmSounder.Play();
     }
@@ -48,6 +53,11 @@ public class SoundManager : Singleton<SoundManager>
     public void PlaySFX(string source)
     {
         AudioClip clip = Resources.Load<AudioClip>(SFXPath + source);
+        if (clip == null)
+        {
+            Debug.Log("음악 파일이 없습니다. " + clip);
+            return;
+        }
         sfxSounder.PlayOneShot(clip);
     }
 
