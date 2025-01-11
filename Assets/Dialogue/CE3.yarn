@@ -1,0 +1,139 @@
+title: 크리스_은채_세번째
+tags: 도서관
+---
+<<SetPortrait Portraits Eun_Idle>>
+당신과 은채는 중앙도서관에서 만나 공부를 하고 있었다.
+YOU: (사실 난 유튜브 보고 있지만)
+<<SetPortrait Portraits Eun_Smile>>
+은채: 너 지금 딴짓 하고 있지?
+YOU: ??
+YOU: 어떻게 알았어?
+은채: 얼굴에 다 쓰여있어.
+??: 저기, 조용히 좀 해주세요.
+은채 뒷자리에 있던 사람이 은채에게 한 마디 했다.
+<<SetPortrait Portraits Eun_Idle>>
+은채: 네, 죄송합니다.
+은채: (엄청 예민하네)
+은채가 당신에게 문자를 보낸다.
+YOU: (그니까ㅋㅋㅋ 여기 1층이라 바깥소리도 다 들리는데)
+<<SetPortrait Portraits Eun_Laugh>>
+은채: (비오면 하늘에 대고 조용히 하라고 할듯)
+<<SetPortrait Portraits Eun_Shock>>
+은채: 헉!
+<<SetPortrait Portraits Eun_Shock Chris_Smile>>
+크리스: 선배들 안녕하세요!
+크리스가 은채 뒤에서 옆구리를 찌르며 나타났다.
+째려보는 시선들이 느껴진다.
+<<SetPortrait Portraits Eun_Idle Chris_Shock>>
+크리스: 이런~
+은채의 뒷자리에 있던 사람이 짐을 챙겨서 떠난다.
+YOU: (방금 건 좀 심하긴 했지.)
+<<SetPortrait Portraits Eun_Idle Chris_Idle>>
+크리스가 그 자리를 차지하고 앉았다.
+책과 공책을 펴길래 공부하는 줄 알았더니
+은채의 어깨 너머로 낙서들만 잔뜩 보인다.
+YOU: (조소과라고 낙서도 좀 다르네.)
+YOU: (근데 왜 이렇게 익숙한 느낌이지)
+당신은 크리스의 낙서가 누군가와 닮은 것을 알아챈다.
+-> 무시하고 공부를 하려고 노력한다.
+    <<if TossCoin2(2, "mental", -1, "lvChris")>>
+        <<jump 성공CE3>>
+    <<else>>
+        <<jump 실패CE3>>
+    <<endif>>
+-> 크리스에게 누구를 그린 거냐고 물어본다.
+    <<jump 일반CE3>>
+===
+
+
+title: 성공CE3
+---
+<<ChangeStat lvEun +5>>
+<<ChangeStat lvChris +5>>
+<<ChangeStat Chris_Eun +5>>
+<<ChangeStat Charm +5>>
+<<ChangeStat mov +5>>
+<<ChangeStat mental +5>>
+<<SetPortrait Portraits>>
+당신은 있는 힘을 다해 유튜브 버튼을 누르지 않으려 애쓴다.
+30분 가량의 노력 끝에 당신의 노력이 빛을 발했다.
+YOU: (이제 할일을 해야지.)
+책을 펼치는 순간 당신 옆으로 작은 쪽지가 날라왔다.
+??: 오늘 저녁에 뭐해?
+YOU: (누구야?)
+당신은 고개를 들었을 때 본 것은
+<<SetPortrait Portraits Eun_Shock>>
+<<wait 1>>
+<<SetPortrait Portraits Eun_Blush>>
+<<wait 1>>
+<<SetPortrait Portraits Eun_Neg>>
+은채의 곤란한 표정이었다.
+YOU: (네가 보낸 거야?)
+당신이 은채에게 입모양으로 물어봤다.
+은채는 별 반응없이 문자로 답장했다.
+은채: (그...)
+<<SetPortrait Portraits Eun_Idle>>
+은채: (크리스랑 잡담하다가 날라갔나봐.)
+은채: (방해해서 미안해.)
+<<SetPortrait Portraits Eun_Idle Chris_Idle>>
+크리스도 뒤를 돌아 고개를 한 번 까딱여 미안함을 표현했다.
+당신은 무언가 섭섭함을 느끼며 공부를 시작한다.
+오늘따라 잡념이 많은 것 같다.
+===
+
+
+title: 실패CE3
+---
+<<ChangeStat lvEun +5>>
+<<ChangeStat lvChris +5>>
+<<ChangeStat Chris_Eun +10>>
+<<ChangeStat mental -10>>
+<<SetPortrait Portraits>>
+당신은 있는 힘을 다해 유튜브 버튼을 누르지 않으려 애쓴다.
+YOU: (그래, 한 2시간 전까지는 그랬던 것 같아)
+YOU: (도서관까지 와서 2시간 동안 유튜브나 보다니...)
+YOU: (난 정말 쓰레기야..! 인기많은 자리까지 차지해놓고)
+YOU: (집에 가서 잠이나 잘걸...)
+<<SetPortrait Portraits Eun_Idle Chris_Smile>>
+크리스: ~~
+<<SetPortrait Portraits Eun_Smile Chris_Smile>>
+은채: ~~
+당신은 크리스와 은채가 작게 대화를 나누는 것을 본다.
+YOU: (무슨 얘기하는 거지?)
+<<SetPortrait Portraits Eun_Idle Chris_Idle>>
+그들은 시선을 느끼자 이내 다시 할 일에 집중하는 듯 했다.
+당신은 무언가 섭섭함을 느끼며 짐을 정리한다.
+YOU: (나 먼저 가볼게)
+당신은 은채에게 문자를 남긴 뒤 집으로 향한다.
+===
+
+
+title: 일반CE3
+---
+<<ChangeStat lvEun -5>>
+<<ChangeStat lvChris -10>>
+<<ChangeStat Chris_Eun -5>>
+<<ChangeStat Charm -5>>
+<<ChangeStat mov -5>>
+<<ChangeStat mental -5>>
+당신은 자리에서 일어나 크리스 옆자리로 간다.
+YOU: (뭘 그리는 거야?)
+<<SetPortrait Portraits Chris_Shock>>
+크리스는 화들짝 놀라며 노트를 가렸다.
+<<SetPortrait Portraits Chris_Neg>>
+크리스: (왜 남의 노트를 훔쳐보고 그래요! 음침하게...)
+크리스는 유난히 기분이 상한 듯 했다.
+YOU: (훔쳐보다니! 그냥 뭔가 열심히 하길래 눈에 띄었던 거야.)
+<<SetPortrait Portraits Chris_Blush>>
+크리스: 그게 그거죠!
+<<SetPortrait Portraits Chris_Blush Eun_Shock>>
+은채: (무슨 소란이야?)
+은채가 뒤를 돌았을 때, 찰나에 크리스의 손틈 사이로 낙서를 봐버렸다.
+<<SetPortrait Portraits Chris_Shock Eun_Neg>>
+은채: ...음침하기는
+당신은 당황하면서 은채의 뒷통수와 크리스의 눈을 번갈아 봤다.
+<<SetPortrait Portraits Chris_Blush>>
+크리스: 하...
+크리스가 울먹거리더니 이내 떨리는 손으로 책가방을 챙겨 떠났다.
+당신은 복잡한 감정을 느끼며 공부를 시작한다.
+===

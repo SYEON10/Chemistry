@@ -1,0 +1,55 @@
+title: 크리스_민트_세번째
+tags: 신촌거리, 카페
+---
+<<SetBackground Background sinchon>>
+<<SetPortrait Portraits Chris_Idle>>
+당신은 기말시험을 대비해 크리스와 공부를 할 장소를 찾아다니고 있었다.
+<<SetPortrait Portraits Chris_Neg>>
+크리스: 하필이면 오늘부터 휴무라니...
+YOU: 한 달이나 가게를 닫으시다니 무슨 일 있으신가?
+<<SetPortrait Portraits Chris_Idle>>
+크리스: SNS 보니까 새로운 메뉴를 개발하시는데 전념하신다더라고
+YOU: 그런 글이 올라왔었어?
+크리스: 아, 글이 아니라 DM이었나봐.
+YOU: 넌 사장님이랑 DM도 해?
+<<SetPortrait Portraits Chris_Smile>>
+크리스: 응. 카페 계정 팔로우하고 얼마 안 돼서 자주 와줘서 고맙다고 연락왔었어.
+YOU: 네가 꽤 마음에 드셨나본데?
+<<SetPortrait Portraits Chris_Laugh>>
+크리스: 아하하, 그런 건가?
+YOU: (묘하게 기뻐보인다.)
+<<SetPortrait Portraits Chris_Idle>>
+크리스: 이제 진짜로 공부 시작해야할 것 같은데 프랜차이즈 카페라도 들어갈까?
+<<SetPortrait Portraits Chris_Idle Mint_Idle>>
+민트: ...
+<<SetPortrait Portraits Chris_Smile Mint_Idle>>
+크리스: 아, 민트 사장님! 여기서 만나네요!
+YOU: 안녕하세요~
+민트: (따라오시오.)
+-> 
+    <<if TossCoin1("mental")>>
+        <<jump 성공CM3>>
+    <<else>>
+        <<jump 실패CM3>>
+    <<endif>>
+-> 잔다.
+    <<jump 일반CM3>>
+===
+
+
+title: 성공CM3
+---
+
+===
+
+
+title: 실패CM3
+---
+
+===
+
+
+title: 일반CM3
+---
+
+===

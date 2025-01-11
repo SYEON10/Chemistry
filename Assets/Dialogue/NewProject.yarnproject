@@ -1,12 +1,12 @@
 {
   "projectFileVersion": 2,
   "sourceFiles": [
-    "Test.yarn",
-    "GameOver.yarn",
     "CE1.yarn",
     "CE2.yarn",
+    "CE3.yarn",
     "CM1.yarn",
     "CM2.yarn",
+    "CM3.yarn",
     "EM1.yarn",
     "EM2.yarn",
     "EM3.yarn"

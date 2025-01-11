@@ -89,25 +89,28 @@ public class DialogManager : Singleton<DialogManager>
         {
             Debug.Log("Ending!");
             hasSeenEnding = true;
-            // TODO: 70, 70, 70 모두 다 이상일 때는 최대값 출력하기
-            // 조건에 따라 다른 엔딩
+            // TODO: 조건에 따라 다른 엔딩
             if (GameManager.Instance.data.GetStat(StatEnum.Chris_Eun).value > 70)
             {
                 // 크리스 은채 엔딩
+                StartCoroutine(StartNewDialogue_Ending("GameOver"));
             }
             else if (GameManager.Instance.data.GetStat(StatEnum.Eun_Mint).value > 70)
             {
                 // 은채 민트 엔딩
+                StartCoroutine(StartNewDialogue_Ending("GameOver"));
             }
             else if (GameManager.Instance.data.GetStat(StatEnum.Mint_Chris).value > 70)
             {
                 // 민트 크리스 엔딩
+                StartCoroutine(StartNewDialogue_Ending("GameOver"));
             }
             else if (GameManager.Instance.data.GetStat(StatEnum.lvChris).value > 70
                 && GameManager.Instance.data.GetStat(StatEnum.lvEun).value > 70
                 && GameManager.Instance.data.GetStat(StatEnum.lvMint).value > 70)
             {
-                // 모두 연애 엔딩?
+                // 모두 연애 엔딩
+                StartCoroutine(StartNewDialogue_Ending("GameOver"));
             }
             else
             {
@@ -138,7 +141,7 @@ public class DialogManager : Singleton<DialogManager>
         TextMeshProUGUI textMeshProUGUI = endingImage.GetComponentInChildren<TextMeshProUGUI>();
         fullText = "친구들과 며칠간 연락이 끊겼다. \n그러던 어느날...";
         yield return StartCoroutine(TypeText(textMeshProUGUI));
-        
+
         yield return new WaitForSeconds(1f); // 시간텀 주기
         endingImage.gameObject.SetActive(false);
         dialogueRunner.StartDialogue(dialogueName);
@@ -160,9 +163,6 @@ public class DialogManager : Singleton<DialogManager>
         switch (gameOverType)
         {
             case GameOverType.seperation:
-                StartCoroutine(StartNewDialogue_Ending("GameOver"));
-                break;
-            case GameOverType.unite:
                 StartCoroutine(StartNewDialogue_Ending("GameOver"));
                 break;
             case GameOverType.confession:

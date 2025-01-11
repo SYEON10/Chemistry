@@ -2,7 +2,7 @@ title: 크리스_은채_첫만남
 tags: 교내식당
 ---
 <<SetPortrait Portraits Eun_Neg>>
-<<SetSound EunNeg>>
+<<SetSound Sounds EunNeg>>
 은채: 학교밥은 왜 이렇게 맛이 없는 걸까...
 YOU: 그래도 중고등학교 때 급식보다는 낫잖아.
 <<SetPortrait Portraits Eun_Idle>>
@@ -10,7 +10,7 @@ YOU: 그래도 중고등학교 때 급식보다는 낫잖아.
 은채: 돈만 넉넉하면 맨날 나가서 사먹을텐데.
 YOU: 사회학관에서 정문으로 가는 데만 30분 걸리잖아.
 <<SetPortrait Portraits Eun_Neg>>
-<<SetSound EunAngry>>
+<<SetSound Sounds EunNeg>>
 은채: 조용히 해.
 YOU: 웅...
 당신은 침묵 속에 은채와 식사를 했다.
@@ -20,6 +20,7 @@ YOU: 웅...
 은채: 그... 배가 고파서 좀 짜증이 났었나봐. 무안하게 만드려던 건...
 은채가 말하던 중, 멀리서 당신을 부르는 소리가 들려온다.
 <<SetPortrait Portraits Eun_Idle Chris_Smile>>
+<<SetSound Sounds EunNeg>>
 크리스: 선배~ 
 YOU: 크리스 안녕~ 웬일로 사회학관에 있네?
 <<SetPortrait Portraits Eun_Idle Chris_Idle>>
@@ -108,6 +109,6 @@ title: 일반CE1
 <<ChangeStat charm -5>>
 <<SetPortrait Portraits Eun_Idle Chris_Idle>>
 은채: 어... 응, 다음에 봐.
-<<SetPortrait Portraits Chris_Idle>>
+<<SetPortrait portraits Chris_Idle>>
 당신은 크리스와 중간시험 결과를 확인하러 갔다.
 ===
