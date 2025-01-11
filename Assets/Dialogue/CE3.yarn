@@ -51,7 +51,7 @@ title: 성공CE3
 <<ChangeStat lvEun +5>>
 <<ChangeStat lvChris +5>>
 <<ChangeStat Chris_Eun +5>>
-<<ChangeStat Charm +5>>
+<<ChangeStat charm +5>>
 <<ChangeStat mov +5>>
 <<ChangeStat mental +5>>
 <<SetPortrait Portraits>>
@@ -113,7 +113,7 @@ title: 일반CE3
 <<ChangeStat lvEun -5>>
 <<ChangeStat lvChris -10>>
 <<ChangeStat Chris_Eun -5>>
-<<ChangeStat Charm -5>>
+<<ChangeStat charm -5>>
 <<ChangeStat mov -5>>
 <<ChangeStat mental -5>>
 당신은 자리에서 일어나 크리스 옆자리로 간다.

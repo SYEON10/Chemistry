@@ -10,7 +10,12 @@
     "CE3.yarn",
     "CM3.yarn",
     "EM3.yarn",
-    "CM4.yarn"
+    "CM4.yarn",
+    "EndingCE.yarn",
+    "EndingCM.yarn",
+    "EndingEM.yarn",
+    "Gameover1.yarn",
+    "Gameover2.yarn"
   ],
   "excludeFiles": [
     "**/*~/*"

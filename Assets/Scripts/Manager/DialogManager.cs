@@ -37,7 +37,8 @@ public class DialogManager : Singleton<DialogManager>
 
     void Init()
     {
-        List<string> earlyDialog = new List<string>() { "크리스_은채_첫만남" };
+        List<string> earlyDialog = new List<string>() { "크리스_은채_세번째" };
+        // List<string> earlyDialog = new List<string>() { "크리스_은채_첫만남", "크리스_민트_첫만남", "은채_민트_첫만남" };
         List<string> midDialog = new List<string>() { };
         List<string> lastDialog = new List<string>() { };
         dialogList = new List<string>();
@@ -93,29 +94,29 @@ public class DialogManager : Singleton<DialogManager>
             if (GameManager.Instance.data.GetStat(StatEnum.Chris_Eun).value > 70)
             {
                 // 크리스 은채 엔딩
-                StartCoroutine(StartNewDialogue_Ending("GameOver"));
+                StartCoroutine(StartNewDialogue_Ending("크리스_은채_엔딩"));
             }
             else if (GameManager.Instance.data.GetStat(StatEnum.Eun_Mint).value > 70)
             {
                 // 은채 민트 엔딩
-                StartCoroutine(StartNewDialogue_Ending("GameOver"));
+                StartCoroutine(StartNewDialogue_Ending("은채_민트_엔딩"));
             }
             else if (GameManager.Instance.data.GetStat(StatEnum.Mint_Chris).value > 70)
             {
                 // 민트 크리스 엔딩
-                StartCoroutine(StartNewDialogue_Ending("GameOver"));
+                StartCoroutine(StartNewDialogue_Ending("민트_크리스_엔딩"));
             }
             else if (GameManager.Instance.data.GetStat(StatEnum.lvChris).value > 70
                 && GameManager.Instance.data.GetStat(StatEnum.lvEun).value > 70
                 && GameManager.Instance.data.GetStat(StatEnum.lvMint).value > 70)
             {
                 // 모두 연애 엔딩
-                StartCoroutine(StartNewDialogue_Ending("GameOver"));
+                StartCoroutine(StartNewDialogue_Ending("게임오버1"));
             }
             else
             {
                 // 모두 친구 엔딩
-                StartCoroutine(StartNewDialogue_Ending("GameOver"));
+                StartCoroutine(StartNewDialogue_Ending("게임오버1"));
             }
             return;
         }
@@ -159,14 +160,13 @@ public class DialogManager : Singleton<DialogManager>
 
     public void GameOver(GameOverType gameOverType)
     {
-        // TODO: 게임오버 유형별로 yarn 파일 만들고, 연결하기
         switch (gameOverType)
         {
             case GameOverType.seperation:
-                StartCoroutine(StartNewDialogue_Ending("GameOver"));
+                StartCoroutine(StartNewDialogue_Ending("게임오버1"));
                 break;
             case GameOverType.confession:
-                StartCoroutine(StartNewDialogue_Ending("GameOver"));
+                StartCoroutine(StartNewDialogue_Ending("게임오버2"));
                 break;
             default:
                 Debug.LogError("Invalid GameOverType");
