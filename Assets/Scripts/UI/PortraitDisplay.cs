@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
@@ -8,10 +9,13 @@ using Yarn.Unity;
 
 public class PortraitDisplay : MonoBehaviour
 {
+    [SerializeField] private CanvasGroup canvasGroup;
     public List<Image> images;
     public int portraitNumber { get; private set; }
-    const int MIN_PORTRAIT_NUMBER = 1;
-    const int MAX_PORTRAIT_NUMBER = 3;
+    private const int MIN_PORTRAIT_NUMBER = 1;
+    private const int MAX_PORTRAIT_NUMBER = 3;
+    private float fadeDuration = 0.2f; // 페이드 지속 시간
+    private List<string> previousSpriteNames = new List<string>();
 
     [YarnCommand("SetPortrait")]
     public void SetPortrait(string[] parameters)
@@ -27,21 +31,7 @@ public class PortraitDisplay : MonoBehaviour
             Debug.LogWarning("Too many arguments for SetPortrait command");
             spriteNames.RemoveRange(MAX_PORTRAIT_NUMBER, spriteNames.Count - MAX_PORTRAIT_NUMBER);
         }
-
-        SetImage(spriteNames.Count);
-
-        for (int i = 0; i < spriteNames.Count; i++)
-        {
-            Debug.Log(spriteNames[i]);
-            Sprite sprite = Resources.Load<Sprite>("Portraits/" + spriteNames[i]);
-            if (sprite == null)
-            {
-                Debug.LogError("Sprite not found: " + spriteNames[i]);
-                return;
-            }
-            images[i].sprite = sprite;
-            images[i].rectTransform.sizeDelta = new Vector2(sprite.texture.width, sprite.texture.height);
-        }
+        StartCoroutine(ChangePortrait(spriteNames));
     }
 
     void SetImage(int portraitNumber)
@@ -58,16 +48,14 @@ public class PortraitDisplay : MonoBehaviour
             portraitNumber = MAX_PORTRAIT_NUMBER;
         }
 
-        // 이미지 조정
+        // 이미지 개수 조정
         images = GetComponentsInChildren<Image>().ToList();
         if (images.Count < portraitNumber)
         {
-            Debug.LogWarning("PortraitDisplay: Not enough images in the scene, creating new ones");
             CreateImages(portraitNumber - images.Count);
         }
         else if (images.Count > portraitNumber)
         {
-            Debug.LogWarning("PortraitDisplay: Too many images in the scene, removing the extra ones");
             for (int i = portraitNumber; i < images.Count; i++)
             {
                 Destroy(images[i].gameObject);
@@ -88,18 +76,42 @@ public class PortraitDisplay : MonoBehaviour
         }
     }
 
-    // IEnumerator Fade(Image image, float start, float end)
-    // {
-    //     float fadeDuration = 1f; // 페이드 지속 시간
-    //     float elapsed = 0f;
+    IEnumerator ChangePortrait(List<string> spriteNames)
+    {
+        bool doFade;
+        List<string> spriteNamesModified = spriteNames.Select(item => item.Split('_')[0]).ToList();
+        List<string> previousSpriteNamesModified = previousSpriteNames.Select(item => item.Split('_')[0]).ToList();
+        doFade = !spriteNamesModified.SequenceEqual(previousSpriteNamesModified);
 
-    //     while (elapsed < fadeDuration)
-    //     {
-    //         elapsed += Time.deltaTime;
-    //         canvasGroup.alpha = Mathf.Lerp(start, end, elapsed / fadeDuration);
-    //         yield return null;
-    //     }
+        if (doFade) yield return Fade(1, 0);
+        SetImage(spriteNames.Count);
+        for (int i = 0; i < spriteNames.Count; i++)
+        {
+            Sprite sprite = Resources.Load<Sprite>("Portraits/" + spriteNames[i]);
+            if (sprite == null)
+            {
+                Debug.LogError("Sprite not found: " + spriteNames[i]);
+                continue;
+            }
+            images[i].sprite = sprite;
+            images[i].rectTransform.sizeDelta = new Vector2(sprite.texture.width, sprite.texture.height);
+        }
+        if (doFade) yield return Fade(0, 1);
 
-    //     canvasGroup.alpha = end;
-    // }
+        previousSpriteNames = spriteNames;
+    }
+
+    IEnumerator Fade(float start, float end)
+    {
+        float elapsed = 0f;
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Lerp(start, end, elapsed / fadeDuration);
+            yield return null;
+        }
+
+        canvasGroup.alpha = end;
+    }
 }

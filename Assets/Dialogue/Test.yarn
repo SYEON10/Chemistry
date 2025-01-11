@@ -1,15 +1,14 @@
 ﻿title: Start
 tags:
 ---
-<<SetPortrait Portraits 1>>
+<<SetPortrait Portraits chris_idle eun_idle>>
 Start of the game.
-<<SetPortrait Portraits 1 2 3>>
+<<SetPortrait Portraits chris_idle>>
 Player: I am character
 -> Yes
     <<ChangeStat mov 10>>
 -> No
     <<ChangeStat mov -10>>
-<<SetPortrait Portraits A>>
 <<declare $isSuccess = false>>
 <<set $isSuccess = TossCoin1("mov")>>
 <<set $isSuccess = TossCoin2(2, "lvChris", 3, "charm")>>
