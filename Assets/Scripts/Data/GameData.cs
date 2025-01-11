@@ -1,10 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine.EventSystems;
 
 public class GameData
 {
     public CharacterStat stats = new CharacterStat();
 
+    public Stat GetStat(string stat)
+    {
+        return GetStat((StatEnum)Enum.Parse(typeof(StatEnum), stat));
+    }
+    
     public Stat GetStat(StatEnum statEnum)
     {
         switch (statEnum)
