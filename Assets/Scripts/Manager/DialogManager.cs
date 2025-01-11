@@ -15,9 +15,7 @@ public class DialogManager : Singleton<DialogManager>
     public static bool result;
     private List<string> dialogList;
     private int dialogIndex = 0;
-    private bool isEndingReady = false;
     private bool hasSeenEnding = false;
-    private bool isChoosingOption = false;
 
     void Awake()
     {
@@ -31,57 +29,16 @@ public class DialogManager : Singleton<DialogManager>
         StartDialogue(dialogList[dialogIndex]);
     }
 
-    void Update()
-    {
-        // TODO: 선택지에서도 넘어가짐. 선택지에서는 선택지 눌러야 넘어가게 수정
-        // if (HasActiveChild(dialogueOption.transform))
-        // {
-        //     Debug.Log("Option Activated");
-        // }
-        // else if (Input.GetKeyDown(KeyCode.Space) & dialogueRunner.IsDialogueRunning)
-        // {
-        //     dialogueRunner.dialogueViews[0].UserRequestedViewAdvancement();
-        // }
-    }
-
-    private bool HasActiveChild(Transform parent)
-    {
-        // 부모 오브젝트의 자식 오브젝트를 순회
-        foreach (Transform child in parent)
-        {
-            // 자식 오브젝트가 활성화되어 있다면 true 반환
-            if (child.gameObject.activeSelf)
-            {
-                return true;
-            }
-        }
-        // 활성화된 자식이 없으면 false 반환
-        return false;
-    }
-
     void Init()
     {
-        List<string> earlyDialog = new List<string>() { "크리스_은채_첫만남", "크리스_민트_첫만남", "은채_민트_첫만남" };
+        // List<string> earlyDialog = new List<string>() { "크리스_은채_첫만남", "크리스_민트_첫만남", "은채_민트_첫만남" };
+        List<string> earlyDialog = new List<string>() { "Start" };
         List<string> midDialog = new List<string>() { };
         List<string> lastDialog = new List<string>() { };
         dialogList = new List<string>();
         dialogList.AddRange(Shuffle(earlyDialog));
         dialogList.AddRange(Shuffle(midDialog));
         dialogList.AddRange(Shuffle(lastDialog));
-
-        // 스탯 변경 시에 게임오버 이벤트 추가
-        GameManager.Instance.data.stats.mov.StatChanged -= CheckGameOVer;
-        GameManager.Instance.data.stats.mov.StatChanged += CheckGameOVer;
-        GameManager.Instance.data.stats.charm.StatChanged -= CheckGameOVer;
-        GameManager.Instance.data.stats.charm.StatChanged += CheckGameOVer;
-        GameManager.Instance.data.stats.mental.StatChanged -= CheckGameOVer;
-        GameManager.Instance.data.stats.mental.StatChanged += CheckGameOVer;
-        GameManager.Instance.data.stats.lvChris.StatChanged -= CheckGameOVer;
-        GameManager.Instance.data.stats.lvChris.StatChanged += CheckGameOVer;
-        GameManager.Instance.data.stats.lvEun.StatChanged -= CheckGameOVer;
-        GameManager.Instance.data.stats.lvEun.StatChanged += CheckGameOVer;
-        GameManager.Instance.data.stats.lvMint.StatChanged -= CheckGameOVer;
-        GameManager.Instance.data.stats.lvMint.StatChanged += CheckGameOVer;
     }
 
     public static List<string> Shuffle(List<string> values)
@@ -109,12 +66,42 @@ public class DialogManager : Singleton<DialogManager>
             return;
         }
 
+        // 게임 오버 체크
+        if (GameManager.Instance.data.GetStat(StatEnum.mov).value <= 5
+            | GameManager.Instance.data.GetStat(StatEnum.charm).value <= 5
+            | GameManager.Instance.data.GetStat(StatEnum.mental).value <= 5
+            | GameManager.Instance.data.GetStat(StatEnum.lvChris).value <= 5
+            | GameManager.Instance.data.GetStat(StatEnum.lvEun).value <= 5
+            | GameManager.Instance.data.GetStat(StatEnum.lvMint).value <= 5)
+        {
+            Debug.Log("Game over");
+            hasSeenEnding = true;
+            GameOver(GameOverType.confession);
+            return;
+        }
+
         if (dialogIndex >= dialogList.Count)
         {
             Debug.Log("Ending!");
             hasSeenEnding = true;
-            // TODO: 조건에 따라 다른 엔딩
-            StartCoroutine(StartNewDialogue("GameOver"));
+            // 조건에 따라 다른 엔딩
+            if (GameManager.Instance.data.GetStat(StatEnum.Chris_Eun).value > 70)
+            {
+                // 크리스 은채 엔딩
+            }
+            else if (GameManager.Instance.data.GetStat(StatEnum.Eun_Mint).value > 70)
+            {
+                // 은채 민트 엔딩
+            }
+            else if (GameManager.Instance.data.GetStat(StatEnum.Mint_Chris).value > 70)
+            {
+                // 민트 크리스 엔딩
+            }
+            else
+            {
+                // 모두 친구 엔딩
+                StartCoroutine(StartNewDialogue("GameOver"));
+            }
             return;
         }
 
@@ -126,23 +113,6 @@ public class DialogManager : Singleton<DialogManager>
     {
         yield return new WaitForSeconds(0.1f); // 시간텀 주기
         dialogueRunner.StartDialogue(dialogueName);
-    }
-
-    void CheckGameOVer()
-    {
-        Debug.Log("Checking Game Over...");
-        // TODO: 게임 도중에 게임오버 될 수 있게 만들기
-        if (GameManager.Instance.data.GetStat(StatEnum.mov).value <= 5
-            | GameManager.Instance.data.GetStat(StatEnum.charm).value <= 5
-            | GameManager.Instance.data.GetStat(StatEnum.mental).value <= 5
-            | GameManager.Instance.data.GetStat(StatEnum.lvChris).value <= 5
-            | GameManager.Instance.data.GetStat(StatEnum.lvEun).value <= 5
-            | GameManager.Instance.data.GetStat(StatEnum.lvMint).value <= 5)
-        {
-            Debug.Log("Game over!");
-            dialogueRunner.Stop();
-            GameOver(GameOverType.confession);
-        }
     }
 
     public void GameOver(GameOverType gameOverType)
