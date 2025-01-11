@@ -20,7 +20,7 @@ public class DialogManager : Singleton<DialogManager>
 
     void ChangeStat(string statName, int amount)
     {
-        Debug.Log("Increasing " + statName + " by " + amount);
+        Debug.Log("Changing " + statName + " by " + amount);
         switch (statName)
         {
             case "mov":
@@ -40,6 +40,15 @@ public class DialogManager : Singleton<DialogManager>
                 break;
             case "lvMint":
                 GameManager.Instance.data.stats.lvMint.ChangeStat(amount);
+                break;
+            case "Chris_Eun":
+                GameManager.Instance.data.stats.Chris_Eun.ChangeStat(amount);
+                break;
+            case "Eun_Mint":
+                GameManager.Instance.data.stats.Eun_Mint.ChangeStat(amount);
+                break;
+            case "Mint_Chris":
+                GameManager.Instance.data.stats.Mint_Chris.ChangeStat(amount);
                 break;
             default:
                 Debug.LogError("Invalid stat name: " + statName);
