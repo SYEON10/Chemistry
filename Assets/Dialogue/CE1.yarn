@@ -1,6 +1,7 @@
 title: 크리스_은채_첫만남
 tags: 교내식당
 ---
+<<SetBackground Background restaurant>>
 <<SetPortrait Portraits Eun_Neg>>
 은채: 학교밥은 왜 이렇게 맛이 없는 걸까...
 YOU: 그래도 중고등학교 때 급식보다는 낫잖아.
