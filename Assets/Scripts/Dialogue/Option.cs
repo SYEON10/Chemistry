@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using Yarn.Unity;
 
 public class Option : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private OptionView optionView;
+    private TextMeshProUGUI text;
+    
+    void Awake()
     {
-        
+        optionView = GetComponent<OptionView>();
+        text = GetComponentInChildren<TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        optionView.OnOptionSelected -= GetBeforeSelect;
+        optionView.OnOptionSelected += GetBeforeSelect;
+    }
+
+    private void GetBeforeSelect(DialogueOption option)
+    {
+        GameManager.Instance.data.beforeChoice = text.text;
     }
 }
