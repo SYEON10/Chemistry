@@ -21,5 +21,6 @@ public enum StatEnum
 public enum GameOverType
 {
     seperation,
-    unite
+    unite,
+    other
 }

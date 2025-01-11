@@ -108,6 +108,6 @@ title: 일반CE1
 <<ChangeStat charm -5>>
 <<SetPortrait Portraits Eun_Idle Chris_Idle>>
 은채: 어... 응, 다음에 봐.
-<<SetPortrait portraits Chris_Idle>>
+<<SetPortrait Portraits Chris_Idle>>
 당신은 크리스와 중간시험 결과를 확인하러 갔다.
 ===

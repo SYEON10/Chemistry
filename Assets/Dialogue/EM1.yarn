@@ -1,6 +1,7 @@
 title: 은채_민트_첫만남
 tags: 신촌거리, 카페
 ---
+<<SetPortrait Portraits>>
 YOU: 집 가서 빨리 잠이나 자고 싶다...
 YOU: 밤샜더니 죽을 것 같아...
 은채: 야~ 어디가?
@@ -122,7 +123,7 @@ title: 일반EM1
 ---
 <<ChangeStat lvEun -5>>
 <<ChangeStat mov -5>>
-<<ChangeStat >>
+// <<ChangeStat >> // 이건 오타?
 <<SetPortrait Portraits Eun_Idle>>
 YOU: 손톱도 아니고 깃털인데 괜찮지 않나?
 YOU: 우리가 입는 패딩도 비슷한 걸로 만들어졌어.
