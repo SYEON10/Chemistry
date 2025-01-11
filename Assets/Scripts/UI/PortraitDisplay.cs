@@ -88,18 +88,18 @@ public class PortraitDisplay : MonoBehaviour
         }
     }
 
-    // IEnumerator Fade(Image image, float start, float end)
-    // {
-    //     float fadeDuration = 1f; // 페이드 지속 시간
-    //     float elapsed = 0f;
+    IEnumerator Fade(Image image, float start, float end)
+    {
+        float fadeDuration = 1f; // 페이드 지속 시간
+        float elapsed = 0f;
 
-    //     while (elapsed < fadeDuration)
-    //     {
-    //         elapsed += Time.deltaTime;
-    //         canvasGroup.alpha = Mathf.Lerp(start, end, elapsed / fadeDuration);
-    //         yield return null;
-    //     }
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Lerp(start, end, elapsed / fadeDuration);
+            yield return null;
+        }
 
-    //     canvasGroup.alpha = end;
-    // }
+        canvasGroup.alpha = end;
+    }
 }
