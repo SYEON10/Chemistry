@@ -36,9 +36,18 @@ public class CoinResult : MonoBehaviour
         button.interactable = false;
         if(result) animator.Play("Win");
         else animator.Play("Lose");
+        SoundManager.Instance.PlaySFX("CoinToss");
         yield return new WaitForSeconds(1.5f);
-        if (result) this.result.text = "성공";
-        else this.result.text = "실패";
+        if (result)
+        {
+            this.result.text = "성공";
+            SoundManager.Instance.PlaySFX("CoinSuccess");
+        }
+        else
+        {
+            this.result.text = "실패";
+            SoundManager.Instance.PlaySFX("CoinFail");
+        }
         resultPanel.SetActive(true);
         button.interactable = true;
     }
