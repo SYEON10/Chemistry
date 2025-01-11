@@ -86,6 +86,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4845058037571118450}
     m_Modifications:
+    - target: {fileID: 1531372679304271756, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6444953637440971090, guid: 0b16c6e04f636d842bfa6ad41e60967b, type: 2}
     - target: {fileID: 2179463908908511007, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_Name
       value: MintCircle
@@ -170,10 +174,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7195375813034483670, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
-      propertyPath: statEnum
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -192,6 +192,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4845058037571118450}
     m_Modifications:
+    - target: {fileID: 1531372679304271756, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6444953637440971090, guid: 0b16c6e04f636d842bfa6ad41e60967b, type: 2}
     - target: {fileID: 2179463908908511007, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_Name
       value: ChrisCircle
@@ -276,10 +280,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7195375813034483670, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
-      propertyPath: statEnum
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -298,6 +298,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4845058037571118450}
     m_Modifications:
+    - target: {fileID: 1531372679304271756, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6444953637440971090, guid: 0b16c6e04f636d842bfa6ad41e60967b, type: 2}
     - target: {fileID: 2179463908908511007, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_Name
       value: EunCircle
@@ -381,10 +385,6 @@ PrefabInstance:
     - target: {fileID: 2720774242524481665, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7195375813034483670, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
-      propertyPath: statEnum
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

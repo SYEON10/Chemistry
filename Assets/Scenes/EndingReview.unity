@@ -138,6 +138,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\uC740\uCC44\uD328\uB110"
       objectReference: {fileID: 0}
+    - target: {fileID: 3253673346846164358, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6444953637440971090, guid: 0b16c6e04f636d842bfa6ad41e60967b, type: 2}
+    - target: {fileID: 3896185661353419189, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 204e4ada5ce9f3845831ec01be2dbabb, type: 3}
     - target: {fileID: 4412866411737468787, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -226,6 +234,10 @@ PrefabInstance:
       propertyPath: statEnum
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8878268182338036407, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ffd7006879c10b4dbb7c1caa36d9314, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -533,12 +545,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1111823585296934487, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
       propertyPath: statEnum
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2068762864926579160, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ffd7006879c10b4dbb7c1caa36d9314, type: 3}
     - target: {fileID: 2436008851435914897, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
       propertyPath: m_Name
       value: "\uD06C\uB9AC\uC2A4\uD328\uB110"
       objectReference: {fileID: 0}
+    - target: {fileID: 3253673346846164358, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6444953637440971090, guid: 0b16c6e04f636d842bfa6ad41e60967b, type: 2}
+    - target: {fileID: 3896185661353419189, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 204e4ada5ce9f3845831ec01be2dbabb, type: 3}
     - target: {fileID: 4412866411737468787, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -627,6 +651,10 @@ PrefabInstance:
       propertyPath: statEnum
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8878268182338036407, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ebc580645b258242a9dc073136d83aa, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -927,6 +955,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\uBBFC\uD2B8\uD328\uB110"
       objectReference: {fileID: 0}
+    - target: {fileID: 2436008851435914897, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253673346846164358, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6444953637440971090, guid: 0b16c6e04f636d842bfa6ad41e60967b, type: 2}
+    - target: {fileID: 3422499050626283857, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3896185661353419189, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ffd7006879c10b4dbb7c1caa36d9314, type: 3}
     - target: {fileID: 4412866411737468787, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1014,6 +1058,14 @@ PrefabInstance:
     - target: {fileID: 7560897995858304312, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
       propertyPath: statEnum
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878268182338036407, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ebc580645b258242a9dc073136d83aa, type: 3}
+    - target: {fileID: 8907593449683595570, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1297,10 +1349,22 @@ PrefabInstance:
       propertyPath: statEnum
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2068762864926579160, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ffd7006879c10b4dbb7c1caa36d9314, type: 3}
     - target: {fileID: 2436008851435914897, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
       propertyPath: m_Name
       value: "You\uD328\uB110"
       objectReference: {fileID: 0}
+    - target: {fileID: 3253673346846164358, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6444953637440971090, guid: 0b16c6e04f636d842bfa6ad41e60967b, type: 2}
+    - target: {fileID: 3896185661353419189, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 204e4ada5ce9f3845831ec01be2dbabb, type: 3}
     - target: {fileID: 4412866411737468787, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1389,6 +1453,10 @@ PrefabInstance:
       propertyPath: statEnum
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8878268182338036407, guid: dd4ee76ab41df6647a5b80bea2386e50, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ebc580645b258242a9dc073136d83aa, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
