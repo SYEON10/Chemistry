@@ -86,6 +86,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4845058037571118450}
     m_Modifications:
+    - target: {fileID: 1531372679304271756, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6681881973342180211, guid: be6116b86bafdf445b6f03830d69845f, type: 2}
     - target: {fileID: 2179463908908511007, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_Name
       value: MintCircle
@@ -156,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2720774242524481665, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -193
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2720774242524481665, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -169,10 +173,6 @@ PrefabInstance:
     - target: {fileID: 2720774242524481665, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7195375813034483670, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
-      propertyPath: statEnum
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -192,6 +192,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4845058037571118450}
     m_Modifications:
+    - target: {fileID: 1531372679304271756, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6681881973342180211, guid: be6116b86bafdf445b6f03830d69845f, type: 2}
     - target: {fileID: 2179463908908511007, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_Name
       value: ChrisCircle
@@ -262,7 +266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2720774242524481665, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 181
+      value: 185
       objectReference: {fileID: 0}
     - target: {fileID: 2720774242524481665, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -275,10 +279,6 @@ PrefabInstance:
     - target: {fileID: 2720774242524481665, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7195375813034483670, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
-      propertyPath: statEnum
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -298,6 +298,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4845058037571118450}
     m_Modifications:
+    - target: {fileID: 1531372679304271756, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6681881973342180211, guid: be6116b86bafdf445b6f03830d69845f, type: 2}
     - target: {fileID: 2179463908908511007, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_Name
       value: EunCircle
@@ -368,7 +372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2720774242524481665, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2720774242524481665, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -381,10 +385,6 @@ PrefabInstance:
     - target: {fileID: 2720774242524481665, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7195375813034483670, guid: 1c4e1b4b99dd0d4499d9887d66b237d6, type: 3}
-      propertyPath: statEnum
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
