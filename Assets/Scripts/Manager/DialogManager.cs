@@ -5,14 +5,20 @@ using Yarn.Unity;
 public class DialogManager : Singleton<DialogManager>
 {
     public DialogueRunner dialogueRunner;
-    [SerializeField] private CoinDisplay coinDisplay;
+    public static CoinDisplay coinDisplay;
+    public static bool result;
+
+    void Awake()
+    {
+        coinDisplay = GetComponentInChildren<CoinDisplay>();
+    }
 
     void Start()
     {
         StartDialogue("Start");
         dialogueRunner.AddCommandHandler("ChangeStat", (System.Action<string, int>)ChangeStat);
     }
-
+    
     public void StartDialogue(string filename)
     {
         dialogueRunner.StartDialogue(filename);
@@ -41,12 +47,14 @@ public class DialogManager : Singleton<DialogManager>
     [YarnFunction("TossCoin1")]
     public static bool TossCoin1(string statName)
     {
-        return true;
+        result = coinDisplay.SpinCoin(statName);
+        return result;
     }
 
     [YarnFunction("TossCoin2")]
     public static bool TossCoin2(int ratio1, string statName1, int ratio2, string statName2)
     {
-        return true;
+        result = coinDisplay.SpinCoin(ratio1, statName1, ratio2, statName2);
+        return result;
     }
 }
