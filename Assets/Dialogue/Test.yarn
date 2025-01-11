@@ -1,9 +1,7 @@
 ﻿title: Start
 tags:
 ---
-<<SetPortrait Portraits chris_idle eun_idle>>
 Start of the game.
-<<SetPortrait Portraits chris_idle>>
 Player: I am character
 -> Yes
     <<ChangeStat mov 10>>
@@ -13,9 +11,9 @@ Player: I am character
 <<set $isSuccess = TossCoin1("mov")>>
 <<set $isSuccess = TossCoin2(2, "lvChris", 3, "charm")>>
 <<if $isSuccess == true>>
-    성공!
+    Success!
 <<else>>
-    실패!
+    Fail!
 <<endif>>
 <<set $isSuccess = TossCoin(0.5)>>
 You Toss a Coin!, it's {$isSuccess}!

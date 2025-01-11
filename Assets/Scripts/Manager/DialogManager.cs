@@ -9,7 +9,7 @@ public class DialogManager : Singleton<DialogManager>
 
     void Start()
     {
-        StartDialogue("Start");
+        StartDialogue("크리스_민트_첫만남");
         dialogueRunner.AddCommandHandler("ChangeStat", (System.Action<string, int>)ChangeStat);
     }
 
