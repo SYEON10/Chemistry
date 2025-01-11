@@ -26,8 +26,7 @@ public class DialogManager : Singleton<DialogManager>
     void Start()
     {
         Init();
-        // StartDialogue(dialogList[dialogIndex]);
-        StartDialogue("Start");
+        StartDialogue(dialogList[dialogIndex]);
     }
 
     void Update()
@@ -41,7 +40,7 @@ public class DialogManager : Singleton<DialogManager>
 
     void Init()
     {
-        List<string> earlyDialog = new List<string>() { };
+        List<string> earlyDialog = new List<string>() { "크리스_은채_첫만남", "크리스_민트_첫만남", "은채_민트_첫만남" };
         List<string> midDialog = new List<string>() { };
         List<string> lastDialog = new List<string>() { };
         dialogList = new List<string>();
@@ -65,9 +64,15 @@ public class DialogManager : Singleton<DialogManager>
 
     public void EndDialogue()
     {
-        Debug.Log($"End of dialogue, isDialogueRunning= {dialogueRunner.IsDialogueRunning}, IsActive= {dialogueRunner.Dialogue.IsActive}");
-
         dialogIndex += 1;
+        
+        // 엔딩 씬 이후에 엔딩 리뷰 씬으로 넘어가기
+        if (hasSeenEnding)
+        {
+            SceneManager.LoadScene("EndingReview");
+            return;
+        }
+
         if (dialogIndex >= dialogList.Count)
         {
             Debug.Log("Ending!");
@@ -75,31 +80,16 @@ public class DialogManager : Singleton<DialogManager>
             hasSeenEnding = true;
             // 조건에 따라 다른 엔딩
             StartCoroutine(StartNewDialogue("GameOver"));
+            return;
         }
 
         // dialog 종료 후 다른 yarn으로 넘어가기
         StartCoroutine(StartNewDialogue(dialogList[dialogIndex]));
-
-        // 엔딩 씬 이후에 엔딩 리뷰 씬으로 넘어가기
-        if (hasSeenEnding)
-        {
-            SceneManager.LoadScene("EndingReview");
-        }
     }
 
     private IEnumerator StartNewDialogue(string dialogueName)
     {
-        // dialogueRunner.Stop();
-        // 대화가 종료될 때까지 기다림
-        for (int i = 0; i < 1000; i++)
-        {
-            if (!dialogueRunner.Dialogue.IsActive) break;
-            Debug.Log("Waiting for dialogue to end...");
-            yield return null;  // 프레임마다 확인
-        }
-
-        // 대화가 종료되면 새로운 대화 시작
-        Debug.Log("Starting new dialogue...");
+        yield return new WaitForSeconds(0.1f); // 시간텀 주기
         dialogueRunner.StartDialogue(dialogueName);
     }
 
