@@ -695,7 +695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 628218841}
   dialogueOption: {fileID: 681266426}
-  stepText: {fileID: 2061906923}
+  stepImage: {fileID: 1650485313}
 --- !u!114 &628218841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2052,7 +2052,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1650485312
 RectTransform:
   m_ObjectHideFlags: 0
