@@ -68,7 +68,7 @@ MonoBehaviour:
   m_text: "\uC2DC\uC791\uD558\uAE30"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b16c6e04f636d842bfa6ad41e60967b, type: 2}
-  m_sharedMaterial: {fileID: 5308116361535563412, guid: 0b16c6e04f636d842bfa6ad41e60967b, type: 2}
+  m_sharedMaterial: {fileID: 6444953637440971090, guid: 0b16c6e04f636d842bfa6ad41e60967b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 2b62f169ad6c04c2d9a3fa4e8c3aa694, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1

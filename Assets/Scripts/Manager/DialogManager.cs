@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Yarn.Unity;
@@ -9,13 +10,14 @@ using Yarn.Unity;
 public class DialogManager : Singleton<DialogManager>
 {
     public DialogueRunner dialogueRunner;
-    public LineView lineView;
+    [SerializeField] private OptionsListView dialogueOption;
     public static CoinDisplay coinDisplay;
     public static bool result;
     private List<string> dialogList;
     private int dialogIndex = 0;
     private bool isEndingReady = false;
     private bool hasSeenEnding = false;
+    private bool isChoosingOption = false;
 
     void Awake()
     {
@@ -31,11 +33,30 @@ public class DialogManager : Singleton<DialogManager>
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        // TODO: 선택지에서도 넘어가짐. 선택지에서는 선택지 눌러야 넘어가게 수정
+        // if (HasActiveChild(dialogueOption.transform))
+        // {
+        //     Debug.Log("Option Activated");
+        // }
+        // else if (Input.GetKeyDown(KeyCode.Space) & dialogueRunner.IsDialogueRunning)
+        // {
+        //     dialogueRunner.dialogueViews[0].UserRequestedViewAdvancement();
+        // }
+    }
+
+    private bool HasActiveChild(Transform parent)
+    {
+        // 부모 오브젝트의 자식 오브젝트를 순회
+        foreach (Transform child in parent)
         {
-            // TODO: 선택지에서도 넘어가짐. 선택지에서는 선택지 눌러야 넘어가게 수정
-            lineView.OnContinueClicked();
+            // 자식 오브젝트가 활성화되어 있다면 true 반환
+            if (child.gameObject.activeSelf)
+            {
+                return true;
+            }
         }
+        // 활성화된 자식이 없으면 false 반환
+        return false;
     }
 
     void Init()
@@ -65,7 +86,7 @@ public class DialogManager : Singleton<DialogManager>
     public void EndDialogue()
     {
         dialogIndex += 1;
-        
+
         // 엔딩 씬 이후에 엔딩 리뷰 씬으로 넘어가기
         if (hasSeenEnding)
         {
@@ -76,9 +97,8 @@ public class DialogManager : Singleton<DialogManager>
         if (dialogIndex >= dialogList.Count)
         {
             Debug.Log("Ending!");
-            // TODO: 게임 종료 후 현재 상황에 따라 엔딩씬 띄우기
             hasSeenEnding = true;
-            // 조건에 따라 다른 엔딩
+            // TODO: 조건에 따라 다른 엔딩
             StartCoroutine(StartNewDialogue("GameOver"));
             return;
         }
@@ -97,6 +117,7 @@ public class DialogManager : Singleton<DialogManager>
     public void GameOver(GameOverType gameOverType)
     {
         // TODO: 게임오버 유형별로 yarn 파일 만들고, 연결하기
+        // TODO: 게임 도중에 게임오버 될 수 있게 만들기
         switch (gameOverType)
         {
             case GameOverType.seperation:
