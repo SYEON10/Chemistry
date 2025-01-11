@@ -9,6 +9,7 @@ public class DialogManager : Singleton<DialogManager>
     public LineView lineView;
     public static CoinDisplay coinDisplay;
     public static bool result;
+    private bool isDialogueEnd = false;
 
     void Awake()
     {
@@ -29,7 +30,7 @@ public class DialogManager : Singleton<DialogManager>
             lineView.OnContinueClicked();
         }
     }
-    
+
     public void StartDialogue(string filename)
     {
         dialogueRunner.StartDialogue(filename);
@@ -38,8 +39,35 @@ public class DialogManager : Singleton<DialogManager>
     public void EndDialogue()
     {
         Debug.Log("End of dialogue");
+
         // TODO: 현재 상황에 따라 엔딩씬 띄우기
-        SceneManager.LoadScene("EndingReview");
+        if (!isDialogueEnd)
+        {
+            isDialogueEnd = true;
+            StartCoroutine(StartNewDialogue("GameOver"));
+        }
+        else
+        {
+            // 엔딩 씬에서는 엔딩 리뷰 씬으로 넘어가기
+            SceneManager.LoadScene("EndingReview");
+        }
+
+        // TODO: 엔딩 씬 이후에 엔딩 리뷰 씬으로 넘어가기
+        // SceneManager.LoadScene("EndingReview");
+    }
+
+    private IEnumerator StartNewDialogue(string dialogueName)
+    {
+        // 대화가 종료될 때까지 기다림
+        while (dialogueRunner.Dialogue.IsActive)
+        {
+            Debug.Log("Waiting for dialogue to end...");
+            yield return null;  // 프레임마다 확인
+        }
+
+        // 대화가 종료되면 새로운 대화 시작
+        Debug.Log("Starting new dialogue...");
+        dialogueRunner.StartDialogue(dialogueName);
     }
 
     [YarnCommand("ChangeStat")]
@@ -53,8 +81,8 @@ public class DialogManager : Singleton<DialogManager>
     {
         SoundManager.Instance.PlaySFX(source);
     }
-    
-    [YarnFunction ("TossCoin")]
+
+    [YarnFunction("TossCoin")]
     public static bool TossCoin(float successRate)
     {
         Debug.Log("Tossing a coin...");
