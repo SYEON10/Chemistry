@@ -67,7 +67,7 @@ title: 실패CM1
 <<ChangeStat lvMint +5>>
 <<ChangeStat mental -5>>
 <<ChangeStat Mint_Chris +5>>
-<<SetPortrait Portrairts Chris_Neg Mint_Idle>>
+<<SetPortrait Portraits Chris_Neg Mint_Idle>>
 크리스: 네? 인형탈 쓴 사람을 쳐다보는 게 뭐가 이상해요?
 크리스: 선배는 디즈니랜드에서 미키마우스 알바를 쓰는 이유가 뭐겠어요. 구경하라고 있는 거잖아요.
 YOU: 윽...

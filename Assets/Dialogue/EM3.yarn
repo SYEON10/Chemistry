@@ -14,7 +14,7 @@ YOU: 오랜만에 공부도 하고, 겸사겸사 너도 보고.
 고 당신은 속으로 생각한다.
 은채가 스팀기로 우유 스팀을 시작한 순간,
 은채: 아야,
-<<SetPortrait Portraits Eun_Shoke>>
+<<SetPortrait Portraits Eun_Shock>>
 스팀기에 손이 데인 건지 은채가 화들짝 놀라 물러선다. 당신은 덩달아 놀라 묻는다.
 YOU: 괜찮아? 많이 다쳤어?
 <<SetPortrait Portraits Eun_Idle>>
@@ -44,7 +44,7 @@ YOU: 네가 준비성이 없는 거야.
 은채: 야, 누가 화상 연고를 들고 다녀? 소화제 같은 거면 몰라도.
 YOU: 그냥 고맙다고 하고 받으면 되지, 진짜.
 은채: ...
-(wait 1)
+<<wait 1>>
 <<SetPortrait Portraits Eun_Blush>>
 은채: 고마워.
 
