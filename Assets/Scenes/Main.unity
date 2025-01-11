@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 149772870}
   - component: {fileID: 149772869}
   - component: {fileID: 149772872}
+  - component: {fileID: 149772873}
   m_Layer: 5
   m_Name: Dialogue Bubble
   m_TagString: Untagged
@@ -249,6 +250,18 @@ MonoBehaviour:
   holdTime: 1
   autoAdvance: 0
   palette: {fileID: 0}
+--- !u!114 &149772873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149772867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f76fadfc1aa257145aa658ed8b3496fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &250752475
 PrefabInstance:
   m_ObjectHideFlags: 0
