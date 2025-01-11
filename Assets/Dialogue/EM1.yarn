@@ -54,7 +54,7 @@ title: 성공EM1
 <<ChangeStat lvMint +5>>
 <<ChangeStat mov +5>>
 <<ChangeStat Eun_Mint +5>>
-<<SetPortraits Portraits>>
+<<SetPortrait Portraits>>
 당신은 솜털을 들고 카운터로 간다.
 YOU: 사장님!
 ??: ...

@@ -37,7 +37,7 @@ public class DialogManager : Singleton<DialogManager>
 
     void Init()
     {
-        List<string> earlyDialog = new List<string>() { "크리스_은채_첫만남" };
+        List<string> earlyDialog = new List<string>() { "크리스_은채_첫만남", "크리스_민트_첫만남", "은채_민트_첫만남" };
         List<string> midDialog = new List<string>() { };
         List<string> lastDialog = new List<string>() { };
         dialogList = new List<string>();
