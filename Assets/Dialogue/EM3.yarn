@@ -1,0 +1,75 @@
+title: 은채_민트_세번째
+tags: 카페
+---
+
+<<SetBackground Background cafe>>
+<<SetPortrait Portraits>>
+YOU: 녹차라떼 한 잔 주세요.
+<<SetPortrait Portraits Eun_Smile>>
+은채: 곧 기말고사잖아. 어쩐 일로 여기까지 왔어?
+YOU: 오랜만에 공부도 하고, 겸사겸사 너도 보고.
+은채: 뭐래? 공부나 해.
+<<SetPortrait Portraits Eun_Idle>>
+은채가 우유와 녹차가루를 꺼내려고 하는데, 찬장에 손이 온전히 닿지 않아 까치발을 든 은채가 귀엽다... 
+고 당신은 속으로 생각한다.
+은채가 스팀기로 우유 스팀을 시작한 순간,
+은채: 아야,
+<<SetPortrait Portraits Eun_Shoke>>
+스팀기에 손이 데인 건지 은채가 화들짝 놀라 물러선다. 당신은 덩달아 놀라 묻는다.
+YOU: 괜찮아? 많이 다쳤어?
+<<SetPortrait Portraits Eun_Idle>>
+은채: 아니, 그렇게 심한 건 아니야...
+-> 무언가 도움이 될 만한 것이 있는지 찾는다.
+    <<if TossCoin1("mov")>>
+        <<jump 성공EM3>>
+    <<else>>
+        <<jump 실패EM3>>
+    <<endif>>
+-> 발을 동동 구른다.
+    <<jump 일반EM3>>
+
+===
+
+title: 성공EM3
+---
+<<ChangeStat lvEun +5>>
+<<ChangeStat charm +5>>
+<<SetPortrait Portraits Eun_Idle>>
+가방에서 화상 연고를 발견했다.
+YOU: 우선 찬 물에 식히고, 이거 이따가 발라.
+화상 연고를 은채에게 주었다.
+은채: 원래 이런 것도 챙겨다녀?
+YOU: 네가 준비성이 없는 거야.
+<<SetPortrait Portraits Eun_Blush>>
+은채: 야, 누가 화상 연고를 들고 다녀? 소화제 같은 거면 몰라도.
+YOU: 그냥 고맙다고 하고 받으면 되지, 진짜.
+은채: ...
+(wait 1)
+<<SetPortrait Portraits Eun_Blush>>
+은채: 고마워.
+
+===
+
+title: 실패EM3
+---
+
+당신은 아무것도 발견하지 못했다.
+<<jump 일반EM3>>
+
+===
+
+title: 일반EM3
+---
+<<ChangeStat Eun_Mint +5>>
+은채는 흐르는 물에 손을 식힌다.
+<<SetPortrait Portraits Eun_Idle Mint_Idle>>
+민트: (은채 학생, 괜찮소?)
+은채: 아, 사장님. 괜찮아요.
+민트가 서랍에서 구급키트를 꺼내 은채의 손에 화상 거즈를 덮고, 붕대로 감아준다.
+민트: (흉지지 않게 조심하시오.)
+은채: 감사합니다...
+<<SetPortrait Portraits Eun_Blush Mint_Idle>>
+YOU: 조심해...
+당신은 조금 찌질한 것 같다.
+
+===
