@@ -1,0 +1,133 @@
+title: 은채_민트_첫만남
+tags: 신촌거리, 카페
+---
+YOU: 집 가서 빨리 잠이나 자고 싶다...
+YOU: 밤샜더니 죽을 것 같아...
+은채: 야~ 어디가?
+뒤에서 익숙한 목소리가 들린다.
+<<SetPortrait Portraits Eun_Smile>>
+은채: 나 카페 가서 카공할 건데 같이 가주면 안 돼?
+YOU: 나 너무 피곤한데...
+은채: 내가 사줄게.
+YOU: 음...
+<<SetPortrait Portraits Eun_Idle>>
+은채: 케이크도 먹어도 돼.
+YOU: 가자.
+<<SetPortrait Portraits Eun_Smile>>
+당신은 은채와 "민트 카페"라는 가게에 들어간다.
+카페는 사람들로 가득 차 있었으나 운 좋게 테이블 하나가 막 빈 것 같다.
+YOU: 여긴 카공할 분위기는 아닌 것 같은데?
+은채: 사실 여기 사장님이 잘생겼대서 와봤어.
+YOU: ...
+<<SetPortrait Portraits Eun_Idle>>
+은채: 그런 눈으로 보지마! 공부도 할 거야.
+<<SetPortrait Portraits Eun_Smile>>
+은채: 아무튼! 뭐 먹고 싶어?
+YOU: 나 딸기 프라페랑 커스커드 푸딩.
+<<SetPortrait Portraits Eun_Idle>>
+은채: ... 알았어
+몇 분 후, 당신이 시킨 디저트가 나왔다.
+<<SetPortrait Portraits Eun_Smile>>
+은채: 나 딸기 하나만.
+YOU: 두 개 먹어도 돼.
+은채는 신나게 포크를 들어 딸기를 집어먹었다.
+<<SetPortrait Portraits Eun_Shock>>
+<<SetSound EunShock>>
+은채: 앗!
+YOU: 왜, 왜 그래?
+은채가 입에서 작은 솜털 하나를 뱉어냈다.
+-> 카페 사장님에게 따지러 간다.
+    <<if TossCoin1("mov")>>
+        <<jump 성공EM1>>
+    <<else>>
+        <<jump 실패EM1>>
+    <<endif>>
+-> 솜털이야 뭐... 그냥 먹자.
+    <<jump 일반EM1>>
+===
+
+
+title: 성공EM1
+---
+<<ChangeStat lvEun +5>>
+<<ChangeStat lvMint +5>>
+<<ChangeStat mov +5>>
+<<ChangeStat Eun_Mint +5>>
+<<SetPortrait Portraits>>
+당신은 솜털을 들고 카운터로 간다.
+YOU: 사장님!
+??: ...
+YOU: 사장님?
+<<SetPortrait Portraits Mint_Idle>>
+민트: ...
+<<SetPortrait Portraits Mint_Shock>>
+민트: ...!
+민트: (정말 미안하오.)
+<<SetPortrait Portraits Mint_Blush>>
+민트: (털갈이 중인지라...)
+<<SetPortrait Portraits Mint_Blush Eun_Idle>>
+은채: 난 괜찮은데...
+<<SetPortrait Portraits Mint_Idle Eun_Idle>>
+민트: (원한다면 새로 만들어주겠소.)
+YOU: ...
+YOU: 아뇨, 깃털 좀 더 넣어주실 수 있나 해서요.
+<<SetPortrait Portraits Mint_Shock Eun_Neg>>
+민트: ??
+은채: 으...
+<<SetPortrait Portraits Mint_Smile Eun_Neg>>
+민트: (그건 어렵겠소만...)
+민트: (휘낭시에 하나 서비스로 드리겠소.)
+<<SetPortrait Portraits Eun_Smile>>
+당신과 은채는 자리로 돌아와 각자의 할 일을 시작한다.
+디저트는 근래 먹었던 것 중에 가장 만족스러웠으며, 다음에 가게에 또 방문하기로 약속한다.
+===
+
+
+title: 실패EM1
+---
+<<ChangeStat lvEun +5>>
+<<ChangeStat mov +5>>
+<<ChangeStat Eun_Mint -10>>
+<<SetPortrait Portraits Eun_Idle>>
+은채: 난 괜찮아.
+??: (무슨 문제 있소?)
+<<SetPortrait Portraits Eun_Idle Mint_Smile>>
+당신은 어느새 뒤에서 나타난 사람에 소스라치게 놀란다.
+은채: 별일 아니예요 소란 피워서 죄송합니다.
+<<SetPortrait Portraits Eun_Idle Mint_Idle>>
+<<wait  1>>
+<<SetPortrait Portraits Eun_Idle Mint_Shock>>
+민트: ...!
+민트: (깃털이...)
+민트: (정말 미안하오.)
+<<SetPortrait Portraits Mint_Blush>>
+민트: (털갈이 중인지라...)
+<<SetPortrait Portraits Mint_Blush Eun_Idle>>
+은채: 난 괜찮은데...
+<<SetPortrait Portraits Mint_Idle Eun_Idle>>
+민트: (원한다면 새로 만들어주겠소.)
+<<SetPortrait Portraits Mint_Idle Eun_Smile>>
+은채: 정말 괜찮아요. 머리카락이나 손톱같은 것에 비하면 아무것도 아니죠.
+<<SetPortrait Portraits Mint_Neg Eun_Smile>>
+민트: (본인의 깃털이나 학생의 머리카락이나 똑같다오. 그런 말은 삼가해주시오.)
+<<SetPortrait Portraits Eun_Idle>>
+퍼리는 어쩐지 빈정이 상한 듯 했으며, 주방으로 돌아갔다.
+민트: 그러려던 건 아니었는데...
+당신과 은채는 각자의 할 일을 시작했다.
+디저트는 근래 먹었던 것 중에 가장 만족스러웠으며, 다음에 가게에 또 방문하기로 약속한다.
+===
+
+
+title: 일반EM1
+---
+<<ChangeStat lvEun -5>>
+<<ChangeStat mov -5>>
+<<ChangeStat >>
+<<SetPortrait Portraits Eun_Idle>>
+YOU: 손톱도 아니고 깃털인데 괜찮지 않나?
+YOU: 우리가 입는 패딩도 비슷한 걸로 만들어졌어.
+<<SetPortrait Portraits Eun_Neg>>
+은채: 넌 가끔씩 그런 말을 한단 말이야...
+당신과 은채는 각자의 할 일을 시작했다.
+디저트는 근래 먹었던 것 중에 가장 만족스러웠으며, 다음에 가게에 또 방문하기로 약속한다.
+===
