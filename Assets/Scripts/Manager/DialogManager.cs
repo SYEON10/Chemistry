@@ -15,8 +15,7 @@ public class DialogManager : Singleton<DialogManager>
 
     void Start()
     {
-        StartDialogue("Start");
-        dialogueRunner.AddCommandHandler("ChangeStat", (System.Action<string, int>)ChangeStat);
+        StartDialogue("크리스_민트_첫만남");
     }
     
     public void StartDialogue(string filename)
@@ -24,7 +23,8 @@ public class DialogManager : Singleton<DialogManager>
         dialogueRunner.StartDialogue(filename);
     }
 
-    void ChangeStat(string statName, int amount)
+    [YarnCommand("ChangeStat")]
+    public static void ChangeStat(string statName, int amount)
     {
         GameManager.Instance.data.GetStat(statName).ChangeStat(amount);
     }

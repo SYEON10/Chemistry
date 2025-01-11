@@ -1,0 +1,90 @@
+title: 크리스_민트_첫만남
+tags: 신촌거리
+---
+<<SetPortrait Portraits Chris_Idle>>
+나레이션: 당신은 수업이 끝난 후 크리스와 신촌 거리를 걷고 있었다.
+크리스: 우리 수업 진짜 재미없지 않아요? 이름부터 '문화와예술을통해본르네상스역사'가 뭐예요~
+YOU: 그니까. 이 수업에서 유일하게 봐줄만 한 건 교수님의 빛나는 머리야...
+<<SetPortrait Portraits Chris_Laugh>>
+// <<SetSound ChrisLaugh>>
+<<wait 0.5>>
+<<SetPortrait Portraits Chris_Idle>>
+크리스: 선배, 말이 너무 심해요! 저도 언젠가 그럴게 될 수도 있는데.
+YOU: 그런 말 하면서 웃지마...
+나레이션: 당신은 크리스와 농담따먹기나 하며 버스 정류장으로 향했다.
+나레이션: 그러던 중...
+<<SetPortrait Portraits Chris_Shock>>
+// <<SetSound ChrisShock>>
+크리스: 앗!
+YOU: 뭐야? 왜 그렇게 놀라?
+크리스: 저기! 저기 안 보여요?!
+나레이션: 크리스가 가리킨 곳으로 보니...
+나레이션: 퍼리가 보인다.
+<<SetPortrait Portraits Chris_Shock Mint_Idle>>
+YOU: 너 지금 저 사람보고 놀란 거야? 쯧쯧...
+크리스: 사람??
+YOU: 신촌에서 퍼리 처음 봐?
+나레이션: 크리스의 시선을 느꼈는지, 퍼리가 당신을 향해 다가온다.
+-> 크리스, 너가 뚫어져라 쳐다봐서 화나셨나봐. 사과드려.
+    <<if TossCoin2(1, "mental", 1, "lvChris") == true>>
+        <<jump 성공CM1>>
+    <<else>>
+        <<jump 실패CM1>>
+    <<endif>>
+-> 크리스를 데리고 도망간다.
+    <<jump 일반CM1>>
+===
+
+
+title: 성공CM1
+---
+<<ChangeStat lvMint +5>>
+<<ChangeStat Mint_Chris +5>>
+<<ChangeStat mental +5>>
+<<SetPortrait Portraits Chris_Neg Mint_Idle>>
+크리스: 아... 그...
+크리스: 죄송해요. 제가 너무 쳐다봤죠?
+민트: (신촌에서 퍼리 처음 보오?)
+<<SetPortrait Portraits Chris_Shock Mint_Idle>>
+// <<SetSound ChrisShock>>
+크리스: 분명 말을 하지 않았는데 소리가 들렸어!
+크리스: 역시 이상해!
+나레이션: 크리스는 당신과 민트를 두고 어딘가로 가버렸다...
+YOU: 아... 원래 저런 친구는 아닌데 미안해요. 
+민트: ...
+===
+
+
+title: 실패CM1
+---
+<<ChangeStat lvChris -5>>
+<<ChangeStat lvMint +5>>
+<<ChangeStat mental -5>>
+<<ChangeStat Mint_Chris +5>>
+<<SetPortrait Portrairts Chris_Neg Mint_Idle>>
+크리스: 네? 퍼수트 입은 사람을 쳐다보는 게 뭐가 이상해요?
+크리스: 선배는 디즈니랜드에서 미키마우스 알바를 쓰는 이유가 뭐겠어요. 구경하라고 있는 거잖아요.
+YOU: 윽...
+민트: (이건 수트가 아니라 본인의 몸이오.)
+<<SetPortrait Portraits Chris_Shock Mint_Idle>>
+// <<SetSound ChrisShock>>
+크리스: 분명 말을 하지 않았는데 소리가 들렸어!
+크리스: 역시 이상해!
+<<SetPortrait Portraits Mint_Idle>>
+나레이션: 크리스는 당신과 민트를 두고 어딘가로 가버렸다...
+YOU: 아... 원래 저런 친구는 아닌데 미안해요. 
+민트: ...
+===
+
+
+title: 일반CM1
+---
+<<ChangeStat lvMint -10>>
+<<ChangeStat Mint_Chris -10>>
+<<ChangeStat mov +5>>
+<<SetPortrait Portraits Mint_Idle>>
+나레이션: 당신은 크리스를 데리고 건물들 사이로 도망쳤다.
+<<SetPortrait Portraits Mint_Neg>>
+// <<SetSount MintAngry>>
+민트: ...
+===
