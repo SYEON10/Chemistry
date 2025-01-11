@@ -34,7 +34,8 @@ public class CoinResult : MonoBehaviour
     public IEnumerator ShowResult(bool result)
     {
         button.interactable = false;
-        animator.Play("Coin");
+        if(result) animator.Play("Win");
+        else animator.Play("Lose");
         yield return new WaitForSeconds(1.5f);
         if (result) this.result.text = "성공";
         else this.result.text = "실패";
