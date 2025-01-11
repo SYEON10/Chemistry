@@ -2,4 +2,7 @@
 tags:
 ---
 Test Message
+<<ChangeStat lvChris -100>>
+Test1
+test2
 ===

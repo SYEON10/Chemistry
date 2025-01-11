@@ -22,5 +22,5 @@ public enum GameOverType
 {
     seperation,
     unite,
-    other
+    confession
 }

@@ -68,6 +68,20 @@ public class DialogManager : Singleton<DialogManager>
         dialogList.AddRange(Shuffle(earlyDialog));
         dialogList.AddRange(Shuffle(midDialog));
         dialogList.AddRange(Shuffle(lastDialog));
+
+        // 스탯 변경 시에 게임오버 이벤트 추가
+        GameManager.Instance.data.stats.mov.StatChanged -= CheckGameOVer;
+        GameManager.Instance.data.stats.mov.StatChanged += CheckGameOVer;
+        GameManager.Instance.data.stats.charm.StatChanged -= CheckGameOVer;
+        GameManager.Instance.data.stats.charm.StatChanged += CheckGameOVer;
+        GameManager.Instance.data.stats.mental.StatChanged -= CheckGameOVer;
+        GameManager.Instance.data.stats.mental.StatChanged += CheckGameOVer;
+        GameManager.Instance.data.stats.lvChris.StatChanged -= CheckGameOVer;
+        GameManager.Instance.data.stats.lvChris.StatChanged += CheckGameOVer;
+        GameManager.Instance.data.stats.lvEun.StatChanged -= CheckGameOVer;
+        GameManager.Instance.data.stats.lvEun.StatChanged += CheckGameOVer;
+        GameManager.Instance.data.stats.lvMint.StatChanged -= CheckGameOVer;
+        GameManager.Instance.data.stats.lvMint.StatChanged += CheckGameOVer;
     }
 
     public static List<string> Shuffle(List<string> values)
@@ -83,6 +97,7 @@ public class DialogManager : Singleton<DialogManager>
         dialogueRunner.StartDialogue(filename);
     }
 
+    // Dialogue 종료 시 호출됨
     public void EndDialogue()
     {
         dialogIndex += 1;
@@ -113,11 +128,26 @@ public class DialogManager : Singleton<DialogManager>
         dialogueRunner.StartDialogue(dialogueName);
     }
 
+    void CheckGameOVer()
+    {
+        Debug.Log("Checking Game Over...");
+        // TODO: 게임 도중에 게임오버 될 수 있게 만들기
+        if (GameManager.Instance.data.GetStat(StatEnum.mov).value <= 5
+            | GameManager.Instance.data.GetStat(StatEnum.charm).value <= 5
+            | GameManager.Instance.data.GetStat(StatEnum.mental).value <= 5
+            | GameManager.Instance.data.GetStat(StatEnum.lvChris).value <= 5
+            | GameManager.Instance.data.GetStat(StatEnum.lvEun).value <= 5
+            | GameManager.Instance.data.GetStat(StatEnum.lvMint).value <= 5)
+        {
+            Debug.Log("Game over!");
+            dialogueRunner.Stop();
+            GameOver(GameOverType.confession);
+        }
+    }
 
     public void GameOver(GameOverType gameOverType)
     {
         // TODO: 게임오버 유형별로 yarn 파일 만들고, 연결하기
-        // TODO: 게임 도중에 게임오버 될 수 있게 만들기
         switch (gameOverType)
         {
             case GameOverType.seperation:
@@ -126,7 +156,7 @@ public class DialogManager : Singleton<DialogManager>
             case GameOverType.unite:
                 StartCoroutine(StartNewDialogue("GameOver"));
                 break;
-            case GameOverType.other:
+            case GameOverType.confession:
                 StartCoroutine(StartNewDialogue("GameOver"));
                 break;
             default:
@@ -138,6 +168,7 @@ public class DialogManager : Singleton<DialogManager>
     [YarnCommand("ChangeStat")]
     public static void ChangeStat(string statName, int amount)
     {
+        Debug.Log($"{statName} changed {amount}");
         GameManager.Instance.data.GetStat(statName).ChangeStat(amount);
     }
 
