@@ -14,6 +14,7 @@ public class SoundManager : Singleton<SoundManager>
     private AudioSource sfxSounder;
     void Awake()
     {
+        base.Awake();
         bgmSounder = transform.Find("BGMSource").GetComponent<AudioSource>();
         sfxSounder = transform.Find("SFXSource").GetComponent<AudioSource>();
 
