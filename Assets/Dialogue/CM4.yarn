@@ -25,10 +25,9 @@ YOU: ...
 <<wait 2>>
 당신은 어색한 듯, 설레는 듯, ... 묘한 감정을 느낀다.
 -> 크리스, 할 말이 있는데...
-// TODO: 확정실패 구현하기
-    <<declare $isSuccess = false>>
-    <<set $isSuccess = TossCoin2(0, "lvChris", 0, "charm")>>
+    <<if !TossCoin2(0, "lvChris", 0, "charm")>>
         <<jump 실패CM4>>
+    <<endif>>
 -> 오늘 날씨 진짜 별로다.
     <<jump 일반CM4>>
 ===
