@@ -2,14 +2,15 @@
   "projectFileVersion": 2,
   "sourceFiles": [
     "CE1.yarn",
-    "CE2.yarn",
-    "CE3.yarn",
     "CM1.yarn",
-    "CM2.yarn",
-    "CM3.yarn",
     "EM1.yarn",
+    "CE2.yarn",
+    "CM2.yarn",
     "EM2.yarn",
-    "EM3.yarn"
+    "CE3.yarn",
+    "CM3.yarn",
+    "EM3.yarn",
+    "CM4.yarn"
   ],
   "excludeFiles": [
     "**/*~/*"
