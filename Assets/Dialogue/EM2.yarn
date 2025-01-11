@@ -1,0 +1,142 @@
+title: 은채_민트_두번째
+tags: 카페
+---
+YOU: 안녕하세요
+<<SetPortrait Portraits Eun_Smile>>
+은채: 어서 오세요~
+YOU: 네가 왜 여기에 있어?
+<<SetPortrait Portraits Eun_Idle>>
+은채: 진짜로 맨날 밥 사먹으려고 알바 시작했어.
+은채: 또 파르페 먹으려고 그러지?
+<<SetPortrait Portraits Eun_Smile>>
+은채: 만들기 힘드니까 아메리카노 어때?
+당신은 갑자기 장난끼가 든다.
+YOU: 음... 그것도 먹고 싶고, 유니콘 밀크쉐이크도 맛있어보이고, 비엔나 커피도 좀 먹고 싶은 것 같은데?
+<<SetPortrait Portraits Eun_Idle>>
+은채: ... 다 먹을 수는 있어?
+YOU: 해보면 알겠지.
+YOU: 방금 말한 거 다 주세요.
+<<SetPortrait Portraits Eun_Neg>>
+<<wait  1>>
+<<SetPortrait Portraits Eun_Idle>>
+은채: 딸기 파르페 하나, 유니콘 밀크쉐이크 하나, 비엔나 커피 하나 맞으시죠?
+YOU: 팝피젤리 멜론사이다도 주세요~
+은채: ...
+<<SetPortrait Portraits>>
+(20분 후)
+YOU: 생각보다 많이 느리네...
+당신은 카운터로 간다.
+<<SetPortrait Portraits Eun_Idle>>
+주방 틈 사이로, 낑낑거리며 커피를 내리는 은채가 보인다.
+은채 옆으로 깃털 무더기가 있다.
+민트 사장님이 음료를 만드는 방법을 지도하고 있는 것 같다.
+<<SetPortrait Portraits>>
+당신은 뭔가 미안한 마음이 들어 자리로 돌아간다.
+몇 분 후 당신은 음식들을 받는다.
+YOU: 생각보다 양이 많은데... 다 먹을 수 있을까...
+-> 어떻게든 모든 그릇을 비운다
+    <<if TossCoin2(1, "mov", 2, "lvEun")>>
+        <<jump 성공EM2>>
+    <<else>>
+        <<jump 실패EM2>>
+    <<endif>>
+-> 적당히 먹고 반 정도 남긴다.
+    <<jump 일반EM2>>
+===
+
+
+title: 성공EM2
+---
+<<ChangeStat lvEun +5>>
+<<ChangeStat lvMint +5>>
+<<ChangeStat mental +5>>
+<<ChangeStat Eun_Mint +5>>
+YOU: 하... 먹는 것마저 이렇게 힘들다니...
+<<SetPortrait Portraits Eun_Smile>>
+은채: 뭐야, 진짜 다 먹었네?
+은채: 30분 걸려서 만든 보람이 있네~
+YOU: 어쩌다가 그렇게 오래 걸린거야? 사장님도 계셨던 것 같은데
+은채: 뭐? 음식이 왜 이렇게 늦게 나오냐고 불평하는 손님같네.
+YOU: (그야 그게 맞으니까...)
+<<SetPortrait Portraits Eun_Smile Mint_Idle>>
+(wait 1)
+<<SetPortrait Portraits Eun_Smile Mint_Shock>>
+민트: (그걸 모두 혼자 먹은 것이오?)
+YOU: 앗...
+YOU: 사실 은채를 좀 놀리려다가...
+<<SetPortrait Portraits Eun_Smile Mint_Neg>>
+민트: (...)
+YOU: 별개로 음료가 다 맛있기도 했어요!
+<<SetPortrait Portraits Eun_Smile Mint_Smile>>
+민트: (학생만한 단골도 없는 것 같소. 푸딩도 서비스로 내오겠소.)
+<<SetPortrait Portraits Eun_Idle Mint_Smile>>
+은채: 민트 사장님... 너무 놀리지 마세요.
+<<SetPortrait Portraits Eun_Idle Mint_Laugh>>
+민트: (농담이오.)
+민트: (그래도 다음에 오면 챙겨주겠소.)
+<<SetPortrait Portraits Eun_Smile Mint_Smile>>
+(wait 1)
+<<SetPortrait Portrait>>
+은채와 민트는 도란도란 당신의 이야기를 하며 주방으로 돌아갔다.
+당신은 둘이 어느새 저렇게 친해졌는지 궁금해한다.
+동시에 당신의 소꿉친구가 아르바이트에 잘 적응하고 있는 것을 보고 주제넘게 뿌듯해졌다.
+===
+
+
+title: 실패EM2
+---
+<<ChangeStat lvMint -5>>
+<<ChangeStat lvEun -5>>
+<<ChangeStat Eun_Mint +5>>
+YOU: 우욱... 더는 못 먹겠어...
+<<SetPortrait Portraits Eun_Idle>>
+<<wait 1>>
+<<SetPortrait Portraits Eun_Neg>>
+은채: 그러게 먹을만큼만 시키지...
+은채: 날 그렇게 놀리고 싶었어?
+<<SetPortrait Portraits>>
+은채는 기분이 상했는지 발소리를 크게 내며 주방으로 돌아갔다.
+<<SetPortrait Portraits Mint_Idle>>
+민트: ...
+<<SetPortrait Portraits Mint_Neg>>
+민트: ... ... ... ...
+<<SetPortrait Portraits>>
+민트가 당신을 잠깐 쳐다보더니 아무말도 없이 주방으로 돌아갔다.
+당신은 엄청난 경멸을 느낀다...
+<<ChangeStat lvMint -100>>
+===
+
+
+title: 일반EM2
+---
+<<ChangeStat lvMint -5>>
+<<ChangeStat mental -5>>
+<<ChangeStat Eun_Mint -5>>
+YOU: 더는 못 먹겠어...
+<<SetPortrait Portraits Eun_Idle>>
+<<wait 1>>
+<<SetPortrait Portraits Eun_Neg>>
+은채: 그러게 먹을만큼만 시키지...
+은채: 날 그렇게 놀리고 싶었어?
+<<SetPortrait Portraits Eun_Smile>>
+은채: 어쩔 수 없지. 내가 도와줘야겠다!
+은채는 당신의 멜론소다 위 체리를 먹어버리고는, 딸기 파르페까지 손대기 시작했다.
+처음부터 숟가락을 갖고 나온 걸 보니, 원래 이러려던 속셈이었던 것 같다.
+<<SetPortrait Portraits Eun_Smile Mint_Neg>>
+민트: (은채 학생...)
+<<SetPortrait Portraits Eun_Shock Mint_Neg>>
+은채: 앗!
+민트: (은채 학생, 손님의 음식을 뺏어먹는 것이오?)
+은채: 그게 아니라...!
+민트: (다시는 이런 일 없도록 하시오.)
+<<SetPortrait Portraits Eun_Shock>>
+<<wait 1>>
+<<SetPortrait Portraits Eun_Idle>>
+<<wait 1>>
+<<SetPortrait Portraits Eun_Blush>>
+은채: 네 앞에서 혼나다니 조금 부끄럽네...
+<<SetPortrait Portraits>>
+<<wait 1>>
+YOU: (은채는 왜 얼굴을 붉혔을까?)
+===
+

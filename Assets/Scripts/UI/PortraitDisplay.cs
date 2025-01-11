@@ -23,7 +23,7 @@ public class PortraitDisplay : MonoBehaviour
         List<string> spriteNames;
         if (parameters != null) spriteNames = parameters.ToList();
         else spriteNames = new List<string>();
-        
+
         if (spriteNames.Count > MAX_PORTRAIT_NUMBER)
         {
             Debug.LogWarning("Too many arguments for SetPortrait command");
@@ -95,7 +95,8 @@ public class PortraitDisplay : MonoBehaviour
             images[i].rectTransform.sizeDelta = new Vector2(sprite.texture.width, sprite.texture.height);
         }
         // 왼쪽사람은 오른쪽 보게
-        if (images[0] != null) images[0].rectTransform.localScale = new Vector3(-1, 1, 1);
+
+        if (images != null & images[0] != null) images[0].rectTransform.localScale = new Vector3(-1, 1, 1);
         if (doFade) yield return Fade(0, 1);
 
         previousSpriteNames = spriteNames;

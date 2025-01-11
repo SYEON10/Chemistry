@@ -101,6 +101,12 @@ public class DialogManager : Singleton<DialogManager>
             {
                 // 민트 크리스 엔딩
             }
+            else if (GameManager.Instance.data.GetStat(StatEnum.lvChris).value > 70
+                && GameManager.Instance.data.GetStat(StatEnum.lvEun).value > 70
+                && GameManager.Instance.data.GetStat(StatEnum.lvMint).value > 70)
+            {
+                // 모두 연애 엔딩?
+            }
             else
             {
                 // 모두 친구 엔딩

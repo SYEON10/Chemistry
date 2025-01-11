@@ -1,0 +1,101 @@
+title: 크리스_민트_두번째
+tags: 영화관
+---
+<<SetPortrait Portraits>>
+문화와 예술을 통해 본 르네상스 역사 수업에서 영화를 보고 감상문을 작성해서 내라는 과제를 받았다.
+당신은 같은 수업을 듣는 크리스와 같이 영화를 본 후, 카페에서 과제 제출까지 하고 해산하기로 했다.
+YOU: (이렇게 누가 감시를 해야만 과제를 제대로 하는 학생이라니...!)
+YOU: (정말 부끄럽다...)
+하지만 당신은 이미 영화만 보고 도망가려고 복도쪽 자리를 잡아두었다.
+<<SetPortrait Portraits Chris_Smile>>
+크리스: 선배!
+크리스: 많이 기다렸어요?
+YOU: 아니야. 나도 방금 왔어
+<<SetPortrait Portraits Chris_Idle>>
+크리스: 그런 것 치고 팝콘이랑 콜라도 들고 있으신데요.
+YOU: 사이다야.
+YOU: 얻어먹고 싶으면 조용히 하도록.
+<<SetPortrait Portraits Chris_Idle>>
+크리스: 넵!
+당신과 크리스는 영화관에 들어가 자리에 앉아 이런저런 이야기를 하며 영화가 시작하기를 기다렸다.
+광고가 모두 끝나고 비상탈출 안내가 나올 즈음 누군가가 영화관 문을 열고 들어왔다.
+YOU: (누군진 몰라도 타이밍 장난 아니네)
+뜻밖에도 그 사람은 당신과 크리스 옆자리에 자리를 잡았다.
+YOU: (귀가 저러면 뒷사람 시야는 어떻게 되는 거지?)
+<<SetPortrait Portraits Chris_Idle Mint_Idle>>
+<<wait 1>>
+<<SetPortrait Portraits Chris_Idle Mint_Blush>>
+YOU: (그렇군)
+(30분 후)
+영화는 정말 지루하고, 당신은 게임을 하느라 지난밤을 샜다.
+-> 있는 힘을 다해 버틴다.
+    <<if TossCoin1("mental")>>
+        <<jump 성공EM2>>
+    <<else>>
+        <<jump 실패EM2>>
+    <<endif>>
+-> 잔다.
+    <<jump 일반EM2>>
+===
+
+
+title: 성공
+---
+<<ChangeStat Mint_Chris +10>>
+<<ChangeStat mental +5>>
+YOU: (이번 과제마저 제대로 안 하면 교양마저 F를 받을지도 몰라..!)
+당신은 마른 세수를 하고 눈을 부릅 뜬다.
+크리스: ?
+영화는 2시간 30분 후쯤 끝났고 끝까지 재미가 없었다.
+YOU: 어떻게 이런 영화가 다 있지... 자는 게 더 유익한 시간이었을거야.
+당신은 옆을 본다
+<<SetPortrait Portraits Chris_Smile Mint_Neg>>
+YOU: 활짝 웃고 있네. 재밌었어?
+크리스: ...
+YOU: 크리스?
+크리스: ...
+YOU: 민트 사장님?
+민트: ...
+YOU: ...
+YOU: 일어나!!!!!!!!!!!!
+<<SetPortrait Portraits Chris_Shock Mint_Shock>>
+당신은 둘을 깨워놓고 집으로 도망갔다.
+비록 느리빼다 과제 마감 2초 전에 제출하긴 했지만 제시간에 냈다는 것에 의의를 두기로 했다.
+===
+
+
+title: 실패
+---
+<<ChangeStat Mint_Chris +10>>
+<<ChangeStat mental -5>>
+YOU: (그래... 게임을 14시간이나 하다니 내가 미친놈이지)
+YOU: (8시간으로 줄여야해... ...)
+당신은 눈이 감기려던 찰나, 주변시야로 믿을 수 없는 관경이 보인 것 같아 고개를 휙 돌린다.
+YOU: 잘못 봤나...
+YOU: 손을 잡고 있었던 것 같은데...
+당신이 본 것은 크리스와 민트의 손등이 맞닿아있던 것이었다.
+별일이 아니라고 생각한 당신은 영화를 보던 중 잠이 들었다.
+===
+
+
+title: 일반
+---
+<<ChangeStat Mint_Chris +10>>
+<<ChangeStat mov -5>>
+당신은 2시간 동안 푹 자고 일어났다.
+YOU: (영화가 아직도 안 끝났다고?)
+YOU: 하...
+당신은 옆을 본다
+YOU: (안 자고 잘 보네...)
+30분 후 영화가 끝났다.
+YOU: 다들 안 졸고 잘 보더라?
+<<SetPortrait Portraits Chris_Laugh Mint_Blush>>
+크리스: 난 사실 1시간 자다가 일어났어.
+<<SetPortrait Portraits Chris_Laugh Mint_Laugh>>
+민트: (본인은 1시간 반.)
+YOU: 사장님도 잠을 주무시는구나...
+<<SetPortrait Portraits Chris_Idle Mint_Laugh>>
+크리스: 그건 그렇고 선배.
+크리스: 튀려고 하셨죠?
+당신은 방심하던 찰나에 크리스에게 잡혀 과제를 하게 되었다.
+===

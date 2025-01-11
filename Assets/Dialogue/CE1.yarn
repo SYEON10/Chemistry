@@ -25,7 +25,7 @@ YOU: 크리스 안녕~ 웬일로 사회학관에 있네?
 <<SetPortrait Portraits Eun_Idle Chris_Idle>>
 크리스: 문화와 예술을 통해 본 르네상스 역사 중간시험 결과 확인하려고 왔어요.
 YOU: 성실하구나...
-<<SetPortrait Portraits Eun_Angry Chris_Idle>>
+<<SetPortrait Portraits Eun_Neg Chris_Idle>>
 은챼: 누구야?
 YOU: 같이 교양수업 듣는 후배야. 이름은 크리스.
 크리스: 선배도 같이 가요!

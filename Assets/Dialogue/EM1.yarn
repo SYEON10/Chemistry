@@ -1,7 +1,6 @@
 title: 은채_민트_첫만남
 tags: 신촌거리, 카페
 ---
-<<SetPortrait Portraits>>
 YOU: 집 가서 빨리 잠이나 자고 싶다...
 YOU: 밤샜더니 죽을 것 같아...
 은채: 야~ 어디가?
@@ -23,11 +22,12 @@ YOU: ...
 <<SetPortrait Portraits Eun_Idle>>
 은채: 그런 눈으로 보지마! 공부도 할 거야.
 <<SetPortrait Portraits Eun_Smile>>
+은채: 그리고 여기 오픈 이벤트로 SNS 계정 팔로우하면 서비스도 준대.
 은채: 아무튼! 뭐 먹고 싶어?
 YOU: 나 딸기 프라페랑 커스커드 푸딩.
 <<SetPortrait Portraits Eun_Idle>>
 은채: ... 알았어
-몇 분 후, 당신이 시킨 디저트가 나왔다.
+몇 분 후, 당신과 은채가 시킨 디저트와 서비스로 받은 초콜릿이 나왔다.
 <<SetPortrait Portraits Eun_Smile>>
 은채: 나 딸기 하나만.
 YOU: 두 개 먹어도 돼.
@@ -123,7 +123,6 @@ title: 일반EM1
 ---
 <<ChangeStat lvEun -5>>
 <<ChangeStat mov -5>>
-// <<ChangeStat >> // 이건 오타?
 <<SetPortrait Portraits Eun_Idle>>
 YOU: 손톱도 아니고 깃털인데 괜찮지 않나?
 YOU: 우리가 입는 패딩도 비슷한 걸로 만들어졌어.
