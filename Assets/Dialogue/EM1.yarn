@@ -123,7 +123,6 @@ title: 일반EM1
 ---
 <<ChangeStat lvEun -5>>
 <<ChangeStat mov -5>>
-<<ChangeStat >>
 <<SetPortrait Portraits Eun_Idle>>
 YOU: 손톱도 아니고 깃털인데 괜찮지 않나?
 YOU: 우리가 입는 패딩도 비슷한 걸로 만들어졌어.
