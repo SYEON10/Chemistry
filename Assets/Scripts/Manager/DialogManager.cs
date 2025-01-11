@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,7 @@ public class DialogManager : Singleton<DialogManager>
 {
     public DialogueRunner dialogueRunner;
     [SerializeField] private OptionsListView dialogueOption;
+    [SerializeField] private TextMeshProUGUI stepText;
     public static CoinDisplay coinDisplay;
     public static bool result;
     private List<string> dialogList;
@@ -31,8 +33,8 @@ public class DialogManager : Singleton<DialogManager>
 
     void Init()
     {
-        // List<string> earlyDialog = new List<string>() { "크리스_은채_첫만남", "크리스_민트_첫만남", "은채_민트_첫만남" };
-        List<string> earlyDialog = new List<string>() { "Start" };
+        List<string> earlyDialog = new List<string>() { "크리스_은채_첫만남", "크리스_민트_첫만남", "은채_민트_첫만남" };
+        // List<string> earlyDialog = new List<string>() { "Start" };
         List<string> midDialog = new List<string>() { };
         List<string> lastDialog = new List<string>() { };
         dialogList = new List<string>();
@@ -84,6 +86,7 @@ public class DialogManager : Singleton<DialogManager>
         {
             Debug.Log("Ending!");
             hasSeenEnding = true;
+            // TODO: 70, 70, 70 모두 다 이상일 때는 최대값 출력하기
             // 조건에 따라 다른 엔딩
             if (GameManager.Instance.data.GetStat(StatEnum.Chris_Eun).value > 70)
             {
@@ -111,7 +114,10 @@ public class DialogManager : Singleton<DialogManager>
 
     private IEnumerator StartNewDialogue(string dialogueName)
     {
-        yield return new WaitForSeconds(0.1f); // 시간텀 주기
+        
+        stepText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f); // 시간텀 주기
+        stepText.gameObject.SetActive(false);
         dialogueRunner.StartDialogue(dialogueName);
     }
 

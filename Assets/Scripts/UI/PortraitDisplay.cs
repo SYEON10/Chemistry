@@ -17,7 +17,6 @@ public class PortraitDisplay : MonoBehaviour
     private float fadeDuration = 0.2f; // 페이드 지속 시간
     private List<string> previousSpriteNames = new List<string>();
 
-    // TODO: 초상화 대화할 때는 서로 마주보게 설정?
     [YarnCommand("SetPortrait")]
     public void SetPortrait(string[] parameters = null)
     {
@@ -95,6 +94,8 @@ public class PortraitDisplay : MonoBehaviour
             images[i].sprite = sprite;
             images[i].rectTransform.sizeDelta = new Vector2(sprite.texture.width, sprite.texture.height);
         }
+        // 왼쪽사람은 오른쪽 보게
+        if (images[0] != null) images[0].rectTransform.localScale = new Vector3(-1, 1, 1);
         if (doFade) yield return Fade(0, 1);
 
         previousSpriteNames = spriteNames;
