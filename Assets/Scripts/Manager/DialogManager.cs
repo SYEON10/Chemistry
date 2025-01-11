@@ -39,6 +39,7 @@ public class DialogManager : Singleton<DialogManager>
     public void EndDialogue()
     {
         Debug.Log("End of dialogue");
+        // TODO: dialog 종료 후 다른 yarn으로 넘어가기
 
         // TODO: 현재 상황에 따라 엔딩씬 띄우기
         if (!isDialogueEnd)
