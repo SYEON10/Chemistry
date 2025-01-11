@@ -1,19 +1,23 @@
 title: 크리스_은채_두번째
 tags: 도서관, 카페
 ---
+<<SetBackground Background library>>
 YOU: (죽겠다...)
 YOU: (한 수업에 과제를 하나씩 주면 난 동시에 6개를 해야한다고...)
 당신은 짐을 챙겨 도서관 밖으로 나섰다.
 반쯤 몽롱해진 정신으로 산책을 하던 당신은
 <<wait 1>>
 갑자기 당이 땡긴다.
+<<SetBackground Background cafe>>
 <<SetPortrait Portraits Eun_Smile>>
+<<SetSound EunSmile>>
 은채: 어서 오세요~
 <<SetPortrait Portraits Eun_Idle>>
 YOU: 오늘은 웬일로 빈자리가 많네.
 은채: 뭐야 너였네. 딸기 파르페 먹을거야?
 YOU: 넌 날 너무 잘 알아.
 <<SetPortrait Portraits Eun_Smile>>
+<<SetSound EunSmile>>
 은채: 네, 딸기 파르페 하나요~
 몇 분 후, 당신은 음식을 받아 넓은 4인용 자리에 앉았다. 
 <<SetPortrait Portraits Chris_Idle>>
@@ -23,6 +27,7 @@ YOU: 넌 날 너무 잘 알아.
 <<SetPortrait Portraits Chris_Idle Eun_Idle>>
 은채: 흥.
 <<SetPortrait Portraits Chris_Shock>>
+<<SetSound ChrisShock>>
 크리스: 앗. 들어가버리셨네...
 당신은 은채가 왜 이렇게 크리스를 싫어하는지 의문을 가진다.
 주방에서 대화 소리가 들리더니 민트가 카운터로 나왔다.
@@ -43,7 +48,7 @@ YOU: 넌 날 너무 잘 알아.
 은채: 감사합니다!
 <<SetPortrait Portraits Eun_Smile>>
 은채는 앞치마를 벗고 주방에서 나와 당신 맞은 편에 앉았다.
-(wait 1)
+<<wait 1>>
 <<SetPortrait Portraits Eun_Smile Chris_Smile>>
 크리스가 당신 옆자리 의자를 빼면서 말을 건다.
 <<SetPortrait Portraits Eun_Smile Chris_Blush>>
@@ -71,7 +76,7 @@ title: 성공CE2
 <<ChangeStat lvEun +5>>
 <<ChangeStat lvChris +5>>
 <<ChangeStat Chris_Eun +10>>
-<<ChangeStat Charm +5>>
+<<ChangeStat charm +5>>
 <<SetPortrait Portraits Eun_Neg>>
 은채: ... ...
 은채: 그...
@@ -99,7 +104,7 @@ title: 실패CE2
 <<ChangeStat lvEun +5>>
 <<ChangeStat lvChris -5>>
 <<ChangeStat Chris_Eun -10>>
-<<ChangeStat Charm +5>>
+<<ChangeStat charm +5>>
 <<SetPortrait Portraits Eun_Neg>>
 은채: ... ...
 은채: 그...
@@ -126,7 +131,7 @@ title: 일반CE2
 <<ChangeStat lvEun -5>>
 <<ChangeStat lvChris -5>>
 <<ChangeStat Chris_Eun -10>>
-<<ChangeStat Charm -5>>
+<<ChangeStat charm -5>>
 <<SetPortrait Portraits Eun_Neg>>
 은채: 몰라. 너도 짜증나.
 <<SetPortrait Portraits>>
