@@ -8,7 +8,7 @@ using Yarn.Unity;
 
 public class PortraitDisplay : MonoBehaviour
 {
-    public static List<Image> images;
+    public List<Image> images;
     public int portraitNumber { get; private set; }
     const int MIN_PORTRAIT_NUMBER = 1;
     const int MAX_PORTRAIT_NUMBER = 3;
@@ -29,7 +29,7 @@ public class PortraitDisplay : MonoBehaviour
         }
 
         SetImage(spriteNames.Count);
-        
+
         for (int i = 0; i < spriteNames.Count; i++)
         {
             Debug.Log(spriteNames[i]);
@@ -87,4 +87,19 @@ public class PortraitDisplay : MonoBehaviour
             images.Add(newImage);
         }
     }
+
+    // IEnumerator Fade(Image image, float start, float end)
+    // {
+    //     float fadeDuration = 1f; // 페이드 지속 시간
+    //     float elapsed = 0f;
+
+    //     while (elapsed < fadeDuration)
+    //     {
+    //         elapsed += Time.deltaTime;
+    //         canvasGroup.alpha = Mathf.Lerp(start, end, elapsed / fadeDuration);
+    //         yield return null;
+    //     }
+
+    //     canvasGroup.alpha = end;
+    // }
 }

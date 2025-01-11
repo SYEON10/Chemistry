@@ -1287,6 +1287,7 @@ GameObject:
   - component: {fileID: 1739688808}
   - component: {fileID: 1739688810}
   - component: {fileID: 1739688812}
+  - component: {fileID: 1739688813}
   - component: {fileID: 1739688811}
   m_Layer: 5
   m_Name: Portraits
@@ -1361,6 +1362,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!225 &1739688813
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739688807}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1838939262
 GameObject:
   m_ObjectHideFlags: 0
