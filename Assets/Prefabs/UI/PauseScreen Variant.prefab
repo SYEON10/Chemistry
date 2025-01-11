@@ -1691,8 +1691,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241421008511125449a318388006f907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgmScrollBar: {fileID: 0}
-  sfxScrollBar: {fileID: 0}
+  bgmScrollBar: {fileID: 1555797138428405600}
+  sfxScrollBar: {fileID: 5915635385174771823}
 --- !u!224 &3071373056489193806 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1710548932902486973, guid: 7fdd5161de8bb644da70e7ee4a5506e8, type: 3}
