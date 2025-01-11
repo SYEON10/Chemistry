@@ -96,7 +96,10 @@ public class PortraitDisplay : MonoBehaviour
         }
         // 왼쪽사람은 오른쪽 보게
 
-        if (images != null & images[0] != null) images[0].rectTransform.localScale = new Vector3(-1, 1, 1);
+        if (images != null & images.Count != 0)
+        {
+            if (images[0] != null) images[0].rectTransform.localScale = new Vector3(-1, 1, 1);
+        }
         if (doFade) yield return Fade(0, 1);
 
         previousSpriteNames = spriteNames;

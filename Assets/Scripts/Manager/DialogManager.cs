@@ -110,7 +110,7 @@ public class DialogManager : Singleton<DialogManager>
             else
             {
                 // 모두 친구 엔딩
-                StartCoroutine(StartNewDialogue("GameOver"));
+                StartCoroutine(StartNewDialogue_Ending("GameOver"));
             }
             return;
         }
@@ -127,19 +127,26 @@ public class DialogManager : Singleton<DialogManager>
         dialogueRunner.StartDialogue(dialogueName);
     }
 
+    private IEnumerator StartNewDialogue_Ending(string dialogueName)
+    {
+        //TODO: 엔딩 전용 전환 효과 만들기
+        yield return new WaitForSeconds(1f); // 시간텀 주기
+        dialogueRunner.StartDialogue(dialogueName);
+    }
+
     public void GameOver(GameOverType gameOverType)
     {
         // TODO: 게임오버 유형별로 yarn 파일 만들고, 연결하기
         switch (gameOverType)
         {
             case GameOverType.seperation:
-                StartCoroutine(StartNewDialogue("GameOver"));
+                StartCoroutine(StartNewDialogue_Ending("GameOver"));
                 break;
             case GameOverType.unite:
-                StartCoroutine(StartNewDialogue("GameOver"));
+                StartCoroutine(StartNewDialogue_Ending("GameOver"));
                 break;
             case GameOverType.confession:
-                StartCoroutine(StartNewDialogue("GameOver"));
+                StartCoroutine(StartNewDialogue_Ending("GameOver"));
                 break;
             default:
                 Debug.LogError("Invalid GameOverType");
