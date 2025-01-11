@@ -1,6 +1,7 @@
 title: 크리스_민트_두번째
 tags: 영화관
 ---
+<<SetBackground Background cinema>>
 <<SetPortrait Portraits>>
 문화와 예술을 통해 본 르네상스 역사 수업에서 영화를 보고 감상문을 작성해서 내라는 과제를 받았다.
 당신은 같은 수업을 듣는 크리스와 같이 영화를 본 후, 카페에서 과제 제출까지 하고 해산하기로 했다.
@@ -30,16 +31,16 @@ YOU: (그렇군)
 영화는 정말 지루하고, 당신은 게임을 하느라 지난밤을 샜다.
 -> 있는 힘을 다해 버틴다.
     <<if TossCoin1("mental")>>
-        <<jump 성공EM2>>
+        <<jump 성공CM2>>
     <<else>>
-        <<jump 실패EM2>>
+        <<jump 실패CM2>>
     <<endif>>
 -> 잔다.
-    <<jump 일반EM2>>
+    <<jump 일반CM2>>
 ===
 
 
-title: 성공
+title: 성공CM2
 ---
 <<ChangeStat Mint_Chris +10>>
 <<ChangeStat mental +5>>
@@ -64,7 +65,7 @@ YOU: 일어나!!!!!!!!!!!!
 ===
 
 
-title: 실패
+title: 실패CM2
 ---
 <<ChangeStat Mint_Chris +10>>
 <<ChangeStat mental -5>>
@@ -78,7 +79,7 @@ YOU: 손을 잡고 있었던 것 같은데...
 ===
 
 
-title: 일반
+title: 일반CM2
 ---
 <<ChangeStat Mint_Chris +10>>
 <<ChangeStat mov -5>>

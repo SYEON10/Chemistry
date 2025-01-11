@@ -59,7 +59,7 @@ YOU: 어쩌다가 그렇게 오래 걸린거야? 사장님도 계셨던 것 같�
 은채: 뭐? 음식이 왜 이렇게 늦게 나오냐고 불평하는 손님같네.
 YOU: (그야 그게 맞으니까...)
 <<SetPortrait Portraits Eun_Smile Mint_Idle>>
-(wait 1)
+<<wait 1>>
 <<SetPortrait Portraits Eun_Smile Mint_Shock>>
 민트: (그걸 모두 혼자 먹은 것이오?)
 YOU: 앗...
