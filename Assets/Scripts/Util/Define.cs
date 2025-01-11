@@ -17,3 +17,10 @@ public enum StatEnum
     Eun_Mint,
     Mint_Chris
 }
+
+public enum GameOverType
+{
+    seperation,
+    unite,
+    other
+}

@@ -1,4 +1,7 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Yarn.Unity;
@@ -9,7 +12,10 @@ public class DialogManager : Singleton<DialogManager>
     public LineView lineView;
     public static CoinDisplay coinDisplay;
     public static bool result;
-    private bool isDialogueEnd = false;
+    private List<string> dialogList;
+    private int dialogIndex = 0;
+    private bool isEndingReady = false;
+    private bool hasSeenEnding = false;
 
     void Awake()
     {
@@ -19,7 +25,8 @@ public class DialogManager : Singleton<DialogManager>
 
     void Start()
     {
-        StartDialogue("크리스_민트_첫만남");
+        Init();
+        StartDialogue(dialogList[dialogIndex]);
     }
 
     void Update()
@@ -31,6 +38,25 @@ public class DialogManager : Singleton<DialogManager>
         }
     }
 
+    void Init()
+    {
+        List<string> earlyDialog = new List<string>() { "크리스_은채_첫만남", "크리스_민트_첫만남", "은채_민트_첫만남" };
+        List<string> midDialog = new List<string>() { };
+        List<string> lastDialog = new List<string>() { };
+        dialogList = new List<string>();
+        dialogList.AddRange(Shuffle(earlyDialog));
+        dialogList.AddRange(Shuffle(midDialog));
+        dialogList.AddRange(Shuffle(lastDialog));
+    }
+
+    public static List<string> Shuffle(List<string> values)
+    {
+        System.Random rand = new System.Random();
+        var shuffled = values.OrderBy(_ => rand.Next()).ToList();
+
+        return shuffled;
+    }
+
     public void StartDialogue(string filename)
     {
         dialogueRunner.StartDialogue(filename);
@@ -38,37 +64,54 @@ public class DialogManager : Singleton<DialogManager>
 
     public void EndDialogue()
     {
-        Debug.Log("End of dialogue");
-        // TODO: dialog 종료 후 다른 yarn으로 넘어가기
-
-        // TODO: 현재 상황에 따라 엔딩씬 띄우기
-        if (!isDialogueEnd)
+        dialogIndex += 1;
+        
+        // 엔딩 씬 이후에 엔딩 리뷰 씬으로 넘어가기
+        if (hasSeenEnding)
         {
-            isDialogueEnd = true;
-            StartCoroutine(StartNewDialogue("GameOver"));
-        }
-        else
-        {
-            // 엔딩 씬에서는 엔딩 리뷰 씬으로 넘어가기
             SceneManager.LoadScene("EndingReview");
+            return;
         }
 
-        // TODO: 엔딩 씬 이후에 엔딩 리뷰 씬으로 넘어가기
-        // SceneManager.LoadScene("EndingReview");
+        if (dialogIndex >= dialogList.Count)
+        {
+            Debug.Log("Ending!");
+            // TODO: 게임 종료 후 현재 상황에 따라 엔딩씬 띄우기
+            hasSeenEnding = true;
+            // 조건에 따라 다른 엔딩
+            StartCoroutine(StartNewDialogue("GameOver"));
+            return;
+        }
+
+        // dialog 종료 후 다른 yarn으로 넘어가기
+        StartCoroutine(StartNewDialogue(dialogList[dialogIndex]));
     }
 
     private IEnumerator StartNewDialogue(string dialogueName)
     {
-        // 대화가 종료될 때까지 기다림
-        while (dialogueRunner.Dialogue.IsActive)
-        {
-            Debug.Log("Waiting for dialogue to end...");
-            yield return null;  // 프레임마다 확인
-        }
-
-        // 대화가 종료되면 새로운 대화 시작
-        Debug.Log("Starting new dialogue...");
+        yield return new WaitForSeconds(0.1f); // 시간텀 주기
         dialogueRunner.StartDialogue(dialogueName);
+    }
+
+
+    public void GameOver(GameOverType gameOverType)
+    {
+        // TODO: 게임오버 유형별로 yarn 파일 만들고, 연결하기
+        switch (gameOverType)
+        {
+            case GameOverType.seperation:
+                StartCoroutine(StartNewDialogue("GameOver"));
+                break;
+            case GameOverType.unite:
+                StartCoroutine(StartNewDialogue("GameOver"));
+                break;
+            case GameOverType.other:
+                StartCoroutine(StartNewDialogue("GameOver"));
+                break;
+            default:
+                Debug.LogError("Invalid GameOverType");
+                break;
+        }
     }
 
     [YarnCommand("ChangeStat")]
@@ -93,9 +136,7 @@ public class DialogManager : Singleton<DialogManager>
             return false;
         }
 
-        // TODO: 코인 돌아가는 연출 추가하기, 이때 interaction은 끄기
-
-        return Random.value < successRate;
+        return UnityEngine.Random.value < successRate;
     }
 
     [YarnFunction("TossCoin1")]

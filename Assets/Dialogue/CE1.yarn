@@ -1,0 +1,113 @@
+title: 크리스_은채_첫만남
+tags: 교내식당
+---
+<<SetPortrait Portraits Eun_Neg>>
+<<SetSound EunNeg>>
+은채: 학교밥은 왜 이렇게 맛이 없는 걸까...
+YOU: 그래도 중고등학교 때 급식보다는 낫잖아.
+<<SetPortrait Portraits Eun_Idle>>
+은채: 학교 앞에 맛집이 너무 많아서 입맛이 까다로워진 것 같아.
+은채: 돈만 넉넉하면 맨날 나가서 사먹을텐데.
+YOU: 사회학관에서 정문으로 가는 데만 30분 걸리잖아.
+<<SetPortrait Portraits Eun_Neg>>
+<<SetSound EunAngry>>
+은채: 조용히 해.
+YOU: 웅...
+당신은 침묵 속에 은채와 식사를 했다.
+은채: ...
+식사를 마치면서, 은채는 당신에게 까칠하게 군 것이 미안한지 먼저 말을 걸었다.
+<<SetPortrait Portraits Eun_Blush>>
+은채: 그... 배가 고파서 좀 짜증이 났었나봐. 무안하게 만드려던 건...
+은채가 말하던 중, 멀리서 당신을 부르는 소리가 들려온다.
+<<SetPortrait Portraits Eun_Idle Chris_Smile>>
+크리스: 선배~ 
+YOU: 크리스 안녕~ 웬일로 사회학관에 있네?
+<<SetPortrait Portraits Eun_Idle Chris_Idle>>
+크리스: 문화와 예술을 통해 본 르네상스 역사 중간시험 결과 확인하려고 왔어요.
+YOU: 성실하구나...
+<<SetPortrait Portraits Eun_Angry Chris_Idle>>
+은챼: 누구야?
+YOU: 같이 교양수업 듣는 후배야. 이름은 크리스.
+크리스: 선배도 같이 가요!
+-> 은채야 조금만 기다려줄래? 10분도 안 걸리는데... 이따가 기숙사 데려다줄게.
+    <<if TossCoin2(1, "mov", 1, "lvEun")>>
+        <<jump 성공CE1>>
+    <<else>>
+        <<jump 실패CE1>>
+    <<endif>>
+-> 그럼 나 먼저 가볼게. 다음에 봐 은채야.
+    <<jump 일반CE1>>
+===
+
+
+title: 성공CE1
+---
+<<ChangeStat lvChris +5>>
+<<ChangeStat lvEun +5>>
+<<ChangeStat Chris_Eun +5>>
+<<ChangeStat charm +5>>
+<<SetPortrait Portraits Eun_Smile Chris_Idle>>
+은채: 알았어. 여기서 기다리고 있을게.
+은채: 10분 넘으면 그냥 간다!
+YOU: 응 금방 올게!
+<<SetPortrait Portraits Eun_Idle>>
+당신은 크리스와 중간시험 결과를 확인하러 갔다.
+은채: ...커피나 마실까
+(몇 분 후)
+시계를 보니 11분이 지났다! 당신은 은채가 먼저 떠났을까봐 달려서 식당으로 돌아갔다.
+<<SetPortrait Portraits Eun_Smile>>
+은채: 1분 지각이야!
+YOU: 안 갔네??
+<<SetPortrait Portraits Eun_Idle>>
+은채: 날 얼마나 소인배로 보는 거야?
+<<SetPortrait Portraits Eun_Idle Chris_Neg>>
+크리스: 헉헉... 왜 이렇게 달려가요...
+<<SetPortrait Portraits Eun_Smile Chris_Idle>>
+나레이션: 당신은 은채와 기숙사까지 걸어갔다. 왜인지 크리스도 따라왔다.
+<<SetPortrait Portraits Eun_Idle Chris_Idle>>
+은채: 저 사람은 왜 따라오는 거야?
+<<SetPortrait Portraits Eun_Idle Chris_Smile>>
+크리스: 저 사람 아니고 크리스예요. 이브 크리스.
+은채: 아, 네.
+나레이션: 이 이후로 아무도 입을 열지 않았다.
+===
+
+
+title: 실패CE1
+---
+<<ChangeStat lvChris +5>>
+<<ChangeStat lvEun -5>>
+<<SetPortrait Portraits Eun_Neg Chris_Idle>>
+은채: 됐어. 나도 어차피 할 일 있어서 가봐야돼.
+YOU: 알았어, 그럼. 다음에 봐.
+<<SetPortrait Portraits Chris_Neg>>
+크리스: 미안해요. 제가 괜히...
+YOU: 아니야, 오늘따라 기분이 별로인가봐.
+<<SetPortrait Portraits Chris_Idle>>
+당신은 크리스와 중간시험 결과를 확인하러 간다.
+(몇 분 후)
+당신은 식당에 휴대전화를 두고 왔다는 것을 알아채고 돌아간다.
+<<SetPortrait Portraits Eun_Idle>>
+YOU: 안 갔네??
+은채: 기숙사 데려다준다며.
+<<SetPortrait Portraits Eun_Smile Chris_Idle>>
+당신은 은채와 기숙사까지 걸어갔다. 왜인지 크리스도 따라왔다.
+<<SetPortrait Portraits Eun_Idle Chris_Idle>>
+은채: 저 사람은 왜 따라오는 거야?
+<<SetPortrait Portraits Eun_Idle Chris_Smile>>
+크리스: 저 사람 아니고 크리스예요. 이브 크리스.
+은채: 아, 네.
+이 이후로 아무도 입을 열지 않았다.
+===
+
+
+title: 일반CE1
+---
+<<ChangeStat lvMint +5>>
+<<ChangeStat Chris_Eun -5>>
+<<ChangeStat charm -5>>
+<<SetPortrait Portraits Eun_Idle Chris_Idle>>
+은채: 어... 응, 다음에 봐.
+<<SetPortrait Portraits Chris_Idle>>
+당신은 크리스와 중간시험 결과를 확인하러 갔다.
+===

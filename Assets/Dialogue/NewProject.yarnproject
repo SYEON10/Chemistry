@@ -2,8 +2,10 @@
   "projectFileVersion": 2,
   "sourceFiles": [
     "Test.yarn",
+    "GameOver.yarn",
+    "CE1.yarn",
     "CM1.yarn",
-    "GameOver.yarn"
+    "EM1.yarn"
   ],
   "excludeFiles": [
     "**/*~/*"

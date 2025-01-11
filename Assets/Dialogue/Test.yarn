@@ -1,24 +1,5 @@
 ﻿title: Start
 tags:
 ---
-<<SetBackground Background 1>>
-Start of the game.
-Player: I am character
--> Yes
-    <<ChangeStat mov 10>>
--> No
-    <<ChangeStat mov -10>>
-<<declare $isSuccess = false>>
-<<set $isSuccess = TossCoin1("mov")>>
-<<set $isSuccess = TossCoin2(2, "lvChris", 3, "charm")>>
-<<if $isSuccess == true>>
-    Success!
-<<else>>
-    Fail!
-<<endif>>
-<<set $isSuccess = TossCoin(0.5)>>
-You Toss a Coin!, it's {$isSuccess}!
-<<set $isSuccess = TossCoin(0.5)>>
-You Toss a Coin!, it's {$isSuccess}!
-End of game...
+Test Message
 ===
