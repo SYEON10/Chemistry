@@ -1,0 +1,72 @@
+title: 크리스_민트_고백공격
+tags: 카페
+---
+<<SetBackground Background black>>
+톡, 토독.
+얇게 내리던 비가 점차 거세진다.
+당신은 크리스와 함께 무작정 달려 눈에 보이는 카페로 들어간다.
+무의식적이었을까? 들어간 곳은 민트가 운영하는 카페였다.
+<<SetBackground Background cafe>>
+YOU: 실례합니다...
+<<SetPortrait Portraits Chris_Laugh>>
+<<SetSound Sounds ChrisSmile>>
+크리스: 실례합니다~
+<<SetPortrait Portraits Mint_Smile, Chris_Laugh>>
+민트: (어서오시오.)
+직원실에서 나온 민트는 당신과 크리스에게 수건을 건네주었다.
+민트: (요새 일기예보가 자주 빗나가는 듯 하오. 본인이 따듯한 차라도 내오지.)
+크리스: 와, 고마워요!
+<<SetPortrait Portraits Chris_Idle>>
+당신과 크리스는 카운터와 사뭇 떨어진 자리에 앉았다.
+크리스가 수건으로 붉게 젖은 머리카락을 털었다. 수건 사이로 보이는 녹안이나, 하얀 피부 같은 것들이...
+YOU: ...
+<<SetPortrait Portraits>>
+머그컵과 티스푼이 부딪혀 달그락거리는 소리가 카페를 메운다.
+(wait 2)
+당신은 어색한 듯, 설레는 듯, ... 묘한 감정을 느낀다.
+-> 크리스, 할 말이 있는데...
+    TossCoin2(0, "lvChris", 0, "lvChris")
+    <<jump 실패CM4>>
+-> 오늘 날씨 진짜 별로다.
+    <<jump 일반CM4>>
+===
+
+title: 실패CM4
+---
+
+고개를 어찌 둘 줄 몰라 우물쭈물 책상만 내려보던 당신은,
+YOU: ...네가 좋은 것 같아.
+(wait 2)
+고개를 들었을 때,
+<<SetPortrait Portraits Mint_Shoke>>
+김이 나는 머그컵을 트레이에 들고 온 민트와 눈이 마주친다.
+훅 끼치는 얼그레이 향이 짙다.
+<<SetPortrait Portraits Chris_Shoke>>
+<<SetSound Sounds ChrisGasp>>
+크리스는 그 다정한 성정에, 꼴에 좀 곤란한 얼굴을 하고 있다.
+<<SetPortrait Portraits Chris_Neg>>
+그 곤란한 얼굴이 패닉으로 물든 것을 알아차렸을 즈음에는,
+<<SetPortrait Portrairts>>
+이미 자리에서 일어나 몸을 돌린 뒤였다.
+크리스는 그는 카페 문을 박차고 도망치듯 그 자리를 벗어났다.
+그 뒤로 다시는 그 붉은 머리칼을 볼 수 없었다.
+<<ChangeStat charm -100>>
+===
+
+title: 일반CM4
+---
+<<SetPortrait Portraits Chris_Smile>>
+<<SetSound Sounds ChrisSmile>>
+크리스: 맞아요. 분명 오늘 아침에 일기예보도 확인하고 나왔는데!
+탄식하며 의자에 체중을 실어 기댄다. 이어지는 투정.
+크리스: 기껏 선배랑 놀러 나왔는데~
+<<SetPortrait Portraits Mint_Idle, Chris_Smile>>
+그때, 민트가 김이 나는 얼그레이를 테이블 위에 올려주고 크리스의 옆자리에 앉는다.
+민트: (비 오는 날 카페도 나름 운치 있지 않나.)
+<<SetSound Sounds MintLaugh>>
+<<SetPortrait Portraits Mint_Smile, Chris_Smile>>
+YOU: 맞아요. 이런 날도 나쁘지만은 않네요.
+그렇게 우리 셋은 담소를 나누다 비가 멎을 즈음 헤어졌다.
+<<SetPortrait Portraits>>
+당신은 그날 뜨거운 차를 마시다 혀를 데였을지도 모르겠다.
+===

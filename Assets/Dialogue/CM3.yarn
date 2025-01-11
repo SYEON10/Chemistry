@@ -1,5 +1,5 @@
 title: 크리스_민트_세번째
-tags: 신촌거리, 카페
+tags: 신촌거리, 도서관
 ---
 <<SetBackground Background sinchon>>
 <<SetPortrait Portraits Chris_Idle>>
@@ -26,30 +26,116 @@ YOU: (묘하게 기뻐보인다.)
 크리스: 아, 민트 사장님! 여기서 만나네요!
 YOU: 안녕하세요~
 민트: (따라오시오.)
--> 
+-> 정말로 공부를 해야하니 정중하게 거절한다.
     <<if TossCoin1("mental")>>
         <<jump 성공CM3>>
     <<else>>
         <<jump 실패CM3>>
     <<endif>>
--> 잔다.
+-> 좋아요!
     <<jump 일반CM3>>
 ===
 
 
 title: 성공CM3
 ---
-
+<<ChangeStat Mint_Chris +10>>
+<<ChangeStat lvMint +5>>
+<<ChangeStat lvChris +5>>
+<<ChangeStat charm +5>>
+YOU: 저희도 정말 그러고 싶지만...
+YOU: 시험이 곧이라 진짜 공부하러 가야해요...
+<<SetPortrait Portraits Chris_Blush Mint_Idle>>
+크리스: 정말 아쉽지만 맞는 말이에요...
+<<SetPortrait Portraits Chris_Blush Mint_Smile>>
+민트: (걱정마시오, 본인도 공부를 하러가는 길이니)
+당신과 크리스가 민트를 따라서 간 곳은 의외로...
+<<SetBackground Background library>>
+동네 도서관이었다.
+YOU: 커피공방같은 곳일 줄 알았는데...
+<<SetPortrait Portraits Chris_Idle Mint_Neg>>
+민트: (다 들리오.)
+민트: (본인도 책 정도는 읽을 줄 안다오.)
+<<SetPortrait Portraits Chris_Smile Mint_Neg>>
+크리스: 선배도 그런 의미는 아니었을 거예요.
+<<SetPortrait Portraits Chris_Blush2 Mint_Idle>>
+크리스: 저도 내심 딴짓하고 싶었거든요. 헤헤.
+YOU: ??
+<<SetPortrait Portraits Chris_Blush2 Mint_Laugh>>
+민트: (다들 똑같은 생각을 하는 것 같소.)
+YOU: 요즘들어 민트 사장님의 웃음장벽이 낮아진 것 같단 말이지...
+당신을 위화감을 느낀다.
+<<SetPortrait Portraits Chris_Smile Mint_Laugh>>
+크리스: 자, 이제 도서관 안이니까 조용히 해야해요...!
 ===
 
 
 title: 실패CM3
 ---
-
+<<ChangeStat Mint_Chris +10>>
+<<ChangeStat lvMint +5>>
+<<ChangeStat lvChris -5>>
+<<ChangeStat charm -5>>
+당신은 도저히 공부를 하고 싶지 않다!
+YOU: 네!!
+<<SetPortrait Portraits Chris_Shock Mint_Idle>>
+크리스: 선배! 저랑 공부하기로 했잖아요!
+<<SetPortrait Portraits Chris_Neg Mint_Idle>>
+크리스: 가끔 진짜 너무해요...
+YOU: 미안해... 근데 오늘은 공부하기 싫어서 미칠 것 같아
+<<SetPortrait Portraits Chris_Blush Mint_Smile>>
+민트: (걱정마시오, 본인도 공부를 하러가는 길이니)
+YOU: 네?
+YOU: 사장님도 정말 너무하세요...
+<<SetPortrait Portraits Chris_Blush2 Mint_Laugh>>
+당신과 크리스가 민트를 따라서 간 곳은 의외로...
+<<SetBackground Background library>>
+동네 도서관이었다.
+YOU: 커피공방같은 곳일 줄 알았는데...
+<<SetPortrait Portraits Chris_Idle Mint_Neg>>
+민트: (다 들리오.)
+민트: (본인도 책 정도는 읽을 줄 안다오.)
+<<SetPortrait Portraits Chris_Smile Mint_Neg>>
+크리스: 선배도 그런 의미는 아니었을 거예요.
+<<SetPortrait Portraits Chris_Blush2 Mint_Idle>>
+크리스: 저도 내심 딴짓하고 싶었거든요. 헤헤.
+YOU: ??
+<<SetPortrait Portraits Chris_Blush2 Mint_Laugh>>
+민트: (다들 똑같은 생각을 하는 것 같소.)
+YOU: 요즘들어 민트 사장님의 웃음장벽이 낮아진 것 같단 말이지...
+당신을 위화감을 느낀다.
+<<SetPortrait Portraits Chris_Smile Mint_Laugh>>
+크리스: 자, 이제 도서관 안이니까 조용히 해야해요...!
 ===
 
 
 title: 일반CM3
 ---
-
+<<ChangeStat Mint_Chris +10>>
+<<ChangeStat lvMint +5>>
+<<ChangeStat lvChris -5>>
+<<ChangeStat charm -5>>
+<<SetPortrait Portraits Chris_Shock Mint_Idle>>
+크리스: 선배! 저랑 공부하기로 했잖아요!
+YOU: 미안해... 근데 오늘은 공부하기 싫어서 미칠 것 같아
+민트: (걱정마시오, 본인도 공부를 하러가는 길이니)
+YOU: 네? 이럴수가.
+<<SetPortrait Portraits Chris_Blush2 Mint_Laugh>>
+당신과 크리스가 민트를 따라서 간 곳은 의외로...
+<<SetBackground Background library>>
+동네 도서관이었다.
+YOU: 커피공방같은 곳일 줄 알았는데...
+<<SetPortrait Portraits Chris_Idle Mint_Neg>>
+민트: (다 들리오.)
+민트: (본인도 책 정도는 읽을 줄 안다오.)
+<<SetPortrait Portraits Chris_Smile Mint_Neg>>
+크리스: 선배도 그런 의미는 아니었을 거예요.
+<<SetPortrait Portraits Chris_Blush2 Mint_Idle>>
+크리스: 저도 내심 딴짓하고 싶었거든요. 헤헤.
+<<SetPortrait Portraits Chris_Blush2 Mint_Laugh>>
+민트: (다들 똑같은 생각을 하는 것 같소.)
+YOU: 요즘들어 민트 사장님의 웃음장벽이 낮아진 것 같단 말이지...
+당신을 위화감을 느낀다.
+<<SetPortrait Portraits Chris_Smile Mint_Laugh>>
+크리스: 자, 이제 도서관 안이니까 조용히 해야해요...!
 ===
