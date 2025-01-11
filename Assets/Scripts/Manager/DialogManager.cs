@@ -6,13 +6,14 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Yarn.Unity;
 
 public class DialogManager : Singleton<DialogManager>
 {
     public DialogueRunner dialogueRunner;
     [SerializeField] private OptionsListView dialogueOption;
-    [SerializeField] private TextMeshProUGUI stepText;
+    [SerializeField] private Image stepImage;
     public static CoinDisplay coinDisplay;
     public static bool result;
     private List<string> dialogList;
@@ -114,10 +115,9 @@ public class DialogManager : Singleton<DialogManager>
 
     private IEnumerator StartNewDialogue(string dialogueName)
     {
-        
-        stepText.gameObject.SetActive(true);
+        stepImage.gameObject.SetActive(true);
         yield return new WaitForSeconds(1f); // 시간텀 주기
-        stepText.gameObject.SetActive(false);
+        stepImage.gameObject.SetActive(false);
         dialogueRunner.StartDialogue(dialogueName);
     }
 
