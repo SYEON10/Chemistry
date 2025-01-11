@@ -14,11 +14,14 @@ public class DialogManager : Singleton<DialogManager>
     public DialogueRunner dialogueRunner;
     [SerializeField] private OptionsListView dialogueOption;
     [SerializeField] private Image stepImage;
+    [SerializeField] private Image endingImage;
+    [SerializeField] private PortraitDisplay portraitDisplay;
     public static CoinDisplay coinDisplay;
     public static bool result;
     private List<string> dialogList;
     private int dialogIndex = 0;
     private bool hasSeenEnding = false;
+    private string fullText;
 
     void Awake()
     {
@@ -34,8 +37,7 @@ public class DialogManager : Singleton<DialogManager>
 
     void Init()
     {
-        List<string> earlyDialog = new List<string>() { "크리스_은채_첫만남", "크리스_민트_첫만남", "은채_민트_첫만남" };
-        // List<string> earlyDialog = new List<string>() { "Start" };
+        List<string> earlyDialog = new List<string>() { "크리스_은채_첫만남" };
         List<string> midDialog = new List<string>() { };
         List<string> lastDialog = new List<string>() { };
         dialogList = new List<string>();
@@ -121,6 +123,7 @@ public class DialogManager : Singleton<DialogManager>
 
     private IEnumerator StartNewDialogue(string dialogueName)
     {
+        portraitDisplay.SetPortrait();
         stepImage.gameObject.SetActive(true);
         yield return new WaitForSeconds(1f); // 시간텀 주기
         stepImage.gameObject.SetActive(false);
@@ -129,9 +132,26 @@ public class DialogManager : Singleton<DialogManager>
 
     private IEnumerator StartNewDialogue_Ending(string dialogueName)
     {
-        //TODO: 엔딩 전용 전환 효과 만들기
+        portraitDisplay.SetPortrait();
+        endingImage.gameObject.SetActive(true);
+
+        TextMeshProUGUI textMeshProUGUI = endingImage.GetComponentInChildren<TextMeshProUGUI>();
+        fullText = "친구들과 며칠간 연락이 끊겼다. \n그러던 어느날...";
+        yield return StartCoroutine(TypeText(textMeshProUGUI));
+        
         yield return new WaitForSeconds(1f); // 시간텀 주기
+        endingImage.gameObject.SetActive(false);
         dialogueRunner.StartDialogue(dialogueName);
+    }
+
+    private IEnumerator TypeText(TextMeshProUGUI targetText)
+    {
+        targetText.text = "";
+        foreach (char c in fullText)
+        {
+            targetText.text += c;
+            yield return new WaitForSeconds(0.05f);
+        }
     }
 
     public void GameOver(GameOverType gameOverType)
