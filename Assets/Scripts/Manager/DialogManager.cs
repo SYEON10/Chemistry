@@ -12,6 +12,7 @@ public class DialogManager : Singleton<DialogManager>
 
     void Awake()
     {
+        base.Awake();
         coinDisplay = GetComponentInChildren<CoinDisplay>();
     }
 
