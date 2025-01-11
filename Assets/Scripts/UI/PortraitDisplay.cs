@@ -12,21 +12,19 @@ public class PortraitDisplay : MonoBehaviour
     [SerializeField] private CanvasGroup canvasGroup;
     public List<Image> images;
     public int portraitNumber { get; private set; }
-    private const int MIN_PORTRAIT_NUMBER = 1;
+    private const int MIN_PORTRAIT_NUMBER = 0;
     private const int MAX_PORTRAIT_NUMBER = 3;
     private float fadeDuration = 0.2f; // 페이드 지속 시간
     private List<string> previousSpriteNames = new List<string>();
 
     [YarnCommand("SetPortrait")]
-    public void SetPortrait(string[] parameters)
+    public void SetPortrait(string[] parameters = null)
     {
-        List<string> spriteNames = parameters.ToList();
-        if (spriteNames.Count < MIN_PORTRAIT_NUMBER)
-        {
-            Debug.LogError("Not enough arguments for SetPortrait command");
-            return;
-        }
-        else if (spriteNames.Count > MAX_PORTRAIT_NUMBER)
+        List<string> spriteNames;
+        if (parameters != null) spriteNames = parameters.ToList();
+        else spriteNames = new List<string>();
+        
+        if (spriteNames.Count > MAX_PORTRAIT_NUMBER)
         {
             Debug.LogWarning("Too many arguments for SetPortrait command");
             spriteNames.RemoveRange(MAX_PORTRAIT_NUMBER, spriteNames.Count - MAX_PORTRAIT_NUMBER);

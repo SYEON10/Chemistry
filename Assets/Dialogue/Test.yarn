@@ -1,6 +1,7 @@
 ﻿title: Start
 tags:
 ---
+<<SetBackground Background 1>>
 Start of the game.
 Player: I am character
 -> Yes
