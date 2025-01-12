@@ -2,6 +2,7 @@ title: 크리스_은채_두번째
 tags: 도서관, 카페
 ---
 <<SetBackground Background library>>
+<<SetPortrait Portraits>>
 YOU: (죽겠다...)
 YOU: (한 수업에 과제를 하나씩 주면 난 동시에 6개를 해야한다고...)
 당신은 짐을 챙겨 도서관 밖으로 나섰다.
@@ -27,24 +28,28 @@ YOU: 넌 날 너무 잘 알아.
 <<SetPortrait Portraits Chris_Idle Eun_Idle>>
 은채: 흥.
 <<SetPortrait Portraits Chris_Shock>>
-<<SetSound ChrisShock>>
+<<SetSound ChrisGasp>>
 크리스: 앗. 들어가버리셨네...
 당신은 은채가 왜 이렇게 크리스를 싫어하는지 의문을 가진다.
 주방에서 대화 소리가 들리더니 민트가 카운터로 나왔다.
 <<SetPortrait Portraits Chris_Idle Mint_Smile>>
 민트: (어서 오...)
 <<SetPortrait Portraits Chris_Shock Mint_Idle>>
+<<SetSound ChrisGasp>>
 크리스: 앗 저번에 봤던...
 <<SetPortrait Portraits Chris_Idle Mint_Idle>>
 크리스: ...
 <<SetPortrait Portraits Chris_Blush Mint_Idle>>
+<<SetSound ChrisSigh>>
 크리스: 저, 저번에는 죄송했어요.
 크리스: 그렇게 놀라놓고 도망가서는 안 됐는데...
 민트: (그렇게 사과해주니 고맙소. 마음에 두시 마시오.)
 <<SetPortrait Portraits Chris_Smile Mint_Smile>>
+<<SetSound MintSmile>>
 <<SetPortrait Portraits Mint_Idle>>
 민트: (은채 학생은 조금 쉬어도 괜찮소.)
 <<SetPortrait Portraits Mint_Idle Eun_Smile>>
+<<SetSound EunSmile>>
 은채: 감사합니다!
 <<SetPortrait Portraits Eun_Smile>>
 은채는 앞치마를 벗고 주방에서 나와 당신 맞은 편에 앉았다.
@@ -78,24 +83,54 @@ title: 성공CE2
 <<ChangeStat Chris_Eun +10>>
 <<ChangeStat charm +5>>
 <<SetPortrait Portraits Eun_Neg>>
+<<SetSound EunSigh>>
 은채: ... ...
 은채: 그...
 <<SetPortrait Portraits Eun_Blush>>
+<<SetSound EunNeg>>
 은채: 너랑 같이 있을 때마다 끼어들려고 하잖아...
 은채: 안 그래도 졸업 준비 때문에 바빠서 만날 시간도 없는데
 은채: 짜증나.
 당신은 생각지도 못한 답변에 당황한다.
 YOU: 뭐? 그런 거면 말을 하지
 <<SetPortrait Portraits Eun_Idle>>
+<<SetSound EunSigh>>
 은채: 말해봤자 바쁜건 여전한데 뭐...
 YOU: 그래도 나쁜 마음으로 그러는 건 아니야.
 YOU: 그리고 그... 네가 좋아하는 락밴드 있잖아...
 은채: 뮤츠?
 YOU: 어엉 그거... 크리스도 걔네 노래 듣던데?
 <<SetPortrait Portraits Eun_Shock>>
+<<SetSound EunGasp>>
 은채: 뭣?
-은채: 
-<<SetPortrait Portraits Eun_Idle>>
+<<SetPortrait Portraits Eun_Laugh>>
+<<SetSound EunLaugh>>
+은채: 좀 들을 줄 아네?
+은채가 최근에 이렇게 밝게 웃는 건 처음 본다.
+<<SetPortrait Portraits Eun_Laugh Chris_Idle>>
+크리스: 뭐예요? 뭐 재밌는 이야기 하고 있었어요?
+<<SetPortrait Portraits Eun_Idle Chris_Neg>>
+크리스: 설마 제 뒷담?
+은채: ...
+<<SetPortrait Portraits Eun_Idle Chris_Neg>>
+<<SetSound EunSmile>>
+은채: 맞아
+<<SetPortrait Portraits Eun_Idle Chris_Shock>>
+<<SetSound ChrisGasp>>
+크리스: 앗...!
+<<SetPortrait Portraits Eun_Idle Chris_Blush>>
+크리스: 저 그냥 다른 데 앉을게요...
+<<SetPortrait Portraits Eun_Smile Chris_Blush>>
+은채: 아니야! 그냥 여기 않아.
+<<SetPortrait Portraits Eun_Smile Chris_Shock>>
+<<SetSound ChrisSmile>>
+크리스: 정말 그래도 돼요?
+<<SetPortrait Portraits Eun_Smile Chris_Laugh>>
+크리스: 감사합니다!
+은채가 자신의 옆자리를 치워 크리스가 앉을 수 있도록 해주었다.
+의외로 둘은 죽이 잘 맞았고
+대화 주제는 점점 락밴드로 흘러갔다.
+덕분에 나는 대화에 거의 끼지 못했다...
 ===
 
 
@@ -106,21 +141,26 @@ title: 실패CE2
 <<ChangeStat Chris_Eun -10>>
 <<ChangeStat charm +5>>
 <<SetPortrait Portraits Eun_Neg>>
+<<SetSound EunSigh>>
 은채: ... ...
 은채: 그...
 <<SetPortrait Portraits Eun_Blush>>
+<<SetSound EunNeg>>
 은채: 너랑 같이 있을 때마다 끼어들려고 하잖아...
 은채: 안 그래도 졸업 준비 때문에 바빠서 만날 시간도 없는데
 은채: 짜증나.
 당신은 생각지도 못한 답변에 당황한다.
 YOU: 뭐? 그런 거면 말을 하지
 <<SetPortrait Portraits Eun_Idle>>
+<<SetSound EunSigh>>
 은채: 말해봤자 바쁜건 여전한데 뭐...
 은채: 아무튼 오늘은 절대 안 돼. 다른 자리에 앉으라고 해!
 은채: 가게도 텅텅 비는데 왜 굳이 여기 앉으려는 거야?!
 <<SetPortrait Portraits Eun_Idle Chris_Shock>>
+<<SetSound ChrisGasp>>
 크리스: 저, 전 그러려던 게 아니라...
 <<SetPortrait Portraits Eun_Idle Chris_Blush>>
+<<SetSound ChrisNeg>>
 크리스: 그... 죄송해요...
 <<ChangeStat lvChris -100>>
 ===
@@ -133,6 +173,7 @@ title: 일반CE2
 <<ChangeStat Chris_Eun -10>>
 <<ChangeStat charm -5>>
 <<SetPortrait Portraits Eun_Neg>>
+<<SetSound EunSigh>>
 은채: 몰라. 너도 짜증나.
 <<SetPortrait Portraits>>
 은채는 주방 안으로 들어갔다.
@@ -142,6 +183,7 @@ title: 일반CE2
 크리스: 어라? 은채 씨는요?
 YOU: 어... 사장님이 불러서 간 것 같아.
 <<SetPortrait Portraits Chris_Idle>>
+<<SetSound ChrisSigh>>
 크리스: 제가 또... 누굴 불편하게 만든 건 아니겠죠?
 YOU: 아니야! 그냥 일하러 간 것뿐이니까 너무 걱정하지마.
 크리스는 당신 말을 믿지 않는듯 했다.
