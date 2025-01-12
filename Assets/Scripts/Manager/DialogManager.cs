@@ -32,7 +32,7 @@ public class DialogManager : MonoBehaviour
         dialogIndex = 0;
         StartDialogue(dialogList[dialogIndex]);
     }
-    
+
     void Init()
     {
         List<string> earlyDialog = new List<string>() { "크리스_은채_첫번째", "크리스_민트_첫번째", "은채_민트_첫번째" };
@@ -99,26 +99,48 @@ public class DialogManager : MonoBehaviour
             int Chris_Eun = GameManager.Instance.data.GetStat(StatEnum.Chris_Eun).value;
             int Eun_Mint = GameManager.Instance.data.GetStat(StatEnum.Eun_Mint).value;
             int Mint_Chris = GameManager.Instance.data.GetStat(StatEnum.Mint_Chris).value;
-            if (GameManager.Instance.data.GetStat(StatEnum.Chris_Eun).value > 70)
+
+            // 70 이상인 값과 해당 엔딩을 리스트로 저장
+            var endingCandidates = new List<(int value, string ending)>
+{
+    (Chris_Eun, "크리스_은채_엔딩"),
+    (Eun_Mint, "은채_민트_엔딩"),
+    (Mint_Chris, "민트_크리스_엔딩")
+}.Where(x => x.value > 70) // 70 이상인 경우만 필터링
+             .ToList();
+
+            // 70 이상인 값이 하나도 없으면 아무런 엔딩도 트리거하지 않음
+            if (endingCandidates.Count == 0)
             {
-                // 크리스 은채 엔딩
-                StartCoroutine(StartNewDialogue_Ending("크리스_은채_엔딩"));
-            }
-            else if (GameManager.Instance.data.GetStat(StatEnum.Eun_Mint).value > 70)
-            {
-                // 은채 민트 엔딩
-                StartCoroutine(StartNewDialogue_Ending("은채_민트_엔딩"));
-            }
-            else if (GameManager.Instance.data.GetStat(StatEnum.Mint_Chris).value > 70)
-            {
-                // 민트 크리스 엔딩
-                StartCoroutine(StartNewDialogue_Ending("민트_크리스_엔딩"));
+                StartCoroutine(StartNewDialogue_Ending("모두_친구_엔딩"));
             }
             else
             {
-                // 모두 친구 엔딩
-                StartCoroutine(StartNewDialogue_Ending("모두_친구_엔딩"));
+                // 가장 큰 값을 가진 엔딩 선택
+                var bestEnding = endingCandidates.OrderByDescending(x => x.value).First();
+                StartCoroutine(StartNewDialogue_Ending(bestEnding.ending));
             }
+
+            // if (Chris_Eun > 70)
+            // {
+            //     // 크리스 은채 엔딩
+            //     StartCoroutine(StartNewDialogue_Ending("크리스_은채_엔딩"));
+            // }
+            // else if (Eun_Mint > 70)
+            // {
+            //     // 은채 민트 엔딩
+            //     StartCoroutine(StartNewDialogue_Ending("은채_민트_엔딩"));
+            // }
+            // else if (Mint_Chris > 70)
+            // {
+            //     // 민트 크리스 엔딩
+            //     StartCoroutine(StartNewDialogue_Ending("민트_크리스_엔딩"));
+            // }
+            // else
+            // {
+            //     // 모두 친구 엔딩
+            //     StartCoroutine(StartNewDialogue_Ending("모두_친구_엔딩"));
+            // }
             return;
         }
 
