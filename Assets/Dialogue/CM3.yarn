@@ -129,7 +129,7 @@ YOU: 요즘들어 민트 사장님의 웃음장벽이 낮아진 것 같단 말�
 
 title: 일반CM3
 ---
-<<ChangeStat Mint_Chris +10>>
+<<ChangeStat Mint_Chris +5>>
 <<ChangeStat lvMint +5>>
 <<ChangeStat lvChris -5>>
 <<ChangeStat charm -5>>

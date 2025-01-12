@@ -85,7 +85,7 @@ YOU: 손을 잡고 있었던 것 같은데...
 
 title: 일반CM2
 ---
-<<ChangeStat Mint_Chris +10>>
+<<ChangeStat Mint_Chris +5>>
 <<ChangeStat mov -5>>
 당신은 2시간 동안 푹 자고 일어났다.
 YOU: (영화가 아직도 안 끝났다고?)

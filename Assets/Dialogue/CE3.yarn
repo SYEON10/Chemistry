@@ -57,7 +57,7 @@ title: 성공CE3
 ---
 <<ChangeStat lvEun +5>>
 <<ChangeStat lvChris +5>>
-<<ChangeStat Chris_Eun +5>>
+<<ChangeStat Chris_Eun +10>>
 <<ChangeStat charm +5>>
 <<ChangeStat mov +5>>
 <<ChangeStat mental +5>>
