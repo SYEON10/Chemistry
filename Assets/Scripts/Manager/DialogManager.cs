@@ -37,13 +37,16 @@ public class DialogManager : Singleton<DialogManager>
 
     void Init()
     {
-        List<string> earlyDialog = new List<string>() { "크리스_은채_세번째" };
-        // List<string> earlyDialog = new List<string>() { "크리스_은채_첫만남", "크리스_민트_첫만남", "은채_민트_첫만남" };
-        List<string> midDialog = new List<string>() { };
-        List<string> lastDialog = new List<string>() { };
+        List<string> earlyDialog = new List<string>() { "크리스_은채_첫번째", "크리스_민트_첫번째", "은채_민트_첫번째" };
+        List<string> midDialog = new List<string>() { "크리스_은채_두번째", "크리스_은채_세번째",
+            "크리스_민트_두번째", "크리스_민트_세번째", "은채_민트_두번째", "은채_민트_세번째"}; // 중간거는 6개인데, 3~4개정도만 내보내기
+        List<string> lastDialog = new List<string>() { "크리스_은채_네번째", "크리스_민트_네번째", "은채_민트_네번째" };
         dialogList = new List<string>();
         dialogList.AddRange(Shuffle(earlyDialog));
-        dialogList.AddRange(Shuffle(midDialog));
+        List<string> temp = Shuffle(midDialog);
+        dialogList.Add(temp[0]);
+        dialogList.Add(temp[1]);
+        dialogList.Add(temp[2]);
         dialogList.AddRange(Shuffle(lastDialog));
     }
 

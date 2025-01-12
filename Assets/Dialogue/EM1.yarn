@@ -1,6 +1,7 @@
-title: 은채_민트_첫만남
+title: 은채_민트_첫번째
 tags: 신촌거리, 카페
 ---
+<<SetBackground Background sinchon>>
 YOU: 집 가서 빨리 잠이나 자고 싶다...
 YOU: 밤샜더니 죽을 것 같아...
 은채: 야~ 어디가?
@@ -15,6 +16,7 @@ YOU: 음...
 은채: 케이크도 먹어도 돼.
 YOU: 가자.
 <<SetPortrait Portraits Eun_Smile>>
+<<SetBackground Background cafe>>
 당신은 은채와 "민트 카페"라는 가게에 들어간다.
 카페는 사람들로 가득 차 있었으나 운 좋게 테이블 하나가 막 빈 것 같다.
 YOU: 여긴 카공할 분위기는 아닌 것 같은데?
@@ -64,15 +66,15 @@ YOU: 사장님?
 민트: ...
 <<SetPortrait Portraits Mint_Shock>>
 민트: ...!
-<SetSound MintIdle1>
+<<SetSound MintIdle1>>
 민트: (정말 미안하오.)
 <<SetPortrait Portraits Mint_Blush>>
-<SetSound MintIdle2>
+<<SetSound MintIdle2>>
 민트: (털갈이 중인지라...)
 <<SetPortrait Portraits Mint_Blush Eun_Idle>>
 은채: 난 괜찮은데...
 <<SetPortrait Portraits Mint_Idle Eun_Idle>>
-<SetSound MintIdle1>
+<<SetSound MintIdle1>>
 민트: (원한다면 새로 만들어주겠소.)
 YOU: ...
 YOU: 아뇨, 깃털 좀 더 넣어주실 수 있나 해서요.
@@ -81,9 +83,9 @@ YOU: 아뇨, 깃털 좀 더 넣어주실 수 있나 해서요.
 민트: ??
 은채: 으...
 <<SetPortrait Portraits Mint_Smile Eun_Neg>>
-<SetSound MintIdle1>
+<<SetSound MintIdle1>>
 민트: (그건 어렵겠소만...)
-<SetSound MintIdle2>
+<<SetSound MintIdle2>>
 민트: (휘낭시에 하나 서비스로 드리겠소.)
 <<SetPortrait Portraits Eun_Smile>>
 당신과 은채는 자리로 돌아와 각자의 할 일을 시작한다.
