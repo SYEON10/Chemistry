@@ -111,7 +111,7 @@ YOU: 우욱... 더는 못 먹겠어...
 <<SetPortrait Portraits>>
 민트가 당신을 잠깐 쳐다보더니 아무말도 없이 주방으로 돌아갔다.
 당신은 엄청난 경멸을 느낀다...
-<<ChangeStat lvMint -100>>
+<<ChangeStat lvMint -20>>
 ===
 
 
