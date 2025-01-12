@@ -50,6 +50,7 @@ title: 성공CM1
 <<SetPortrait Portraits Chris_Neg Mint_Idle>>
 크리스: 아... 그...
 크리스: 죄송해요. 제가 너무 쳐다봤죠?
+<<SetSound MintIdle1>>
 민트: (신촌에서 퍼리 처음 보오?)
 <<SetPortrait Portraits Chris_Shock Mint_Idle>>
 <<SetSound ChrisShock>>
@@ -57,6 +58,7 @@ title: 성공CM1
 크리스: 역시 이상해!
 크리스는 당신과 민트를 두고 어딘가로 가버렸다...
 YOU: 아... 원래 저런 친구는 아닌데 미안해요. 
+<<SetSound MintIdle2>>
 민트: ...
 ===
 
@@ -71,6 +73,7 @@ title: 실패CM1
 크리스: 네? 인형탈 쓴 사람을 쳐다보는 게 뭐가 이상해요?
 크리스: 선배는 디즈니랜드에서 미키마우스 알바를 쓰는 이유가 뭐겠어요. 구경하라고 있는 거잖아요.
 YOU: 윽...
+<<SetSound MintIdle2>>
 민트: (탈이 아니라 본인의 몸이오.)
 <<SetPortrait Portraits Chris_Shock Mint_Idle>>
 <<SetSound ChrisShock>>
@@ -79,6 +82,7 @@ YOU: 윽...
 <<SetPortrait Portraits Mint_Idle>>
 크리스는 당신과 민트를 두고 어딘가로 가버렸다...
 YOU: 아... 원래 저런 친구는 아닌데 미안해요. 
+<<SetSound MintIdle1>>
 민트: ...
 ===
 
