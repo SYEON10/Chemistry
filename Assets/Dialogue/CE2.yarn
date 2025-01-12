@@ -168,7 +168,7 @@ YOU: 뭐? 그런 거면 말을 하지
 <<SetPortrait Portraits Eun_Idle>>
 YOU: 화가 많이 난 것 같은데...
 이후로 다시는 크리스를 볼 수 없었다.
-<<ChangeStat lvChris -100>>
+<<ChangeStat lvChris -20>>
 ===
 
 

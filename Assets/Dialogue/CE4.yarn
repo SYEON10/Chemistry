@@ -124,7 +124,7 @@ YOU: 네가 그때로 돌아오면 좋겠어...
 은채는 당신의 손을 뿌리치고 떠난다.
 <<SetPortrait Portraits>>
 다시는 당신과 마주치려 하지 않을 것이다.
-<<ChangeStat charm -100>>
+<<ChangeStat charm -50>>
 ===
 title: 일반CE4
 ---
