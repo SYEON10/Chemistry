@@ -56,7 +56,7 @@ title: 성공EM1
 <<ChangeStat lvEun +5>>
 <<ChangeStat lvMint +5>>
 <<ChangeStat mov +5>>
-<<ChangeStat Eun_Mint +5>>
+<<ChangeStat Eun_Mint +10>>
 <<SetPortrait Portraits>>
 당신은 솜털을 들고 카운터로 간다.
 YOU: 사장님!
@@ -97,7 +97,7 @@ title: 실패EM1
 ---
 <<ChangeStat lvEun +5>>
 <<ChangeStat mov +5>>
-<<ChangeStat Eun_Mint -10>>
+<<ChangeStat Eun_Mint -5>>
 <<SetPortrait Portraits Eun_Idle>>
 은채: 난 괜찮아.
 <<SetSound MintCurious>>

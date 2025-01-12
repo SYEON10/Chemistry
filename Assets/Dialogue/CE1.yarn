@@ -46,7 +46,7 @@ title: 성공CE1
 ---
 <<ChangeStat lvChris +5>>
 <<ChangeStat lvEun +5>>
-<<ChangeStat Chris_Eun +5>>
+<<ChangeStat Chris_Eun +10>>
 <<ChangeStat charm +5>>
 <<SetPortrait Portraits Eun_Smile Chris_Idle>>
 <<SetSound EunSmile>>

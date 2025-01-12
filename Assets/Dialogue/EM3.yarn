@@ -35,6 +35,7 @@ title: 성공EM3
 ---
 <<ChangeStat lvEun +5>>
 <<ChangeStat charm +5>>
+<<ChangeStat Eun_Mint +5>>
 <<SetPortrait Portraits Eun_Idle>>
 가방에서 화상 연고를 발견했다.
 YOU: 우선 찬 물에 식히고, 이거 이따가 발라.
@@ -61,7 +62,7 @@ title: 실패EM3
 
 title: 일반EM3
 ---
-<<ChangeStat Eun_Mint +5>>
+<<ChangeStat Eun_Mint +10>>
 은채는 흐르는 물에 손을 식힌다.
 <<SetPortrait Portraits Eun_Idle Mint_Idle>>
 <<SetSound MintCurious>>

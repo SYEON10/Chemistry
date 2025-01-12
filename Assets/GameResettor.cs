@@ -6,6 +6,7 @@ public class GameResettor : MonoBehaviour
 
     void Start()
     {
+        Debug.Log($"needReset: {needReset}");
         if (needReset)
         {
             FindAnyObjectByType<DialogManager>().Reset();

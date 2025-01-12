@@ -51,6 +51,7 @@ YOU: 응... 재밌더라. 여주인공이 아주 인상적이었어.
 
 title: 일반EM4
 ---
+<<ChangeStat Eun_Mint +15>>
 <<SetBackground Background cinema>>
 <<SetPortrait Portraits Eun_Smile Mint_Idle>>
 <<SetSound Eun_Smile>>

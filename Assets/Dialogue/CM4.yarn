@@ -57,6 +57,7 @@ YOU: ...네가 좋은 것 같아.
 
 title: 일반CM4
 ---
+<<ChangeStat Mint_Chris +15>>
 <<SetPortrait Portraits Chris_Smile>>
 <<SetSound ChrisSmile>>
 크리스: 맞아요. 분명 오늘 아침에 일기예보도 확인하고 나왔는데!
