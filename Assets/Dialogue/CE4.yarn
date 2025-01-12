@@ -1,7 +1,8 @@
 title: 크리스_은채_네번째
 tags: 신촌거리
+position: -35,-149
 ---
-<<SetBackGround Background sinchon>>
+<<SetBackground Background sinchon>>
 <<SetPortrait Portraits>>
 부산여행 일주일 전에 약속이 취소된 당신은 하릴없이 거리를 떠돌고 있었다.
 YOU: 비는 시간이 생겨도 뭐 할만한 일은 없는데...
@@ -16,14 +17,15 @@ YOU: (은채가 락페스티벌 행사장 주변에 맛집 데려가준다고 �
 가끔이 손이 스치는 것도 같고,
 둘은 행복해보인다.
 -> 은채야! 어떻게 이럴 수가 있어?
-    TossCoin2(0, "lvEun", 0, "lvEun")
-    <<jump 실패CM4>>
+    <<TossCoin2(0, "lvEun", 0, "lvEun")>>
+    <<jump 실패CE4>>
 -> 둘을 못 본 척하고 지나친다.
-    <<jump 일반CM4>>
+    <<jump 일반CE4>>
 ===
 
 
 title: 실패CE4
+position: -110,121
 ---
 <<ChangeStat Charm -10>>
 <<ChangeStat mov +20>>
@@ -111,6 +113,7 @@ YOU: 네가 그때로 돌아오면 좋겠어...
 은채: ...
 은채: 네가 이렇게 속좁은 줄은 몰랐네.
 <<SetSound EunSigh>>
+position: 195,130
 은채: 난 크리스를 만나서 사람을 함부로 싫어하면 안 된다는 걸 배웠어.
 은채: 근데 넌 어떻게...
 <<SetPortrait Portraits Eun_Idle>>
@@ -124,6 +127,7 @@ YOU: 네가 그때로 돌아오면 좋겠어...
 
 
 title: 일반CE4
+position: 164,158
 ---
 <<ChangeStat Chris_Eun +15>>
 YOU: 허...

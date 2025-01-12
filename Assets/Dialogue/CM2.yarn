@@ -9,6 +9,7 @@ YOU: (이렇게 누가 감시를 해야만 과제를 제대로 하는 학생이�
 YOU: (정말 부끄럽다...)
 하지만 당신은 이미 영화만 보고 도망가려고 복도쪽 자리를 잡아두었다.
 <<SetPortrait Portraits Chris_Smile>>
+<<SetSound ChrisSmile>>
 크리스: 선배!
 크리스: 많이 기다렸어요?
 YOU: 아니야. 나도 방금 왔어
@@ -17,6 +18,7 @@ YOU: 아니야. 나도 방금 왔어
 YOU: 사이다야.
 YOU: 얻어먹고 싶으면 조용히 하도록.
 <<SetPortrait Portraits Chris_Idle>>
+<<SetSound ChrisSmile>>
 크리스: 넵!
 당신과 크리스는 영화관에 들어가 자리에 앉아 이런저런 이야기를 하며 영화가 시작하기를 기다렸다.
 광고가 모두 끝나고 비상탈출 안내가 나올 즈음 누군가가 영화관 문을 열고 들어왔다.
@@ -60,6 +62,8 @@ YOU: 민트 사장님?
 YOU: ...
 YOU: 일어나!!!!!!!!!!!!
 <<SetPortrait Portraits Chris_Shock Mint_Shock>>
+<<SetSound ChrisGasp>>
+<<SetSound ChrisGasp>>
 당신은 둘을 깨워놓고 집으로 도망갔다.
 비록 느리빼다 과제 마감 2초 전에 제출하긴 했지만 제시간에 냈다는 것에 의의를 두기로 했다.
 ===
@@ -91,12 +95,15 @@ YOU: (안 자고 잘 보네...)
 30분 후 영화가 끝났다.
 YOU: 다들 안 졸고 잘 보더라?
 <<SetPortrait Portraits Chris_Laugh Mint_Blush>>
+<<SetSound ChrisSmile>>
 크리스: 난 사실 1시간 자다가 일어났어.
 <<SetPortrait Portraits Chris_Laugh Mint_Laugh>>
+<<SetSound MintSmile>>
 민트: (본인은 1시간 반.)
 YOU: 사장님도 잠을 주무시는구나...
 <<SetPortrait Portraits Chris_Idle Mint_Laugh>>
 크리스: 그건 그렇고 선배.
+<<SetSound ChrisSmile>>
 크리스: 튀려고 하셨죠?
 당신은 방심하던 찰나에 크리스에게 잡혀 과제를 하게 되었다.
 ===

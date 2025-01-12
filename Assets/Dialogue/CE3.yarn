@@ -6,6 +6,7 @@ tags: 도서관
 당신과 은채는 중앙도서관에서 만나 공부를 하고 있었다.
 YOU: (사실 난 유튜브 보고 있지만)
 <<SetPortrait Portraits Eun_Smile>>
+<<SetSound EunSmile>>
 은채: 너 지금 딴짓 하고 있지?
 YOU: ??
 YOU: 어떻게 알았어?
@@ -15,17 +16,22 @@ YOU: 어떻게 알았어?
 <<SetPortrait Portraits Eun_Idle>>
 은채: 네, 죄송합니다.
 은채: (엄청 예민하네)
+<<SetSound EunSigh>>
 은채가 당신에게 문자를 보낸다.
 YOU: (그니까ㅋㅋㅋ 여기 1층이라 바깥소리도 다 들리는데)
 <<SetPortrait Portraits Eun_Laugh>>
+<<SetSound EunLaugh>>
 은채: (비오면 하늘에 대고 조용히 하라고 할듯)
 <<SetPortrait Portraits Eun_Shock>>
+<<SetSound EunGasp>>
 은채: 헉!
 <<SetPortrait Portraits Eun_Shock Chris_Smile>>
+<<SetSound EunGasp>>
 크리스: 선배들 안녕하세요!
 크리스가 은채 뒤에서 옆구리를 찌르며 나타났다.
 째려보는 시선들이 느껴진다.
 <<SetPortrait Portraits Eun_Idle Chris_Shock>>
+<<SetSound ChrisGasp>>
 크리스: 이런~
 은채의 뒷자리에 있던 사람이 짐을 챙겨서 떠난다.
 YOU: (방금 건 좀 심하긴 했지.)
@@ -64,6 +70,7 @@ YOU: (이제 할일을 해야지.)
 YOU: (누구야?)
 당신은 고개를 들었을 때 본 것은
 <<SetPortrait Portraits Eun_Shock>>
+<<SetSound EunGasp>>
 <<wait 1>>
 <<SetPortrait Portraits Eun_Blush>>
 <<wait 1>>
@@ -74,6 +81,7 @@ YOU: (네가 보낸 거야?)
 은채는 별 반응없이 문자로 답장했다.
 은채: (그...)
 <<SetPortrait Portraits Eun_Idle>>
+<<SetSound EunSigh>>
 은채: (크리스랑 잡담하다가 날라갔나봐.)
 은채: (방해해서 미안해.)
 <<SetPortrait Portraits Eun_Idle Chris_Idle>>
@@ -120,20 +128,25 @@ title: 일반CE3
 당신은 자리에서 일어나 크리스 옆자리로 간다.
 YOU: (뭘 그리는 거야?)
 <<SetPortrait Portraits Chris_Shock>>
+<<SetSound ChrisGasp>>
 크리스는 화들짝 놀라며 노트를 가렸다.
 <<SetPortrait Portraits Chris_Neg>>
+<<SetSound ChrisNeg>>
 크리스: (왜 남의 노트를 훔쳐보고 그래요! 음침하게...)
 크리스는 유난히 기분이 상한 듯 했다.
 YOU: (훔쳐보다니! 그냥 뭔가 열심히 하길래 눈에 띄었던 거야.)
 <<SetPortrait Portraits Chris_Blush>>
+<<SetSound ChrisSigh>>
 크리스: 그게 그거죠!
 <<SetPortrait Portraits Chris_Blush Eun_Shock>>
 은채: (무슨 소란이야?)
 은채가 뒤를 돌았을 때, 찰나에 크리스의 손틈 사이로 낙서를 봐버렸다.
 <<SetPortrait Portraits Chris_Shock Eun_Neg>>
+<<SetSound EunNeg>>
 은채: ...음침하기는
 당신은 당황하면서 은채의 뒷통수와 크리스의 눈을 번갈아 봤다.
 <<SetPortrait Portraits Chris_Blush>>
+<<SetSound ChrisSigh>>
 크리스: 하...
 크리스가 울먹거리더니 이내 떨리는 손으로 책가방을 챙겨 떠났다.
 당신은 복잡한 감정을 느끼며 공부를 시작한다.
