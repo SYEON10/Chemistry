@@ -41,11 +41,11 @@ public class DialogManager : MonoBehaviour
         List<string> lastDialog = new List<string>() { "크리스_은채_네번째", "크리스_민트_네번째", "은채_민트_네번째" };
         dialogList = new List<string>();
         dialogList.AddRange(Shuffle(earlyDialog));
-        // List<string> temp = Shuffle(midDialog);
-        // dialogList.Add(temp[0]);
-        // dialogList.Add(temp[1]);
-        // dialogList.Add(temp[2]);
-        // dialogList.AddRange(Shuffle(lastDialog));
+        List<string> temp = Shuffle(midDialog);
+        dialogList.Add(temp[0]);
+        dialogList.Add(temp[1]);
+        dialogList.Add(temp[2]);
+        dialogList.AddRange(Shuffle(lastDialog));
     }
 
     public static List<string> Shuffle(List<string> values)
