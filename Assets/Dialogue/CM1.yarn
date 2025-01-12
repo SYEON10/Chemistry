@@ -20,10 +20,11 @@ YOU: 그런 말 하면서 웃지마...
 YOU: 뭐야? 왜 그렇게 놀라?
 크리스: 저기! 저기 안 보여요?!
 크리스가 가리킨 곳으로 보니...
-퍼리가 보인다.
-<<SetPortrait Portraits Chris_Shock Mint_Idle>>
+텅 빈 눈, 창백한 피부,
+쫑긋 솟은 귀, 풍성한 깃털을 가진 자가 보인다.
 YOU: 너 지금 저 사람보고 놀란 거야? 쯧쯧...
 크리스: 사람??
+<<SetPortrait Portraits Chris_Shock Mint_Idle>>
 YOU: 신촌에서 퍼리 처음 봐?
 <<SetPortrait Portraits Chris_Neg Mint_Idle>>
 크리스: 네?? 있어봤자 오타쿠 카페 팜플렛에서만 봤지 저건 두 발로 서있잖아요!
