@@ -1011,6 +1011,7 @@ GameObject:
   - component: {fileID: 1450047409}
   - component: {fileID: 1450047408}
   - component: {fileID: 1450047410}
+  - component: {fileID: 1450047411}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1146,6 +1147,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca118240cd7a35449b82561cd2578ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &1450047411
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450047406}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1472838296
 PrefabInstance:
   m_ObjectHideFlags: 0
