@@ -8,6 +8,11 @@ public class StatPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI mov;
     [SerializeField] private TextMeshProUGUI charm;
     [SerializeField] private TextMeshProUGUI mental;
+
+    void Awake()
+    {
+        GameManager.Instance.InitData();
+    }
     
     void Start()
     {
