@@ -729,6 +729,7 @@ GameObject:
   - component: {fileID: 1279133404}
   - component: {fileID: 1279133406}
   - component: {fileID: 1279133407}
+  - component: {fileID: 1279133408}
   m_Layer: 5
   m_Name: LobbyScreen
   m_TagString: Untagged
@@ -927,6 +928,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1279133408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279133402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef47a5d4c5afb547b425796cbfa1009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1382917240 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6487054940745041847, guid: 2d28711dcdde32443a1d170b19090157, type: 3}
@@ -1025,6 +1038,7 @@ GameObject:
   - component: {fileID: 1450047408}
   - component: {fileID: 1450047410}
   - component: {fileID: 1450047411}
+  - component: {fileID: 1450047412}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1172,6 +1186,27 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!95 &1450047412
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450047406}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f5c311703936da409a433702351daeb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1472838296
 PrefabInstance:
   m_ObjectHideFlags: 0
