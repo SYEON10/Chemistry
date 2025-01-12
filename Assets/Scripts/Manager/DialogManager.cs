@@ -1,9 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -32,6 +30,13 @@ public class DialogManager : Singleton<DialogManager>
     void Start()
     {
         Init();
+        StartDialogue(dialogList[dialogIndex]);
+    }
+
+    public void Reset()
+    {
+        Init();
+        dialogIndex = 0;
         StartDialogue(dialogList[dialogIndex]);
     }
 
@@ -72,6 +77,7 @@ public class DialogManager : Singleton<DialogManager>
         if (hasSeenEnding)
         {
             SceneManager.LoadScene("EndingReview");
+            GameResettor.needReset = true;
             return;
         }
 
