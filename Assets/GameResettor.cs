@@ -6,11 +6,11 @@ public class GameResettor : MonoBehaviour
 
     void Start()
     {
-        Debug.Log($"needReset: {needReset}");
-        if (needReset)
-        {
-            FindAnyObjectByType<DialogManager>().Reset();
-            needReset = false;
-        }
+        // Debug.Log($"needReset: {needReset}");
+        // if (needReset)
+        // {
+        //     // FindAnyObjectByType<DialogManager>().Reset();
+        //     needReset = false;
+        // }
     }
 }

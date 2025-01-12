@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Yarn.Unity;
 
-public class DialogManager : Singleton<DialogManager>
+public class DialogManager : MonoBehaviour
 {
     public DialogueRunner dialogueRunner;
     [SerializeField] private OptionsListView dialogueOption;
@@ -23,22 +23,22 @@ public class DialogManager : Singleton<DialogManager>
 
     void Awake()
     {
-        base.Awake();
         coinDisplay = GetComponentInChildren<CoinDisplay>();
     }
 
     void Start()
     {
         Init();
-        StartDialogue(dialogList[dialogIndex]);
-    }
-
-    public void Reset()
-    {
-        Init();
         dialogIndex = 0;
         StartDialogue(dialogList[dialogIndex]);
     }
+
+    // public void Reset()
+    // {
+    //     Init();
+    //     dialogIndex = 0;
+    //     StartDialogue(dialogList[dialogIndex]);
+    // }
 
     void Init()
     {
