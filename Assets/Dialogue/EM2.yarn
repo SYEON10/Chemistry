@@ -53,7 +53,7 @@ title: 성공EM2
 <<ChangeStat lvEun +5>>
 <<ChangeStat lvMint +5>>
 <<ChangeStat mental +5>>
-<<ChangeStat Eun_Mint +5>>
+<<ChangeStat Eun_Mint +10>>
 YOU: 하... 먹는 것마저 이렇게 힘들다니...
 <<SetPortrait Portraits Eun_Smile>>
 은채: 뭐야, 진짜 다 먹었네?
