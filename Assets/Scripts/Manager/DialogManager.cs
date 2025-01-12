@@ -76,14 +76,16 @@ public class DialogManager : Singleton<DialogManager>
         }
 
         // 게임 오버 체크
-        if (GameManager.Instance.data.GetStat(StatEnum.mov).value <= 5
-            | GameManager.Instance.data.GetStat(StatEnum.charm).value <= 5
-            | GameManager.Instance.data.GetStat(StatEnum.mental).value <= 5
-            | GameManager.Instance.data.GetStat(StatEnum.lvChris).value <= 5
+        if (GameManager.Instance.data.GetStat(StatEnum.lvChris).value <= 5
             | GameManager.Instance.data.GetStat(StatEnum.lvEun).value <= 5
             | GameManager.Instance.data.GetStat(StatEnum.lvMint).value <= 5)
         {
-            Debug.Log("Game over");
+            hasSeenEnding = true;
+            GameOver(GameOverType.seperation);
+            return;
+        }
+        else if (GameManager.Instance.data.GetStat(StatEnum.charm).value <= 5)
+        {
             hasSeenEnding = true;
             GameOver(GameOverType.confession);
             return;
@@ -93,7 +95,10 @@ public class DialogManager : Singleton<DialogManager>
         {
             Debug.Log("Ending!");
             hasSeenEnding = true;
-            // TODO: 조건에 따라 다른 엔딩
+            // 조건에 따라 다른 엔딩
+            int Chris_Eun = GameManager.Instance.data.GetStat(StatEnum.Chris_Eun).value;
+            int Eun_Mint = GameManager.Instance.data.GetStat(StatEnum.Eun_Mint).value;
+            int Mint_Chris = GameManager.Instance.data.GetStat(StatEnum.Mint_Chris).value;
             if (GameManager.Instance.data.GetStat(StatEnum.Chris_Eun).value > 70)
             {
                 // 크리스 은채 엔딩
@@ -109,17 +114,10 @@ public class DialogManager : Singleton<DialogManager>
                 // 민트 크리스 엔딩
                 StartCoroutine(StartNewDialogue_Ending("민트_크리스_엔딩"));
             }
-            else if (GameManager.Instance.data.GetStat(StatEnum.lvChris).value > 70
-                && GameManager.Instance.data.GetStat(StatEnum.lvEun).value > 70
-                && GameManager.Instance.data.GetStat(StatEnum.lvMint).value > 70)
-            {
-                // 모두 연애 엔딩
-                StartCoroutine(StartNewDialogue_Ending("게임오버1"));
-            }
             else
             {
                 // 모두 친구 엔딩
-                StartCoroutine(StartNewDialogue_Ending("게임오버1"));
+                StartCoroutine(StartNewDialogue_Ending("모두_친구_엔딩"));
             }
             return;
         }
