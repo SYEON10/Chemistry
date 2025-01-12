@@ -1,0 +1,132 @@
+title: 크리스_은채_네번째
+tags: 신촌거리
+---
+<<SetBackground Background sinchon>>
+<<SetPortrait Portraits>>
+부산여행 일주일 전에 약속이 취소된 당신은 하릴없이 거리를 떠돌고 있었다.
+YOU: 비는 시간이 생겨도 뭐 할만한 일은 없는데...
+YOU: 기차 취소하기도 귀찮은데 그냥 가야겠다.
+일주일 후 당신은 원래 예정대로 부산행 기차에 오른다.
+이것저것 둘러보고 해산물도 즐기면서 이틀을 보낸 후 할 일이 없어진 당신은 다시 생각한다.
+YOU: (은채가 락페스티벌 행사장 주변에 맛집 데려가준다고 했었는데)
+당신은 다음 날 행사장 반대편으로 향한다.
+횡단보도 너머로 익숙한 누군가가 보인다.
+<<SetPortrait Portraits Chris_Smile Eun_Smile>>
+은채와 크리스가 나란히 행사장으로 걸어가고 있었다.
+가끔이 손이 스치는 것도 같고,
+둘은 행복해보인다.
+-> 은채야! 어떻게 이럴 수가 있어?
+    TossCoin2(0, "lvEun", 0, "lvEun")
+    <<jump 실패CM4>>
+-> 둘을 못 본 척하고 지나친다.
+    <<jump 일반CM4>>
+===
+
+
+title: 실패CE4
+---
+<<ChangeStat Charm -10>>
+<<ChangeStat mov +20>>
+<<ChangeStat mental -10>>
+<<ChangeStat lvChris -15>>
+<<ChangeStat lvEun -10>>
+<<ChangeStat Chris_Eun +15>>
+당신은 은채를 소리쳐 부른다.
+<<SetPortrait Portraits Chris_Shock Eun_Shock>>
+YOU: 은채야! 네가 왜 여기에 있어?
+은채는 얼어붙은 채로 내가 횡단보도를 건너오는 것을 기다리는 수밖에 없었다.
+<<SetPortrait Portraits Chris_Neg Eun_Shock>>
+<<wait 1>>
+<<SetPortrait Portraits Chris_Idle Eun_Shock>>
+크리스: 선배! 이런 곳에서 다 보네요!
+YOU: 넌 닥쳐!
+<<SetPortrait Portraits Chris_Shock Eun_Shock>>
+크리스: 앗... 전...
+<<SetPortrait Portraits Chris_Shock Eun_Idle>>
+은채: 그래. 일단 너는 조용히 하고 있어.
+<<SetPortrait Portraits Chris_Neg Eun_Idle>>
+크리스: 아... 네...
+YOU: 은채라 둘이 할 얘기 있으니까 좀 비켜.
+<<SetPortrait Portraits Chris_Neg Eun_Idle>>
+크리스: 원래 같이 있던 쪽은 저희였는데
+크리스: 갑자기 오셔서 이래라저래라 하시면 곤란...
+은채: 괜찮으니까 먼저 들어가있어.
+<<SetPortrait Portraits Chris_Shock Eun_Idle>>
+크리스: 곧 시작하니까 지금 같이 들어가요
+<<SetPortrait Portraits Chris_Shock Eun_Neg>>
+은채: 금방 따라갈게.
+크리스: ...
+<<SetPortrait Portraits Chris_Neg Eun_Neg>>
+크리스: 빨리 와요.
+<<SetPortrait Portraits Eun_Neg>>
+은채: 설마 지금 우리를 따라온 거야?
+YOU: 뭐?
+YOU: 원래 여기는 크리스가 아니라 내가 와야하는 곳이잖아!
+은채: 있어야하는 곳 없어야하는 곳이 어디에 있어.
+<<SetPortrait Portraits Eun_Idle>>
+은채: 내 말은...
+은채: 일정까지 취소됐으면서 왜 여기까지 온 거야?
+YOU: 지금 그게 중요해??
+YOU: 나랑 가기로 했던 곳에 왜 저 녀석을 대신 데려온 건데?
+<<SetPortrait Portraits Eun_Blush>>
+은채: 그...
+은채: 넌 락페에 관심 없기도 하고...
+은채: 항상 보면 나 때문에 오는 거지 정말 재밌어하는 것 같지가 않았단 말이야.
+은채: 그래서...
+YOU: 왜... 왜 하필 저딴 놈인데?
+<<SetPortrait Portraits Eun_Shock>>
+은채: 저딴 놈이라니...!
+은채: 아끼던 후배 아니었어?
+YOU: 내가 완전 사람 잘못 보고 있었어.
+YOU: 저런 사람인줄 알았으면 처음부터 떨어뜨려놔야했는데...!
+<<SetPortrait Portraits Eun_Idle>>
+은채: 저런 사람이 뭔데?
+YOU: ... ...
+은채: 나랑 어울려주는 게 그렇게 큰 문제야?
+YOU: 내 말을 그게 아니라!
+<<SetPortrait Portraits Eun_Neg>>
+은채: 됐어. 이제 나도 가봐야해.
+은채: 지금 너무 흥분했으니까 생각 정리 좀 하고 다음에 다시 얘기하자.
+당신은 은채의 팔을 붙잡는다.
+<<SetPortrait Portraits Eun_Shock>>
+은채: 가야한다니까!
+YOU: 널 더 오래 알고 있던 건 나잖아!
+YOU: 한 두 해 더 본 것도 아니고 10년 넘게 알고 지냈는데
+YOU: 넌 왜 크리스한테 더 친절하게 굴어?
+YOU: 처음에는 그렇게 싫어했으면서...
+YOU: 네가 그때로 돌아오면 좋겠어...
+<<SetPortrait Portraits Eun_Idle>>
+은채: ...
+은채: 네가 이렇게 속좁은 줄은 몰랐네.
+은채: 난 크리스를 만나서 사람을 함부로 싫어하면 안 된다는 걸 배웠어.
+은채: 근데 넌 어떻게...
+<<SetPortrait Portraits Eun_Idle>>
+은채: 다시 내 시야가 좁아지길 바라는 거야?
+당신은 은채의 말에 얼어붙는다.
+은채는 당신의 손을 뿌리치고 떠난다.
+<<SetPortrait Portraits>>
+다시는 당신과 마주치려 하지 않을 것이다.
+<<ChangeStat charm -100>>
+===
+
+
+title: 일반CE4
+---
+<<ChangeStat Chris_Eun +15>>
+YOU: 허...
+당신은 두 사람을 보고 내장이 꼬이는 듯 했지만
+지금 대화를 걸면 싸움으로 번질 것이 분명하기에
+애써 무시하고 지나쳤다.
+<<SetPortrait Portraits Chris_Laugh Eun_Smile>>
+크리스: ~~
+<<SetPortrait Portraits Chris_Smile Eun_Laugh>>
+은채: ~~
+<<SetPortrait Portraits Chris_Smile Eun_Blush>>
+은채: ~~
+<<SetPortrait Portraits Chris_Blush2 Eun_Blush>>
+크리스: ...
+은채: ...
+두 사람은 당신을 눈치채지 못하고 걸음을 재촉했다.
+당신은 이후 일정을 모두 취소하고
+이곳저곳을 방황하다가 숙소로 돌아와 기절하듯 잠에 들었다.
+===
