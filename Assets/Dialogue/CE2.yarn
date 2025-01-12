@@ -33,8 +33,10 @@ YOU: 넌 날 너무 잘 알아.
 당신은 은채가 왜 이렇게 크리스를 싫어하는지 의문을 가진다.
 주방에서 대화 소리가 들리더니 민트가 카운터로 나왔다.
 <<SetPortrait Portraits Chris_Idle Mint_Smile>>
+<<SetSound MintSmile>>
 민트: (어서 오...)
 <<SetPortrait Portraits Chris_Shock Mint_Idle>>
+<<SetSound MintIdle1>>
 <<SetSound ChrisGasp>>
 크리스: 앗 저번에 봤던...
 <<SetPortrait Portraits Chris_Idle Mint_Idle>>
@@ -49,6 +51,7 @@ YOU: 넌 날 너무 잘 알아.
 <<SetPortrait Portraits Mint_Idle>>
 민트: (은채 학생은 조금 쉬어도 괜찮소.)
 <<SetPortrait Portraits Mint_Idle Eun_Smile>>
+<<SetSound MintIdle2>>
 <<SetSound EunSmile>>
 은채: 감사합니다!
 <<SetPortrait Portraits Eun_Smile>>
