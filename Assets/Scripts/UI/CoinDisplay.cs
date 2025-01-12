@@ -20,6 +20,7 @@ public class CoinDisplay : MonoBehaviour
 
     private void SetRaw()
     {
+        choice.text = GameManager.Instance.data.beforeChoice;
         percent.text = "0%";
         icon1.color = Color.clear;
         icon2.color = Color.clear;

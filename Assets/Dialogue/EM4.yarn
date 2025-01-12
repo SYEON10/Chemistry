@@ -8,7 +8,7 @@ tags: 영화관
 <<SetPortrait Portraits Eun_Smile>>
 <<SetSound EunSmile>>
 은채: 일찍 왔네?
-<<SetPortrait Portraits Eun_Smile, Mint_Idle>>
+<<SetPortrait Portraits Eun_Smile Mint_Idle>>
 은채가, 그리고 민트 사장님이 같이 나타났다.
 YOU: 둘이 같이 왔어?
 은채: 오다가 만났어. 그나저나 너, 예매해놓고 티켓도 안 뽑아왔더라? 빨리 들어가기나 하자!
@@ -22,8 +22,11 @@ YOU: 어, 어어. 그래.
 민트 사장님도 날 좋아하지 않을까?
 힐끔 사장님을 본다.
 -> 사장님 손을 슬쩍 잡는다.
-    TossCoin2(0, "lvMint", 0, "lvMint")
-    <<jump 실패EM4>>
+    <<if TossCoin2(0, "lvMint", 0, "lvMint")>>
+        <<jump 실패EM4>>
+    <<else>>
+        <<jump 실패EM4>>
+    <<endif>>
 -> 고개를 돌려 영화에 집중한다.
     <<jump 일반EM4>>
 ===
@@ -35,7 +38,7 @@ title: 실패EM4
 실망감, 그리고 약간의 배신감에 영화는 눈에 들어오지 않았다.
 <<wait 2>>
 <<SetBackground Background cinema>>
-<<SetPortrait Portraits Eun_Smile, Mint_Idle>>
+<<SetPortrait Portraits Eun_Smile Mint_Idle>>
 <<SetSound Eun_Smile>>
 은채: 아, 영화 재밌었다. 그치?
 YOU: 응... 재밌더라. 여주인공이 아주 인상적이었어.
@@ -49,7 +52,7 @@ YOU: 응... 재밌더라. 여주인공이 아주 인상적이었어.
 title: 일반EM4
 ---
 <<SetBackground Background cinema>>
-<<SetPortrait Portraits Eun_Smile, Mint_Idle>>
+<<SetPortrait Portraits Eun_Smile Mint_Idle>>
 <<SetSound Eun_Smile>>
 은채: 아, 영화 재밌었다. 그치?
 YOU: 응. 영화 재밌더라. 럽미올립미라고 해서 로맨스 영화일 줄 알았는데 액션 영화라 깜짝 놀랐어.
