@@ -1,5 +1,4 @@
 using UnityEditor;
-using UnityEditor.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
