@@ -5,26 +5,33 @@ tags: 신촌거리, 도서관
 <<SetPortrait Portraits Chris_Idle>>
 당신은 기말시험을 대비해 크리스와 공부를 할 장소를 찾아다니고 있었다.
 <<SetPortrait Portraits Chris_Neg>>
+<<SetSound ChrisSigh>>
 크리스: 하필이면 오늘부터 휴무라니...
 YOU: 한 달이나 가게를 닫으시다니 무슨 일 있으신가?
 <<SetPortrait Portraits Chris_Idle>>
+<<SetSound ChrisSmile>>
 크리스: SNS 보니까 새로운 메뉴를 개발하시는데 전념하신다더라고
 YOU: 그런 글이 올라왔었어?
 크리스: 아, 글이 아니라 DM이었나봐.
 YOU: 넌 사장님이랑 DM도 해?
 <<SetPortrait Portraits Chris_Smile>>
+<<SetSound ChrisSmile>>
 크리스: 응. 카페 계정 팔로우하고 얼마 안 돼서 자주 와줘서 고맙다고 연락왔었어.
 YOU: 네가 꽤 마음에 드셨나본데?
 <<SetPortrait Portraits Chris_Laugh>>
+<<SetSound ChrisLaugh>>
 크리스: 아하하, 그런 건가?
 YOU: (묘하게 기뻐보인다.)
 <<SetPortrait Portraits Chris_Idle>>
 크리스: 이제 진짜로 공부 시작해야할 것 같은데 프랜차이즈 카페라도 들어갈까?
 <<SetPortrait Portraits Chris_Idle Mint_Idle>>
+<<SetSound MintIdle1>>
 민트: ...
 <<SetPortrait Portraits Chris_Smile Mint_Idle>>
+<<SetSound ChrisSmile>>
 크리스: 아, 민트 사장님! 여기서 만나네요!
 YOU: 안녕하세요~
+<<SetSound MintIdle2>>
 민트: (따라오시오.)
 -> 정말로 공부를 해야하니 정중하게 거절한다.
     <<if TossCoin1("mental")>>
@@ -46,22 +53,28 @@ title: 성공CM3
 YOU: 저희도 정말 그러고 싶지만...
 YOU: 시험이 곧이라 진짜 공부하러 가야해요...
 <<SetPortrait Portraits Chris_Blush Mint_Idle>>
+<<SetSound ChrisSigh>>
 크리스: 정말 아쉽지만 맞는 말이에요...
 <<SetPortrait Portraits Chris_Blush Mint_Smile>>
+<<SetSound MintIdle2>>
 민트: (걱정마시오, 본인도 공부를 하러가는 길이니)
 당신과 크리스가 민트를 따라서 간 곳은 의외로...
 <<SetBackground Background library>>
 동네 도서관이었다.
 YOU: 커피공방같은 곳일 줄 알았는데...
 <<SetPortrait Portraits Chris_Idle Mint_Neg>>
+<<SetSound MintNeg>>
 민트: (다 들리오.)
 민트: (본인도 책 정도는 읽을 줄 안다오.)
 <<SetPortrait Portraits Chris_Smile Mint_Neg>>
+<<SetSound ChrisSmile>>
 크리스: 선배도 그런 의미는 아니었을 거예요.
 <<SetPortrait Portraits Chris_Blush2 Mint_Idle>>
+<<SetSound ChrisLaugh>>
 크리스: 저도 내심 딴짓하고 싶었거든요. 헤헤.
 YOU: ??
 <<SetPortrait Portraits Chris_Blush2 Mint_Laugh>>
+<<SetSound MintLaugh>>
 민트: (다들 똑같은 생각을 하는 것 같소.)
 YOU: 요즘들어 민트 사장님의 웃음장벽이 낮아진 것 같단 말이지...
 당신을 위화감을 느낀다.
@@ -84,6 +97,7 @@ YOU: 네!!
 크리스: 가끔 진짜 너무해요...
 YOU: 미안해... 근데 오늘은 공부하기 싫어서 미칠 것 같아
 <<SetPortrait Portraits Chris_Blush Mint_Smile>>
+<<SetSound MintIdle2>>
 민트: (걱정마시오, 본인도 공부를 하러가는 길이니)
 YOU: 네?
 YOU: 사장님도 정말 너무하세요...
@@ -93,14 +107,18 @@ YOU: 사장님도 정말 너무하세요...
 동네 도서관이었다.
 YOU: 커피공방같은 곳일 줄 알았는데...
 <<SetPortrait Portraits Chris_Idle Mint_Neg>>
+<<SetSound MintIdle1>>
 민트: (다 들리오.)
 민트: (본인도 책 정도는 읽을 줄 안다오.)
 <<SetPortrait Portraits Chris_Smile Mint_Neg>>
+<<SetSound ChrisSmile>>
 크리스: 선배도 그런 의미는 아니었을 거예요.
 <<SetPortrait Portraits Chris_Blush2 Mint_Idle>>
+<<SetSound ChrisLaugh>>
 크리스: 저도 내심 딴짓하고 싶었거든요. 헤헤.
 YOU: ??
 <<SetPortrait Portraits Chris_Blush2 Mint_Laugh>>
+<<SetSound MintIdle1>>
 민트: (다들 똑같은 생각을 하는 것 같소.)
 YOU: 요즘들어 민트 사장님의 웃음장벽이 낮아진 것 같단 말이지...
 당신을 위화감을 느낀다.
@@ -118,6 +136,7 @@ title: 일반CM3
 <<SetPortrait Portraits Chris_Shock Mint_Idle>>
 크리스: 선배! 저랑 공부하기로 했잖아요!
 YOU: 미안해... 근데 오늘은 공부하기 싫어서 미칠 것 같아
+<<SetSound MintIdle2>>
 민트: (걱정마시오, 본인도 공부를 하러가는 길이니)
 YOU: 네? 이럴수가.
 <<SetPortrait Portraits Chris_Blush2 Mint_Laugh>>
@@ -126,13 +145,17 @@ YOU: 네? 이럴수가.
 동네 도서관이었다.
 YOU: 커피공방같은 곳일 줄 알았는데...
 <<SetPortrait Portraits Chris_Idle Mint_Neg>>
+<<SetSound MintIdle1>>
 민트: (다 들리오.)
 민트: (본인도 책 정도는 읽을 줄 안다오.)
 <<SetPortrait Portraits Chris_Smile Mint_Neg>>
+<<SetSound ChrisSmile>>
 크리스: 선배도 그런 의미는 아니었을 거예요.
 <<SetPortrait Portraits Chris_Blush2 Mint_Idle>>
+<<SetSound ChrisLaugh>>
 크리스: 저도 내심 딴짓하고 싶었거든요. 헤헤.
 <<SetPortrait Portraits Chris_Blush2 Mint_Laugh>>
+<<SetSound MintIdle1>>
 민트: (다들 똑같은 생각을 하는 것 같소.)
 YOU: 요즘들어 민트 사장님의 웃음장벽이 낮아진 것 같단 말이지...
 당신을 위화감을 느낀다.
