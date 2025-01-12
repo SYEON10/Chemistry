@@ -59,7 +59,7 @@ public class CoinDisplay : MonoBehaviour
         this.ratio2.text = $"x{ratio2}";
         this.percent.text = $"{percent}%";
     }
-    
+
     public bool SpinCoin(string statName)
     {
         panel.SetActive(true);
@@ -69,14 +69,16 @@ public class CoinDisplay : MonoBehaviour
         ShowBeforeSpin(stat.value, statName);
         return random.Next(1, 100) <= stat.value;
     }
-    
+
     public bool SpinCoin(int ratio1, string statName1, int ratio2, string statName2)
     {
         panel.SetActive(true);
         Debug.Log("Spinning coin...");
         Stat stat1 = GameManager.Instance.data.GetStat(statName1);
         Stat stat2 = GameManager.Instance.data.GetStat(statName2);
-        int value = (stat1.value * ratio1 + stat2.value * ratio2) / (ratio1 + ratio2);
+        int value;
+        if (ratio1 + ratio2 != 0) value = (stat1.value * ratio1 + stat2.value * ratio2) / (ratio1 + ratio2);
+        else value = 0;
         Random random = new Random();
         ShowBeforeSpin(value, ratio1, statName1, ratio2, statName2);
         return random.Next(1, 100) <= value;
