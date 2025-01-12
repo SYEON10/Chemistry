@@ -17,8 +17,11 @@ YOU: (은채가 락페스티벌 행사장 주변에 맛집 데려가준다고 �
 가끔이 손이 스치는 것도 같고,
 둘은 행복해보인다.
 -> 은채야! 어떻게 이럴 수가 있어?
-    <<TossCoin2(0, "lvEun", 0, "lvEun")>>
-    <<jump 실패CE4>>
+    <<if TossCoin2(0, "lvEun", 0, "lvEun")>>
+        <<jump 실패CE4>>
+    <<else>>
+        <<jump 실패CE4>>
+    <<endif>>
 -> 둘을 못 본 척하고 지나친다.
     <<jump 일반CE4>>
 ===
@@ -27,7 +30,7 @@ YOU: (은채가 락페스티벌 행사장 주변에 맛집 데려가준다고 �
 title: 실패CE4
 position: -110,121
 ---
-<<ChangeStat Charm -10>>
+<<ChangeStat charm -10>>
 <<ChangeStat mov +20>>
 <<ChangeStat mental -10>>
 <<ChangeStat lvChris -15>>
@@ -95,7 +98,7 @@ YOU: 저런 사람인줄 알았으면 처음부터 떨어뜨려놔야했는데..
 은채: 저런 사람이 뭔데?
 YOU: ... ...
 은채: 나랑 어울려주는 게 그렇게 큰 문제야?
-YOU: 내 말을 그게 아니라!
+YOU: 내 말은 그게 아니라!
 <<SetPortrait Portraits Eun_Neg>>
 <<SetSound EunNeg>>
 은채: 됐어. 이제 나도 가봐야해.
@@ -113,7 +116,6 @@ YOU: 네가 그때로 돌아오면 좋겠어...
 은채: ...
 은채: 네가 이렇게 속좁은 줄은 몰랐네.
 <<SetSound EunSigh>>
-position: 195,130
 은채: 난 크리스를 만나서 사람을 함부로 싫어하면 안 된다는 걸 배웠어.
 은채: 근데 넌 어떻게...
 <<SetPortrait Portraits Eun_Idle>>
@@ -124,10 +126,7 @@ position: 195,130
 다시는 당신과 마주치려 하지 않을 것이다.
 <<ChangeStat charm -100>>
 ===
-
-
 title: 일반CE4
-position: 164,158
 ---
 <<ChangeStat Chris_Eun +15>>
 YOU: 허...
