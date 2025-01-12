@@ -79,7 +79,7 @@ YOU: 사장님?
 YOU: ...
 YOU: 아뇨, 깃털 좀 더 넣어주실 수 있나 해서요.
 <<SetPortrait Portraits Mint_Shock Eun_Neg>>
-<SetSound MintCurious>
+<<SetSound MintCurious>>
 민트: ??
 은채: 으...
 <<SetPortrait Portraits Mint_Smile Eun_Neg>>
