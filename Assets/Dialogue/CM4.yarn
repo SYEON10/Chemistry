@@ -12,6 +12,7 @@ YOU: 실례합니다...
 <<SetSound ChrisSmile>>
 크리스: 실례합니다~
 <<SetPortrait Portraits Mint_Smile Chris_Laugh>>
+<<SetSound MintSmile>>
 민트: (어서오시오.)
 직원실에서 나온 민트는 당신과 크리스에게 수건을 건네주었다.
 민트: (요새 일기예보가 자주 빗나가는 듯 하오. 본인이 따듯한 차라도 내오지.)
@@ -63,6 +64,7 @@ title: 일반CM4
 크리스: 기껏 선배랑 놀러 나왔는데~
 <<SetPortrait Portraits Mint_Idle Chris_Smile>>
 그때, 민트가 김이 나는 얼그레이를 테이블 위에 올려주고 크리스의 옆자리에 앉는다.
+<<SetSound MintIdle1>>
 민트: (비 오는 날 카페도 나름 운치 있지 않나.)
 <<SetSound MintLaugh>>
 <<SetPortrait Portraits Mint_Smile Chris_Smile>>
