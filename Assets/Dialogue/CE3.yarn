@@ -95,7 +95,7 @@ title: 실패CE3
 ---
 <<ChangeStat lvEun +5>>
 <<ChangeStat lvChris +5>>
-<<ChangeStat Chris_Eun +10>>
+<<ChangeStat Chris_Eun +5>>
 <<ChangeStat mental -10>>
 <<SetPortrait Portraits>>
 당신은 있는 힘을 다해 유튜브 버튼을 누르지 않으려 애쓴다.

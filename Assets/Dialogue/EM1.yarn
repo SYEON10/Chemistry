@@ -124,7 +124,7 @@ title: 실패EM1
 <<SetPortrait Portraits Mint_Idle Eun_Smile>>
 은채: 정말 괜찮아요. 머리카락이나 손톱같은 것에 비하면 아무것도 아니죠.
 <<SetPortrait Portraits Mint_Neg Eun_Smile>>
-<<SetSound MintGasp>>
+<<SetSound MintNeg>>
 민트: (본인의 깃털이나 학생의 머리카락이나 똑같다오. 그런 말은 삼가해주시오.)
 <<SetPortrait Portraits Eun_Idle>>
 퍼리는 어쩐지 빈정이 상한 듯 했으며, 주방으로 돌아갔다.
